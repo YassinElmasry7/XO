@@ -9,17 +9,12 @@
 using namespace std;
 
 void play_math_xo() {
-
     cout << "\n=== Starting Mathematical X-O Game (15 Game) ===\n";
-
     UI<int>* game_ui = new MathXO_UI();
-    
     Board<int>* math_board = new MathXO_Board();
-    
     Player<int>** players = game_ui->setup_players();
 
     GameManager<int> game(math_board, players, game_ui);
-    
     game.run();
 
     delete math_board;
