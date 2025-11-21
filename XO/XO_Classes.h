@@ -22,6 +22,18 @@ public:
     vector<int> get_available_numbers(Player<int>* player);
 };
 
+class ReverseXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+public:
+	ReverseXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player); 
+    bool is_lose(Player<char>* player); 
+    bool is_draw(Player<char>* player);
+	bool game_is_over(Player<char>* player);
+};
+
 class MathXO_UI : public UI<int> {
 public:
     MathXO_UI();
@@ -31,4 +43,11 @@ public:
     virtual Player<int>** setup_players();
 };
 
+class ReverseXO_UI : public UI<char> {
+public:
+    ReverseXO_UI();
+    ~ReverseXO_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
+};
 #endif // XO_CLASSES_H

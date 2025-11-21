@@ -22,6 +22,22 @@ void play_math_xo() {
     delete[] players;
     delete game_ui;
 }
+
+void play_reverse_xo() {
+    cout << "\n=== Starting Reverse X-O Game ===\n";
+    UI<char>* game_ui = new ReverseXO_UI();
+    Board<char>* reverse_board = new ReverseXO_Board();
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> game(reverse_board, players, game_ui);
+    game.run();
+
+    delete reverse_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
+
 int main() {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -33,9 +49,10 @@ int main() {
         cout << "        BOARD GAMES COLLECTION \n";
         cout << "===================================== \n";
         cout << "1. Mathematical X-O (15 Game) \n";
-        cout << "2. Exit \n";
+		cout << "2. Reverse X-O \n";
+        cout << "3. Exit \n";
         cout << "===================================== \n";
-        cout << "Enter your choice (1-2): ";
+        cout << "Enter your choice (1-3): ";
 
         cin >> choice;
 
@@ -44,6 +61,9 @@ int main() {
             play_math_xo();
             break;
         case 2:
+            play_reverse_xo();
+			break;
+        case 3:
             cout << "Thank you for playing!\n";
             break;
         default:
@@ -51,7 +71,7 @@ int main() {
             break;
         }
 
-    } while (choice != 2);
+    } while (choice != 3);
 
     return 0;
 }
