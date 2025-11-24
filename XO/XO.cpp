@@ -38,6 +38,21 @@ void play_reverse_xo() {
     delete game_ui;
 }
 
+void play_obstacle_xo() {
+    cout << "\n=== Starting Obstacle X-O Game ===\n";
+    UI<char>* game_ui = new ObstacleXO_UI();
+    Board<char>* obstacle_board = new ObstacleXO_Board();
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> game(obstacle_board, players, game_ui);
+    game.run();
+
+    delete obstacle_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
+
 int main() {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -49,10 +64,11 @@ int main() {
         cout << "        BOARD GAMES COLLECTION \n";
         cout << "===================================== \n";
         cout << "1. Mathematical X-O (15 Game) \n";
-		cout << "2. Reverse X-O \n";
-        cout << "3. Exit \n";
+        cout << "2. Reverse X-O \n";
+        cout << "3. Obstacle X-O \n";
+        cout << "4. Exit \n";
         cout << "===================================== \n";
-        cout << "Enter your choice (1-3): ";
+        cout << "Enter your choice (1-4): ";
 
         cin >> choice;
 
@@ -62,8 +78,11 @@ int main() {
             break;
         case 2:
             play_reverse_xo();
-			break;
+            break;
         case 3:
+            play_obstacle_xo();
+            break;
+        case 4:
             cout << "Thank you for playing!\n";
             break;
         default:
@@ -71,7 +90,7 @@ int main() {
             break;
         }
 
-    } while (choice != 3);
+    } while (choice != 4);
 
     return 0;
 }

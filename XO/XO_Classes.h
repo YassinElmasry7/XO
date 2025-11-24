@@ -2,6 +2,8 @@
 #define XO_CLASSES_H
 
 #include "BoardGame_Classes.h"
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 class MathXO_Board : public Board<int> {
@@ -26,12 +28,32 @@ class ReverseXO_Board : public Board<char> {
 private:
     char blank_symbol = '.';
 public:
-	ReverseXO_Board();
+    ReverseXO_Board();
     bool update_board(Move<char>* move);
-    bool is_win(Player<char>* player); 
-    bool is_lose(Player<char>* player); 
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player);
     bool is_draw(Player<char>* player);
-	bool game_is_over(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+};
+
+class ObstacleXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    char obstacle_symbol = '#';
+    int round_count = 0;
+
+    void add_random_obstacles();
+    bool has_four_in_row(char symbol);
+
+public:
+    ObstacleXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    int get_round_count() const { return round_count; }
 };
 
 class MathXO_UI : public UI<int> {
@@ -50,4 +72,13 @@ public:
     Player<char>* create_player(string& name, char symbol, PlayerType type);
     virtual Move<char>* get_move(Player<char>* player);
 };
+
+class ObstacleXO_UI : public UI<char> {
+public:
+    ObstacleXO_UI();
+    ~ObstacleXO_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
+};
+
 #endif // XO_CLASSES_H

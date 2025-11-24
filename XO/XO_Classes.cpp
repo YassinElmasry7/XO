@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <iomanip>
 #include <cctype>
 #include "XO_Classes.h"
@@ -233,6 +233,148 @@ Move<char>* ReverseXO_UI::get_move(Player<char>* player) {
         x = rand() % player->get_board_ptr()->get_rows();
         y = rand() % player->get_board_ptr()->get_columns();
         cout << "Computer plays : \n";
+    }
+    return new Move<char>(x, y, player->get_symbol());
+}
+
+ObstacleXO_Board::ObstacleXO_Board() : Board(6, 6) {
+    // Initialize all cells as empty
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+}
+
+bool ObstacleXO_Board::update_board(Move<char>* move) {
+    int x = move->get_x();
+    int y = move->get_y();
+    char mark = move->get_symbol();
+
+    // Check if coordinates are valid and cell is empty (not obstacle)
+    if (x < 0 || x >= rows || y < 0 || y >= columns ||
+        board[x][y] != blank_symbol) {
+        return false;
+    }
+
+    n_moves++;
+    board[x][y] = toupper(mark);
+
+    // After both players have moved (even number of moves), add obstacles
+    if (n_moves % 2 == 0) {
+        round_count++;
+        add_random_obstacles();
+    }
+
+    return true;
+}
+
+void ObstacleXO_Board::add_random_obstacles() {
+    int obstacles_added = 0;
+    int max_attempts = 20; // Prevent infinite loop
+
+    while (obstacles_added < 2 && max_attempts-- > 0) {
+        int x = rand() % rows;
+        int y = rand() % columns;
+
+        // Only add obstacle if cell is empty
+        if (board[x][y] == blank_symbol) {
+            board[x][y] = obstacle_symbol;
+            obstacles_added++;
+        }
+    }
+}
+
+bool ObstacleXO_Board::is_win(Player<char>* player) {
+    char symbol = player->get_symbol();
+    return has_four_in_row(symbol);
+}
+
+bool ObstacleXO_Board::has_four_in_row(char symbol) {
+    // Check horizontal lines
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j <= columns - 4; ++j) {
+            if (board[i][j] == symbol && board[i][j + 1] == symbol &&
+                board[i][j + 2] == symbol && board[i][j + 3] == symbol) {
+                return true;
+            }
+        }
+    }
+
+    // Check vertical lines
+    for (int j = 0; j < columns; ++j) {
+        for (int i = 0; i <= rows - 4; ++i) {
+            if (board[i][j] == symbol && board[i + 1][j] == symbol &&
+                board[i + 2][j] == symbol && board[i + 3][j] == symbol) {
+                return true;
+            }
+        }
+    }
+
+    // Check main diagonals (top-left to bottom-right)
+    for (int i = 0; i <= rows - 4; ++i) {
+        for (int j = 0; j <= columns - 4; ++j) {
+            if (board[i][j] == symbol && board[i + 1][j + 1] == symbol &&
+                board[i + 2][j + 2] == symbol && board[i + 3][j + 3] == symbol) {
+                return true;
+            }
+        }
+    }
+
+    // Check anti-diagonals (top-right to bottom-left)
+    for (int i = 0; i <= rows - 4; ++i) {
+        for (int j = 3; j < columns; ++j) {
+            if (board[i][j] == symbol && board[i + 1][j - 1] == symbol &&
+                board[i + 2][j - 2] == symbol && board[i + 3][j - 3] == symbol) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+bool ObstacleXO_Board::is_draw(Player<char>* player) {
+    // Draw if all non-obstacle cells are filled and no one has won
+    int empty_cells = 0;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < columns; ++j) {
+            if (board[i][j] == blank_symbol) {
+                empty_cells++;
+            }
+        }
+    }
+    return (empty_cells == 0 && !is_win(player));
+}
+
+bool ObstacleXO_Board::game_is_over(Player<char>* player) {
+    return is_win(player) || is_draw(player);
+}
+
+ObstacleXO_UI::ObstacleXO_UI() :UI<char>("", 3) {}
+
+Player<char>* ObstacleXO_UI::create_player(string& name, char symbol, PlayerType type) {
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+    cout << "NOTE: Obstacles (#) appear every round and block cells!\n";
+    return new Player<char>(name, symbol, type);
+}
+
+Move<char>* ObstacleXO_UI::get_move(Player<char>* player) {
+    int x, y;
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\n" << player->get_name() << "'s turn (" << player->get_symbol() << ")\n";
+        cout << "Enter coordinates (row column, 0-5): ";
+        cin >> x >> y;
+    }
+    else if (player->get_type() == PlayerType::COMPUTER) {
+        // Computer AI - choose random empty cell (not obstacle)
+        ObstacleXO_Board* obstacle_board = dynamic_cast<ObstacleXO_Board*>(player->get_board_ptr());
+        do {
+            x = rand() % 6;
+            y = rand() % 6;
+        } while (obstacle_board->get_board_matrix()[x][y] != '.');
+
+        cout << "Computer plays at position (" << x << "," << y << ")\n";
     }
     return new Move<char>(x, y, player->get_symbol());
 }
