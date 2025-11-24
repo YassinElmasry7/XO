@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include <memory>
-
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h"
 
