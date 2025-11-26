@@ -2,13 +2,12 @@
 #include <string>
 #include <vector>
 #include <memory>
-
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h"
 
 using namespace std;
 
-void play_math_xo() {
+void play_math_xo(){
     cout << "\n=== Starting Mathematical X-O Game (15 Game) ===\n";
     UI<int>* game_ui = new MathXO_UI();
     Board<int>* math_board = new MathXO_Board();
