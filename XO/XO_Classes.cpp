@@ -230,10 +230,14 @@ Move<char>* ReverseXO_UI::get_move(Player<char>* player) {
         cin >> x >> y;
     }
     else if (player->get_type() == PlayerType::COMPUTER) {
-        x = rand() % player->get_board_ptr()->get_rows();
-        y = rand() % player->get_board_ptr()->get_columns();
+        ReverseXO_Board* reverse_board = dynamic_cast<ReverseXO_Board*>(player->get_board_ptr());
+        do {
+            x = rand() % player->get_board_ptr()->get_rows();
+            y = rand() % player->get_board_ptr()->get_columns();
+        } while (reverse_board->get_board_matrix()[x][y] != '.');
+
+        cout << "Computer plays at position (" << x << "," << y << ")\n";
     }
-    cout << "Computer plays at position (" << x << "," << y << ")\n";
 
     return new Move<char>(x, y, player->get_symbol());
 }
