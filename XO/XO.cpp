@@ -51,7 +51,36 @@ void play_obstacle_xo() {
     delete[] players;
     delete game_ui;
 }
+void play_five_x_five() {
+    cout << "\n=== Starting 5x5 Tic Tac Toe ===\n";
+    UI<char>* game_ui = new FiveXFive_UI();
+    Board<char>* five_board = new FiveXFive_Board();
+    Player<char>** players = game_ui->setup_players();
 
+    GameManager<char> game(five_board, players, game_ui);
+    game.run();
+
+    
+    FiveXFive_Board* final_board = dynamic_cast<FiveXFive_Board*>(five_board);
+    int scoreX = final_board->get_player_score('X');
+    int scoreO = final_board->get_player_score('O');
+
+    cout << "\n=== FINAL SCORES ===\n";
+    cout << players[0]->get_name() << " (X): " << scoreX << " three-in-a-row sequences\n";
+    cout << players[1]->get_name() << " (O): " << scoreO << " three-in-a-row sequences\n";
+
+    if (scoreX > scoreO)
+        cout << players[0]->get_name() << " WINS!\n";
+    else if (scoreO > scoreX)
+        cout << players[1]->get_name() << " WINS!\n";
+    else
+        cout << "IT'S A TIE!\n";
+
+    delete five_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
 int main() {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -65,9 +94,10 @@ int main() {
         cout << "1. Mathematical X-O (15 Game) \n";
         cout << "2. Reverse X-O \n";
         cout << "3. Obstacle X-O \n";
-        cout << "4. Exit \n";
+        cout << "4. 5x5 Tic Tac Toe \n";
+		cout << "5. Exit \n";
         cout << "===================================== \n";
-        cout << "Enter your choice (1-4): ";
+        cout << "Enter your choice (1-5): ";
 
         cin >> choice;
 
@@ -82,6 +112,8 @@ int main() {
             play_obstacle_xo();
             break;
         case 4:
+			play_five_x_five();
+        case 5:
             cout << "Thank you for playing!\n";
             break;
         default:
@@ -89,7 +121,7 @@ int main() {
             break;
         }
 
-    } while (choice != 4);
+    } while (choice != 5);
 
     return 0;
 }

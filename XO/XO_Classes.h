@@ -55,6 +55,31 @@ public:
 
     int get_round_count() const { return round_count; }
 };
+class FiveXFive_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+
+    int count_three_in_row(char symbol);
+    bool check_three_in_direction(int x, int y, int dx, int dy, char symbol);
+
+public:
+    FiveXFive_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    int get_player_score(char symbol);
+};
+
+class FiveXFive_UI : public UI<char> {
+public:
+    FiveXFive_UI();
+    ~FiveXFive_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
+};
 
 class MathXO_UI : public UI<int> {
 public:

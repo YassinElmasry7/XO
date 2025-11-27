@@ -367,3 +367,95 @@ Move<char>* ObstacleXO_UI::get_move(Player<char>* player) {
     }
     return new Move<char>(x, y, player->get_symbol());
 }
+FiveXFive_Board::FiveXFive_Board() : Board(5, 5) {
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+}
+
+bool FiveXFive_Board::update_board(Move<char>* move) {
+    int x = move->get_x();
+    int y = move->get_y();
+    char symbol = move->get_symbol();
+
+    if (x < 0 || x >= rows || y < 0 || y >= columns || board[x][y] != blank_symbol) {
+        return false;
+    }
+
+    n_moves++;
+    board[x][y] = toupper(symbol);
+    return true;
+}
+
+int FiveXFive_Board::count_three_in_row(char symbol) {
+    int count = 0;
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+           
+            if (j <= columns - 3) {
+                if (board[i][j] == symbol && board[i][j + 1] == symbol && board[i][j + 2] == symbol)
+                    count++;
+            }
+            
+            if (i <= rows - 3) {
+                if (board[i][j] == symbol && board[i + 1][j] == symbol && board[i + 2][j] == symbol)
+                    count++;
+            }
+         
+            if (i <= rows - 3 && j <= columns - 3) {
+                if (board[i][j] == symbol && board[i + 1][j + 1] == symbol && board[i + 2][j + 2] == symbol)
+                    count++;
+            }
+      
+            if (i <= rows - 3 && j >= 2) {
+                if (board[i][j] == symbol && board[i + 1][j - 1] == symbol && board[i + 2][j - 2] == symbol)
+                    count++;
+            }
+        }
+    }
+    return count;
+}
+
+bool FiveXFive_Board::is_win(Player<char>* player) {
+    return (n_moves == 24); 
+}
+
+bool FiveXFive_Board::is_draw(Player<char>* player) {
+    return (n_moves == 24);
+}
+
+bool FiveXFive_Board::game_is_over(Player<char>* player) {
+    return (n_moves == 24);
+}
+
+int FiveXFive_Board::get_player_score(char symbol) {
+    return count_three_in_row(symbol);
+}
+
+FiveXFive_UI::FiveXFive_UI() : UI<char>("", 3) {}
+
+Player<char>* FiveXFive_UI::create_player(string& name, char symbol, PlayerType type) {
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+    cout << "NOTE: Game ends when board is full. Player with most 3-in-a-row sequences wins!\n";
+    return new Player<char>(name, symbol, type);
+}
+
+Move<char>* FiveXFive_UI::get_move(Player<char>* player) {
+    int x, y;
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\n" << player->get_name() << "'s turn (" << player->get_symbol() << ")\n";
+        cout << "Enter coordinates (row column, 0-4): ";
+        cin >> x >> y;
+    }
+    else if (player->get_type() == PlayerType::COMPUTER) {
+        do {
+            x = rand() % 5;
+            y = rand() % 5;
+        } while (dynamic_cast<FiveXFive_Board*>(player->get_board_ptr())->get_board_matrix()[x][y] != '.');
+        cout << "Computer plays at position (" << x << "," << y << ")\n";
+    }
+    return new Move<char>(x, y, player->get_symbol());
+}
