@@ -60,7 +60,6 @@ void play_five_x_five() {
     GameManager<char> game(five_board, players, game_ui);
     game.run();
 
-    
     FiveXFive_Board* final_board = dynamic_cast<FiveXFive_Board*>(five_board);
     int scoreX = final_board->get_player_score('X');
     int scoreO = final_board->get_player_score('O');
@@ -69,18 +68,12 @@ void play_five_x_five() {
     cout << players[0]->get_name() << " (X): " << scoreX << " three-in-a-row sequences\n";
     cout << players[1]->get_name() << " (O): " << scoreO << " three-in-a-row sequences\n";
 
-    if (scoreX > scoreO)
-        cout << players[0]->get_name() << " WINS!\n";
-    else if (scoreO > scoreX)
-        cout << players[1]->get_name() << " WINS!\n";
-    else
-        cout << "IT'S A TIE!\n";
-
     delete five_board;
     for (int i = 0; i < 2; ++i) delete players[i];
     delete[] players;
     delete game_ui;
 }
+
 int main() {
 
     srand(static_cast<unsigned int>(time(0)));

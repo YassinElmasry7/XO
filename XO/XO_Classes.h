@@ -55,12 +55,16 @@ public:
 
     int get_round_count() const { return round_count; }
 };
+
 class FiveXFive_Board : public Board<char> {
 private:
     char blank_symbol = '.';
+    int final_scoreX = 0;
+    int final_scoreO = 0;
 
     int count_three_in_row(char symbol);
-    bool check_three_in_direction(int x, int y, int dx, int dy, char symbol);
+
+    void calculate_final_scores();
 
 public:
     FiveXFive_Board();

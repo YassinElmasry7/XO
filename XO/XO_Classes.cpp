@@ -152,7 +152,7 @@ vector<int> MathXO_Board::get_available_numbers(Player<int>* player)
     }
 }
 
-MathXO_UI::MathXO_UI() : UI<int>("Welcome to Mathematical X-O Game (15 Game)", 3) {}
+MathXO_UI::MathXO_UI() : UI<int>("", 3) {}
 
 Player<int>* MathXO_UI::create_player(string& name, int symbol, PlayerType type)
 {
@@ -213,7 +213,7 @@ Player<int>** MathXO_UI::setup_players() {
     return players;
 }
 
-ReverseXO_UI::ReverseXO_UI() : UI<char>("Welcome to Reverse X-O Game", 3) {}
+ReverseXO_UI::ReverseXO_UI() : UI<char>("", 3) {}
 
 Player<char>* ReverseXO_UI::create_player(string& name, char symbol, PlayerType type) {
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
@@ -339,7 +339,7 @@ bool ObstacleXO_Board::game_is_over(Player<char>* player) {
     return is_win(player) || is_draw(player);
 }
 
-ObstacleXO_UI::ObstacleXO_UI() : UI<char>("Welcome to Obstacle X-O Game", 3) {}
+ObstacleXO_UI::ObstacleXO_UI() : UI<char>("", 3) {}
 
 Player<char>* ObstacleXO_UI::create_player(string& name, char symbol, PlayerType type) {
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
@@ -367,6 +367,7 @@ Move<char>* ObstacleXO_UI::get_move(Player<char>* player) {
     }
     return new Move<char>(x, y, player->get_symbol());
 }
+
 FiveXFive_Board::FiveXFive_Board() : Board(5, 5) {
     for (auto& row : board)
         for (auto& cell : row)
@@ -417,12 +418,31 @@ int FiveXFive_Board::count_three_in_row(char symbol) {
     return count;
 }
 
+void FiveXFive_Board::calculate_final_scores() {
+    if (final_scoreX == 0) { 
+        final_scoreX = count_three_in_row('X');
+        final_scoreO = count_three_in_row('O');
+    }
+}
+
 bool FiveXFive_Board::is_win(Player<char>* player) {
-    return (n_moves == 24); 
+    if (n_moves < 24) return false;
+
+    calculate_final_scores();
+
+    if (player->get_symbol() == 'X') {
+        return final_scoreX > final_scoreO;
+    }
+    else {
+        return final_scoreO > final_scoreX;
+    }
 }
 
 bool FiveXFive_Board::is_draw(Player<char>* player) {
-    return (n_moves == 24);
+    if (n_moves < 24) return false;
+
+    calculate_final_scores();
+    return final_scoreX == final_scoreO;
 }
 
 bool FiveXFive_Board::game_is_over(Player<char>* player) {
@@ -430,7 +450,8 @@ bool FiveXFive_Board::game_is_over(Player<char>* player) {
 }
 
 int FiveXFive_Board::get_player_score(char symbol) {
-    return count_three_in_row(symbol);
+    calculate_final_scores();
+    return (symbol == 'X') ? final_scoreX : final_scoreO;
 }
 
 FiveXFive_UI::FiveXFive_UI() : UI<char>("", 3) {}
