@@ -480,3 +480,260 @@ Move<char>* FiveXFive_UI::get_move(Player<char>* player) {
     }
     return new Move<char>(x, y, player->get_symbol());
 }
+
+FourXFour_Board::FourXFour_Board() : Board(4, 4) {
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+
+    initializeStartingPositions();
+}
+
+void FourXFour_Board::initializeStartingPositions() {
+
+    board[0][0] = 'X'; board[0][1] = 'O'; board[0][2] = 'X'; board[0][3] = 'O';
+    board[3][0] = 'O'; board[3][1] = 'X'; board[3][2] = 'O'; board[3][3] = 'X';
+    playerX_pieces = { {0,0}, {0,2}, {3,1}, {3,3} };
+    playerO_pieces = { {0,1}, {0,3}, {3,0}, {3,2} };
+}
+
+bool FourXFour_Board::isAdjacent(int from_x, int from_y, int to_x, int to_y) {
+
+    int dx = abs(from_x - to_x);
+    int dy = abs(from_y - to_y);
+    return (dx == 1 && dy == 0) || (dx == 0 && dy == 1);
+}
+
+bool FourXFour_Board::isValidMove(int from_x, int from_y, int to_x, int to_y, char symbol) {
+
+    if (from_x < 0 || from_x >= rows || from_y < 0 || from_y >= columns ||
+        to_x < 0 || to_x >= rows || to_y < 0 || to_y >= columns) {
+        return false;
+    }
+
+    if (board[from_x][from_y] != symbol) {
+        return false;
+    }
+
+    if (board[to_x][to_y] != blank_symbol) {
+        return false;
+    }
+
+    if (!isAdjacent(from_x, from_y, to_x, to_y)) {
+        return false;
+    }
+
+    return true;
+}
+
+bool FourXFour_Board::update_board(Move<char>* move) {
+    int combined_x = move->get_x();
+    int combined_y = move->get_y();
+    char symbol = move->get_symbol();
+
+
+    int from_x = combined_x / 10;
+    int to_x = combined_x % 10;
+    int from_y = combined_y / 10;
+    int to_y = combined_y % 10;
+
+
+    if (!isValidMove(from_x, from_y, to_x, to_y, symbol)) {
+        return false;
+    }
+
+    board[from_x][from_y] = blank_symbol;
+    board[to_x][to_y] = symbol;
+    n_moves++;
+
+    if (symbol == 'X') {
+        for (auto& piece : playerX_pieces) {
+            if (piece.first == from_x && piece.second == from_y) {
+                piece.first = to_x;
+                piece.second = to_y;
+                break;
+            }
+        }
+    }
+    else {
+        for (auto& piece : playerO_pieces) {
+            if (piece.first == from_x && piece.second == from_y) {
+                piece.first = to_x;
+                piece.second = to_y;
+                break;
+            }
+        }
+    }
+
+    return true;
+}
+
+bool FourXFour_Board::has_three_in_row(char symbol) {
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j <= columns - 3; j++) {
+            if (board[i][j] == symbol && board[i][j + 1] == symbol && board[i][j + 2] == symbol)
+                return true;
+        }
+    }
+
+    for (int j = 0; j < columns; j++) {
+        for (int i = 0; i <= rows - 3; i++) {
+            if (board[i][j] == symbol && board[i + 1][j] == symbol && board[i + 2][j] == symbol)
+                return true;
+        }
+    }
+
+    for (int i = 0; i <= rows - 3; i++) {
+        for (int j = 0; j <= columns - 3; j++) {
+            if (board[i][j] == symbol && board[i + 1][j + 1] == symbol && board[i + 2][j + 2] == symbol)
+                return true;
+        }
+    }
+
+    for (int i = 0; i <= rows - 3; i++) {
+        for (int j = 2; j < columns; j++) {
+            if (board[i][j] == symbol && board[i + 1][j - 1] == symbol && board[i + 2][j - 2] == symbol)
+                return true;
+        }
+    }
+
+    return false;
+}
+
+bool FourXFour_Board::is_win(Player<char>* player) {
+    return has_three_in_row(player->get_symbol());
+}
+
+bool FourXFour_Board::is_draw(Player<char>* player) {
+
+    return n_moves > 50;
+}
+
+bool FourXFour_Board::game_is_over(Player<char>* player) {
+    return is_win(player) || is_draw(player);
+}
+
+vector<pair<int, int>> FourXFour_Board::get_player_pieces(char symbol) {
+    vector<pair<int, int>> pieces;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            if (board[i][j] == symbol) {
+                pieces.push_back({ i, j });
+            }
+        }
+    }
+    return pieces;
+}
+
+FourXFour_UI::FourXFour_UI() : UI<char>("", 3) {}
+
+Player<char>* FourXFour_UI::create_player(string& name, char symbol, PlayerType type) {
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+    cout << "NOTE: Move your pieces to create three-in-a-row! Only horizontal/vertical moves allowed.\n";
+    return new Player<char>(name, symbol, type);
+}
+
+void FourXFour_UI::display_board_matrix(const vector<vector<char>>& matrix) const {
+    if (matrix.empty() || matrix[0].empty()) return;
+
+    int rows = matrix.size();
+    int cols = matrix[0].size();
+
+    cout << "\n    ";
+    for (int j = 0; j < cols; ++j)
+        cout << setw(cell_width + 1) << j;
+    cout << "\n   " << string((cell_width + 2) * cols, '-') << "\n";
+
+    for (int i = 0; i < rows; ++i) {
+        cout << setw(2) << i << " |";
+        for (int j = 0; j < cols; ++j)
+            cout << setw(cell_width) << matrix[i][j] << " |";
+        cout << "\n   " << string((cell_width + 2) * cols, '-') << "\n";
+    }
+    cout << endl;
+}
+
+Move<char>* FourXFour_UI::get_move(Player<char>* player) {
+    FourXFour_Board* four_board = dynamic_cast<FourXFour_Board*>(player->get_board_ptr());
+    char symbol = player->get_symbol();
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\n" << player->get_name() << "'s turn (" << symbol << ")\n";
+
+        vector<pair<int, int>> pieces = four_board->get_player_pieces(symbol);
+
+        cout << "Your pieces are at: ";
+        for (auto& piece : pieces) {
+            cout << "(" << piece.first << "," << piece.second << ") ";
+        }
+        cout << endl;
+
+        int from_x, from_y, to_x, to_y;
+
+        cout << "Enter source coordinates (row column) of piece to move: ";
+        cin >> from_x >> from_y;
+
+        cout << "Enter destination coordinates (row column): ";
+        cin >> to_x >> to_y;
+
+        if (from_x < 0 || from_x >= 4 || from_y < 0 || from_y >= 4 ||
+            to_x < 0 || to_x >= 4 || to_y < 0 || to_y >= 4) {
+            cout << "Invalid coordinates! Please enter values between 0-3.\n";
+            return get_move(player);
+        }
+
+        int dx = abs(from_x - to_x);
+        int dy = abs(from_y - to_y);
+
+        if (!((dx == 1 && dy == 0) || (dx == 0 && dy == 1))) {
+            cout << "Invalid move! You can only move to adjacent cells (horizontal or vertical).\n";
+            return get_move(player);
+        }
+
+        if (four_board->get_board_matrix()[to_x][to_y] != '.') {
+            cout << "Destination cell is not empty!\n";
+            return get_move(player);
+        }
+
+        if (four_board->get_board_matrix()[from_x][from_y] != symbol) {
+            cout << "You don't have a piece at the source location!\n";
+            return get_move(player);
+        }
+
+
+        return new Move<char>(from_x * 10 + to_x, from_y * 10 + to_y, symbol);
+
+    }
+    else if (player->get_type() == PlayerType::COMPUTER) {
+
+        vector<pair<int, int>> pieces = four_board->get_player_pieces(symbol);
+
+        for (int attempts = 0; attempts < 100; attempts++) {
+            int piece_idx = rand() % pieces.size();
+            int from_x = pieces[piece_idx].first;
+            int from_y = pieces[piece_idx].second;
+
+
+            int directions[4][2] = { {0,1}, {1,0}, {0,-1}, {-1,0} };
+
+            for (int i = 0; i < 4; i++) {
+                int to_x = from_x + directions[i][0];
+                int to_y = from_y + directions[i][1];
+
+                if (to_x >= 0 && to_x < 4 && to_y >= 0 && to_y < 4 &&
+                    four_board->get_board_matrix()[to_x][to_y] == '.') {
+                    cout << "Computer moves piece from (" << from_x << "," << from_y
+                        << ") to (" << to_x << "," << to_y << ")\n";
+                    return new Move<char>(from_x * 10 + to_x, from_y * 10 + to_y, symbol);
+                }
+            }
+        }
+
+
+        return new Move<char>(0, 0, symbol);
+    }
+
+    return new Move<char>(0, 0, symbol);
+}

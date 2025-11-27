@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <cstdlib>
+#include <ctime>
 #include "BoardGame_Classes.h"
 #include "XO_Classes.h"
 
@@ -74,6 +76,21 @@ void play_five_x_five() {
     delete game_ui;
 }
 
+void play_four_x_four() {
+    cout << "\n=== Starting 4x4 Tic Tac Toe ===\n";
+    UI<char>* game_ui = new FourXFour_UI();
+    Board<char>* four_board = new FourXFour_Board();
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> game(four_board, players, game_ui);
+    game.run();
+
+    delete four_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
+
 int main() {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -88,9 +105,10 @@ int main() {
         cout << "2. Reverse X-O \n";
         cout << "3. Obstacle X-O \n";
         cout << "4. 5x5 Tic Tac Toe \n";
-		cout << "5. Exit \n";
+		cout << "5. 4x4 Tic Tac Toe \n";
+		cout << "6. Exit \n";
         cout << "===================================== \n";
-        cout << "Enter your choice (1-5): ";
+        cout << "Enter your choice (1-6): ";
 
         cin >> choice;
 
@@ -106,7 +124,11 @@ int main() {
             break;
         case 4:
 			play_five_x_five();
+			break;
         case 5:
+            play_four_x_four();
+			break;
+        case 6:
             cout << "Thank you for playing!\n";
             break;
         default:
@@ -114,7 +136,7 @@ int main() {
             break;
         }
 
-    } while (choice != 5);
+    } while (choice != 6);
 
     return 0;
 }
