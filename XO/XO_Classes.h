@@ -77,12 +77,43 @@ public:
     int get_player_score(char symbol);
 };
 
-class FiveXFive_UI : public UI<char> {
+class FourXFour_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    vector<pair<int, int>> playerX_pieces;
+    vector<pair<int, int>> playerO_pieces;
+
+    bool isValidMove(int from_x, int from_y, int to_x, int to_y, char symbol);
+    bool isAdjacent(int from_x, int from_y, int to_x, int to_y);
+    void initializeStartingPositions();
+
 public:
-    FiveXFive_UI();
-    ~FiveXFive_UI() {};
-    Player<char>* create_player(string& name, char symbol, PlayerType type);
-    virtual Move<char>* get_move(Player<char>* player);
+    FourXFour_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    vector<pair<int, int>> get_player_pieces(char symbol);
+    bool has_three_in_row(char symbol);
+};
+
+class ConnectFour_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+
+public:
+    ConnectFour_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    bool is_column_full(int col);
+    int get_lowest_empty_row(int col);
+    bool check_four_in_line(char symbol);
 };
 
 class MathXO_UI : public UI<int> {
@@ -110,26 +141,12 @@ public:
     virtual Move<char>* get_move(Player<char>* player);
 };
 
-class FourXFour_Board : public Board<char> {
-private:
-    char blank_symbol = '.';
-    vector<pair<int, int>> playerX_pieces;
-    vector<pair<int, int>> playerO_pieces;
-
-    bool isValidMove(int from_x, int from_y, int to_x, int to_y, char symbol);
-    bool isAdjacent(int from_x, int from_y, int to_x, int to_y);
-    void initializeStartingPositions();
-
+class FiveXFive_UI : public UI<char> {
 public:
-    FourXFour_Board();
-    bool update_board(Move<char>* move);
-    bool is_win(Player<char>* player);
-    bool is_lose(Player<char>* player) { return false; }
-    bool is_draw(Player<char>* player);
-    bool game_is_over(Player<char>* player);
-
-    vector<pair<int, int>> get_player_pieces(char symbol);
-    bool has_three_in_row(char symbol);
+    FiveXFive_UI();
+    ~FiveXFive_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
 };
 
 class FourXFour_UI : public UI<char> {
@@ -139,6 +156,14 @@ public:
     Player<char>* create_player(string& name, char symbol, PlayerType type);
     virtual Move<char>* get_move(Player<char>* player);
     virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
+};
+
+class ConnectFour_UI : public UI<char> {
+public:
+	ConnectFour_UI();
+	~ConnectFour_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
 };
 
 #endif // XO_CLASSES_H

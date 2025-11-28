@@ -13,7 +13,6 @@ MathXO_Board::MathXO_Board() : Board(3, 3){
     available_evens = { 2, 4, 6, 8 };
 }
 
-
 ReverseXO_Board::ReverseXO_Board() : Board(3, 3)
 {
     for (auto& row : board)
@@ -344,7 +343,6 @@ ObstacleXO_UI::ObstacleXO_UI() : UI<char>("", 3) {}
 Player<char>* ObstacleXO_UI::create_player(string& name, char symbol, PlayerType type) {
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
         << " player: " << name << " (" << symbol << ")\n";
-    cout << "NOTE: Obstacles (#) appear every round and block cells!\n";
     return new Player<char>(name, symbol, type);
 }
 
@@ -459,7 +457,6 @@ FiveXFive_UI::FiveXFive_UI() : UI<char>("", 3) {}
 Player<char>* FiveXFive_UI::create_player(string& name, char symbol, PlayerType type) {
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
         << " player: " << name << " (" << symbol << ")\n";
-    cout << "NOTE: Game ends when board is full. Player with most 3-in-a-row sequences wins!\n";
     return new Player<char>(name, symbol, type);
 }
 
@@ -631,7 +628,6 @@ FourXFour_UI::FourXFour_UI() : UI<char>("", 3) {}
 Player<char>* FourXFour_UI::create_player(string& name, char symbol, PlayerType type) {
     cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
         << " player: " << name << " (" << symbol << ")\n";
-    cout << "NOTE: Move your pieces to create three-in-a-row! Only horizontal/vertical moves allowed.\n";
     return new Player<char>(name, symbol, type);
 }
 
@@ -736,4 +732,148 @@ Move<char>* FourXFour_UI::get_move(Player<char>* player) {
     }
 
     return new Move<char>(0, 0, symbol);
+}
+
+ConnectFour_Board::ConnectFour_Board() : Board(6, 7) {
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+}
+
+bool ConnectFour_Board::update_board(Move<char>* move) {
+    int column = move->get_y();
+    char symbol = move->get_symbol();
+
+    if (column < 0 || column >= columns || is_column_full(column)) {
+        return false;
+    }
+
+    int row = get_lowest_empty_row(column);
+    if (row == -1) {
+        return false;
+    }
+
+    n_moves++;
+    board[row][column] = toupper(symbol);
+    return true;
+}
+
+bool ConnectFour_Board::is_column_full(int col) {
+    return board[0][col] != blank_symbol;
+}
+
+int ConnectFour_Board::get_lowest_empty_row(int col) {
+    for (int row = rows - 1; row >= 0; row--) {
+        if (board[row][col] == blank_symbol) {
+            return row;
+        }
+    }
+    return -1;
+}
+
+bool ConnectFour_Board::check_four_in_line(char symbol) {
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col <= columns - 4; col++) {
+            if (board[row][col] == symbol && board[row][col + 1] == symbol &&
+                board[row][col + 2] == symbol && board[row][col + 3] == symbol) {
+                return true;
+            }
+        }
+    }
+    for (int row = 0; row <= rows - 4; row++) {
+        for (int col = 0; col < columns; col++) {
+            if (board[row][col] == symbol &&board[row + 1][col] == symbol &&
+                board[row + 2][col] == symbol && board[row + 3][col] == symbol) {
+                return true;
+            }
+        }
+    }
+    for (int row = 0; row <= rows - 4; row++) {
+        for (int col = 0; col <= columns - 4; col++) {
+            if (board[row][col] == symbol &&board[row + 1][col + 1] == symbol &&
+                board[row + 2][col + 2] == symbol &&board[row + 3][col + 3] == symbol) {
+                return true;
+            }
+        }
+    }
+    for (int row = 0; row <= rows - 4; ++row) {
+        for (int col = 3; col < columns; ++col) {
+            if (board[row][col] == symbol &&board[row + 1][col - 1] == symbol &&
+                board[row + 2][col - 2] == symbol &&board[row + 3][col - 3] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool ConnectFour_Board::is_win(Player<char>* player) {
+    return check_four_in_line(player->get_symbol());
+}
+
+bool ConnectFour_Board::is_draw(Player<char>* player) {
+    for (int col = 0; col < columns; col++) {
+        if (!is_column_full(col)) {
+            return false;
+        }
+    }
+    return !is_win(player);
+}
+
+bool ConnectFour_Board::game_is_over(Player<char>* player) {
+    return is_win(player) || is_draw(player);
+}
+
+ConnectFour_UI::ConnectFour_UI() :UI<char>("", 3){}
+
+Player<char>* ConnectFour_UI::create_player(string& name, char symbol, PlayerType type) {
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+    return new Player<char>(name, symbol, type);
+}
+
+Move<char>* ConnectFour_UI::get_move(Player<char>* player) {
+    int col;
+    ConnectFour_Board* connect4_board = dynamic_cast<ConnectFour_Board*>(player->get_board_ptr());
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\n" << player->get_name() << "'s turn (" << player->get_symbol() << ")\n";
+        cout << "Available columns: ";
+        for (int c = 0; c < 7; ++c) {
+            if (!connect4_board->is_column_full(c)) {
+                cout << c << " ";
+            }
+        }
+        cout << endl;
+        cout << "Enter column number (0-6): ";
+        cin >> col;
+
+        if (col < 0 || col >= 7 || connect4_board->is_column_full(col)) {
+            cout << "Invalid column! Please choose an available column.\n";
+            return get_move(player);
+        }
+
+        int row = connect4_board->get_lowest_empty_row(col);
+        cout << "Placing piece at column " << col << ", row " << row << endl;
+
+    }
+    else if (player->get_type() == PlayerType::COMPUTER) {
+        vector<int> available_columns;
+        for (int c = 0; c < 7; ++c) {
+            if (!connect4_board->is_column_full(c)) {
+                available_columns.push_back(c);
+            }
+        }
+
+        if (available_columns.empty()) {
+            col = 0;
+        }
+        else {
+            col = available_columns[rand() % available_columns.size()];
+        }
+
+        int row = connect4_board->get_lowest_empty_row(col);
+        cout << "Computer plays at column " << col << endl;
+    }
+    return new Move<char>(0, col, player->get_symbol());
 }

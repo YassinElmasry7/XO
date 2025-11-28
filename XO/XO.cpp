@@ -91,6 +91,21 @@ void play_four_x_four() {
     delete game_ui;
 }
 
+void play_connect_four() {
+    cout << "\n=== Starting Connect Four ===\n";
+    UI<char>* game_ui = new ConnectFour_UI();
+    Board<char>* connect4_board = new ConnectFour_Board();
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> game(connect4_board, players, game_ui);
+    game.run();
+
+    delete connect4_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
+
 int main() {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -101,14 +116,15 @@ int main() {
         cout << "\n===================================== \n";
         cout << "        BOARD GAMES COLLECTION \n";
         cout << "===================================== \n";
-        cout << "1. Mathematical X-O (15 Game) \n";
+        cout << "1. Mathematical X-O \n";
         cout << "2. Reverse X-O \n";
         cout << "3. Obstacle X-O \n";
-        cout << "4. 5x5 Tic Tac Toe \n";
-		cout << "5. 4x4 Tic Tac Toe \n";
-		cout << "6. Exit \n";
+        cout << "4. 5x5 X-O \n";
+		cout << "5. 4x4 X-O \n";
+        cout << "6. Connect Four X-O\n";
+		cout << "7. Exit \n";
         cout << "===================================== \n";
-        cout << "Enter your choice (1-6): ";
+        cout << "Enter your choice (1-7): ";
 
         cin >> choice;
 
@@ -129,6 +145,9 @@ int main() {
             play_four_x_four();
 			break;
         case 6:
+            play_connect_four();
+            break;
+        case 7:
             cout << "Thank you for playing!\n";
             break;
         default:
@@ -136,7 +155,7 @@ int main() {
             break;
         }
 
-    } while (choice != 6);
+    } while (choice != 7);
 
     return 0;
 }
