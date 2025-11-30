@@ -877,3 +877,265 @@ Move<char>* ConnectFour_UI::get_move(Player<char>* player) {
     }
     return new Move<char>(0, col, player->get_symbol());
 }
+
+DiamondXO_Board::DiamondXO_Board() : Board(7, 7) {
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+    
+    valid_cells = vector<vector<bool>>(7, vector<bool>(7, false));
+    initialize_diamond_shape();
+}
+
+void DiamondXO_Board::initialize_diamond_shape() {
+    // Row 0
+    valid_cells[0][3] = true;
+    // Row 1
+    valid_cells[1][2] = true;
+    valid_cells[1][3] = true;
+    valid_cells[1][4] = true;
+    // Row 2
+    valid_cells[2][1] = true;
+    valid_cells[2][2] = true;
+    valid_cells[2][3] = true;
+    valid_cells[2][4] = true;
+    valid_cells[2][5] = true;
+    // Row 3
+    for (int j = 0; j < 7; j++) {
+        valid_cells[3][j] = true;
+    }
+    // Row 4
+    valid_cells[4][1] = true;
+    valid_cells[4][2] = true;
+    valid_cells[4][3] = true;
+    valid_cells[4][4] = true;
+    valid_cells[4][5] = true;
+    // Row 5
+    valid_cells[5][2] = true;
+    valid_cells[5][3] = true;
+    valid_cells[5][4] = true;
+    // Row 6
+    valid_cells[6][3] = true;
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 7; j++) {
+            if (!valid_cells[i][j]) {
+                board[i][j] = ' ';
+            }
+        }
+    }
+}
+
+bool DiamondXO_Board::is_valid_cell(int x, int y) const {
+    if (x < 0 || x >= 7 || y < 0 || y >= 7) return false;
+    return valid_cells[x][y];
+}
+
+bool DiamondXO_Board::update_board(Move<char>* move) {
+    int x = move->get_x();
+    int y = move->get_y();
+    char symbol = move->get_symbol();
+
+    if (!is_valid_cell(x, y) || board[x][y] != blank_symbol) {
+        return false;
+    }
+
+    n_moves++;
+    board[x][y] = toupper(symbol);
+    return true;
+}
+
+bool DiamondXO_Board::has_three_horizontal(char symbol) {
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j <= 4; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i, j+1) && is_valid_cell(i, j+2) &&
+                board[i][j] == symbol && board[i][j+1] == symbol && board[i][j+2] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+bool DiamondXO_Board::has_three_vertical(char symbol) {
+    for (int j = 0; j < 7; j++) {
+        for (int i = 0; i <= 4; i++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i+1, j) && is_valid_cell(i+2, j) &&
+                board[i][j] == symbol && board[i+1][j] == symbol && board[i+2][j] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+bool DiamondXO_Board::has_three_diagonal1(char symbol) {
+    for (int i = 0; i <= 4; i++) {
+        for (int j = 0; j <= 4; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i+1, j+1) && is_valid_cell(i+2, j+2) &&
+                board[i][j] == symbol && board[i+1][j+1] == symbol && board[i+2][j+2] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+bool DiamondXO_Board::has_three_diagonal2(char symbol) {
+    for (int i = 0; i <= 4; i++) {
+        for (int j = 2; j < 7; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i+1, j-1) && is_valid_cell(i+2, j-2) &&
+                board[i][j] == symbol && board[i+1][j-1] == symbol && board[i+2][j-2] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool DiamondXO_Board::has_four_horizontal(char symbol) {
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j <= 3; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i, j+1) && is_valid_cell(i, j+2) && is_valid_cell(i, j+3) &&
+                board[i][j] == symbol && board[i][j+1] == symbol && 
+                board[i][j+2] == symbol && board[i][j+3] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+bool DiamondXO_Board::has_four_vertical(char symbol) {
+    for (int j = 0; j < 7; j++) {
+        for (int i = 0; i <= 3; i++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i+1, j) && is_valid_cell(i+2, j) && is_valid_cell(i+3, j) &&
+                board[i][j] == symbol && board[i+1][j] == symbol && 
+                board[i+2][j] == symbol && board[i+3][j] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+bool DiamondXO_Board::has_four_diagonal1(char symbol) {
+    for (int i = 0; i <= 3; i++) {
+        for (int j = 0; j <= 3; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i+1, j+1) && is_valid_cell(i+2, j+2) && is_valid_cell(i+3, j+3) &&
+                board[i][j] == symbol && board[i+1][j+1] == symbol && 
+                board[i+2][j+2] == symbol && board[i+3][j+3] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+bool DiamondXO_Board::has_four_diagonal2(char symbol) {
+    for (int i = 0; i <= 3; i++) {
+        for (int j = 3; j < 7; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i+1, j-1) && is_valid_cell(i+2, j-2) && is_valid_cell(i+3, j-3) &&
+                board[i][j] == symbol && board[i+1][j-1] == symbol && 
+                board[i+2][j-2] == symbol && board[i+3][j-3] == symbol) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool DiamondXO_Board::is_win(Player<char>* player) {
+    char symbol = player->get_symbol();
+
+    // Check all combinations of different directions
+
+    if (has_three_horizontal(symbol) && has_four_vertical(symbol)) return true;
+    if (has_three_horizontal(symbol) && has_four_diagonal1(symbol)) return true;
+    if (has_three_horizontal(symbol) && has_four_diagonal2(symbol)) return true;
+    if (has_three_vertical(symbol) && has_four_horizontal(symbol)) return true;
+    if (has_three_vertical(symbol) && has_four_diagonal1(symbol)) return true;
+    if (has_three_vertical(symbol) && has_four_diagonal2(symbol)) return true;
+    if (has_three_diagonal1(symbol) && has_four_horizontal(symbol)) return true;
+    if (has_three_diagonal1(symbol) && has_four_vertical(symbol)) return true;
+    if (has_three_diagonal1(symbol) && has_four_diagonal2(symbol)) return true;
+    if (has_three_diagonal2(symbol) && has_four_horizontal(symbol)) return true;
+    if (has_three_diagonal2(symbol) && has_four_diagonal1(symbol)) return true;
+
+    return false;
+}
+
+bool DiamondXO_Board::is_draw(Player<char>* player) {
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 7; j++) {
+            if (valid_cells[i][j] && board[i][j] == blank_symbol) {
+                return false;
+            }
+        }
+    }
+    return !is_win(player);
+}
+
+bool DiamondXO_Board::game_is_over(Player<char>* player) {
+    return is_win(player) || is_draw(player);
+}
+
+DiamondXO_UI::DiamondXO_UI() : UI<char>("", 3) {}
+
+Player<char>* DiamondXO_UI::create_player(string& name, char symbol, PlayerType type) {
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+    return new Player<char>(name, symbol, type);
+}
+
+void DiamondXO_UI::display_board_matrix(const vector<vector<char>>& matrix) const {
+    cout << "       0   1   2   3   4   5   6\n";
+    cout << "      -----------------------------\n";
+
+    for (int i = 0; i < 7; ++i) {
+        cout << "   " << i << " |";
+        for (int j = 0; j < 7; ++j) {
+            cout << " " << matrix[i][j] << " |";
+        }
+        cout << "\n";
+
+        if (i < 6) {
+            cout << "      -----------------------------\n";
+        }
+    }
+    cout << "      -----------------------------\n\n";
+}
+
+Move<char>* DiamondXO_UI::get_move(Player<char>* player) {
+    int x, y;
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\n" << player->get_name() << "'s turn (" << player->get_symbol() << ")\n";
+        cout << "Enter coordinates (row column, 0-6): ";
+        cin >> x >> y;
+        DiamondXO_Board* diamond_board = dynamic_cast<DiamondXO_Board*>(player->get_board_ptr());
+
+        if (!diamond_board->is_valid_cell(x, y)) {
+            cout << "Invalid position! That cell is not part of the diamond.\n";
+            cout << "Please choose a valid diamond position.\n";
+            return get_move(player);
+        }
+    }
+    else if (player->get_type() == PlayerType::COMPUTER) {
+        DiamondXO_Board* diamond_board = dynamic_cast<DiamondXO_Board*>(player->get_board_ptr());
+        vector<pair<int, int>> valid_moves;
+
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 7; j++) {
+                if (diamond_board->is_valid_cell(i, j) &&
+                    diamond_board->get_board_matrix()[i][j] == '.') {
+                    valid_moves.push_back({ i, j });
+                }
+            }
+        }
+
+        if (!valid_moves.empty()) {
+            auto move = valid_moves[rand() % valid_moves.size()];
+            x = move.first;
+            y = move.second;
+            cout << "Computer plays at position (" << x << "," << y << ")\n";
+        }
+        else {
+            x = y = 0;
+        }
+    }
+    return new Move<char>(x, y, player->get_symbol());
+}

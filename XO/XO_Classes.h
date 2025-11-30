@@ -116,6 +116,35 @@ public:
     bool check_four_in_line(char symbol);
 };
 
+class DiamondXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    vector<vector<bool>> valid_cells;
+
+    bool has_three_horizontal(char symbol);
+    bool has_three_vertical(char symbol);
+    bool has_three_diagonal1(char symbol); // top-left to bottom-right
+    bool has_three_diagonal2(char symbol); // top-right to bottom-left
+
+    bool has_four_horizontal(char symbol);
+    bool has_four_vertical(char symbol);
+    bool has_four_diagonal1(char symbol); // top-left to bottom-right
+    bool has_four_diagonal2(char symbol); // top-right to bottom-left
+
+    void initialize_diamond_shape();
+
+public:
+    DiamondXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    bool is_valid_cell(int x, int y) const;
+    int get_diamond_size() const { return 7; }
+};
+
 class MathXO_UI : public UI<int> {
 public:
     MathXO_UI();
@@ -164,6 +193,15 @@ public:
 	~ConnectFour_UI() {};
     Player<char>* create_player(string& name, char symbol, PlayerType type);
     virtual Move<char>* get_move(Player<char>* player);
+};
+
+class DiamondXO_UI : public UI<char> {
+public:
+    DiamondXO_UI();
+    ~DiamondXO_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
+    virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
 };
 
 #endif // XO_CLASSES_H
