@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 #include <memory>
 #include <cstdlib>
 #include <ctime>
@@ -121,6 +122,20 @@ void play_diamond_xo() {
     delete[] players;
 	delete game_ui;
 }
+void play_word_xo() {
+    cout << "\n=== Starting Word Tic-Tac-Toe ===\n";
+    UI<char>* game_ui = new WordXO_UI();
+    Board<char>* word_board = new WordXO_Board();
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> game(word_board, players, game_ui);
+    game.run();
+
+    delete word_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
 int main() {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -138,7 +153,8 @@ int main() {
 		cout << "5. 4x4 X-O \n";
         cout << "6. Connect Four X-O\n";
 		cout << "7. Diamond X-O \n";
-		cout << "8. Exit \n";
+        cout << "8. Word Tic-Tac-Toe \n";
+		cout << "9. Exit \n";
         cout << "===================================== \n";
         cout << "Enter your choice (1-8): ";
 
@@ -167,6 +183,9 @@ int main() {
             play_diamond_xo();
 			break;
         case 8:
+            play_word_xo();
+			break;
+        case 9:
             cout << "Thank you for playing!\n";
             break;
         default:
@@ -174,7 +193,7 @@ int main() {
             break;
         }
 
-    } while (choice != 8);
+    } while (choice != 9);
 
     return 0;
 }

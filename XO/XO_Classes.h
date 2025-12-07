@@ -3,6 +3,8 @@
 
 #include "BoardGame_Classes.h"
 #include <vector>
+#include <string>
+#include <unordered_set>
 #include <algorithm>
 using namespace std;
 
@@ -202,6 +204,31 @@ public:
     Player<char>* create_player(string& name, char symbol, PlayerType type);
     virtual Move<char>* get_move(Player<char>* player);
     virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
+};
+class WordXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    unordered_set<string> dictionary;
+
+    void load_dictionary(const string& filename);
+    bool is_valid_word(const string& word) const;
+    string get_cells_as_string(int x1, int y1, int x2, int y2, int x3, int y3) const;
+
+public:
+    WordXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+};
+
+class WordXO_UI : public UI<char> {
+public:
+    WordXO_UI();
+    ~WordXO_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
 };
 
 #endif // XO_CLASSES_H

@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <iomanip>
 #include <cctype>
+#include <fstream>
 #include "XO_Classes.h"
 
 using namespace std;
@@ -1138,4 +1139,149 @@ Move<char>* DiamondXO_UI::get_move(Player<char>* player) {
         }
     }
     return new Move<char>(x, y, player->get_symbol());
+}
+WordXO_Board::WordXO_Board() : Board(3, 3) {
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+    load_dictionary("dic.txt");
+}
+
+void WordXO_Board::load_dictionary(const string& filename) {
+    ifstream file(filename);
+    if (!file) {
+        cerr << "Error: Could not open dictionary file " << filename << endl;
+        return;
+    }
+    string word;
+    while (file >> word) {
+        if (word.length() == 3) {
+            dictionary.insert(word);
+        }
+    }
+    file.close();
+}
+
+bool WordXO_Board::is_valid_word(const string& word) const {
+    return dictionary.find(word) != dictionary.end();
+}
+
+string WordXO_Board::get_cells_as_string(int x1, int y1, int x2, int y2, int x3, int y3) const {
+    string result;
+    result += board[x1][y1];
+    result += board[x2][y2];
+    result += board[x3][y3];
+    return result;
+}
+
+bool WordXO_Board::update_board(Move<char>* move) {
+    int x = move->get_x();
+    int y = move->get_y();
+    char symbol = move->get_symbol();
+
+    if (x < 0 || x >= rows || y < 0 || y >= columns || board[x][y] != blank_symbol) {
+        return false;
+    }
+
+    n_moves++;
+    board[x][y] = toupper(symbol);
+    return true;
+}
+
+bool WordXO_Board::is_win(Player<char>* player) {
+    char symbol = player->get_symbol();
+
+    // Check rows
+    for (int i = 0; i < 3; ++i) {
+        if (board[i][0] != blank_symbol && board[i][1] != blank_symbol && board[i][2] != blank_symbol) {
+            string word = get_cells_as_string(i, 0, i, 1, i, 2);
+            if (is_valid_word(word)) return true;
+        }
+    }
+
+    // Check columns
+    for (int j = 0; j < 3; ++j) {
+        if (board[0][j] != blank_symbol && board[1][j] != blank_symbol && board[2][j] != blank_symbol) {
+            string word = get_cells_as_string(0, j, 1, j, 2, j);
+            if (is_valid_word(word)) return true;
+        }
+    }
+
+    // Check diagonal 1
+    if (board[0][0] != blank_symbol && board[1][1] != blank_symbol && board[2][2] != blank_symbol) {
+        string word = get_cells_as_string(0, 0, 1, 1, 2, 2);
+        if (is_valid_word(word)) return true;
+    }
+
+    // Check diagonal 2
+    if (board[0][2] != blank_symbol && board[1][1] != blank_symbol && board[2][0] != blank_symbol) {
+        string word = get_cells_as_string(0, 2, 1, 1, 2, 0);
+        if (is_valid_word(word)) return true;
+    }
+
+    return false;
+}
+
+bool WordXO_Board::is_draw(Player<char>* player) {
+    if (n_moves == 9 && !is_win(player)) {
+        return true;
+    }
+    return false;
+}
+
+bool WordXO_Board::game_is_over(Player<char>* player) {
+    return is_win(player) || is_draw(player);
+}
+
+WordXO_UI::WordXO_UI() : UI<char>("", 3) {}
+
+Player<char>* WordXO_UI::create_player(string& name, char symbol, PlayerType type) {
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+    return new Player<char>(name, symbol, type);
+}
+
+Move<char>* WordXO_UI::get_move(Player<char>* player) {
+    int x, y;
+    char letter;
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\n" << player->get_name() << "'s turn (" << player->get_symbol() << ")\n";
+        cout << "Enter coordinates (row column, 0-2): ";
+        cin >> x >> y;
+        cout << "Enter a letter (A-Z): ";
+        cin >> letter;
+        letter = toupper(letter);
+
+        if (letter < 'A' || letter > 'Z') {
+            cout << "Invalid letter! Please enter A-Z.\n";
+            return get_move(player);
+        }
+    }
+    else if (player->get_type() == PlayerType::COMPUTER) {
+        WordXO_Board* word_board = dynamic_cast<WordXO_Board*>(player->get_board_ptr());
+        vector<pair<int, int>> empty_cells;
+
+        for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+                if (word_board->get_board_matrix()[i][j] == '.') {
+                    empty_cells.push_back({ i, j });
+                }
+            }
+        }
+
+        if (!empty_cells.empty()) {
+            auto cell = empty_cells[rand() % empty_cells.size()];
+            x = cell.first;
+            y = cell.second;
+            letter = 'A' + rand() % 26;
+            cout << "Computer plays letter " << letter << " at position (" << x << "," << y << ")\n";
+        }
+        else {
+            x = y = 0;
+            letter = 'A';
+        }
+    }
+
+    return new Move<char>(x, y, letter);
 }
