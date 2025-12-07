@@ -136,6 +136,20 @@ void play_word_xo() {
     delete[] players;
     delete game_ui;
 }
+void play_pyramid_xo() {
+    cout << "\n=== Starting Pyramid Tic-Tac-Toe ===\n";
+    UI<char>* game_ui = new PyramidXO_UI();
+    Board<char>* pyramid_board = new PyramidXO_Board();
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> game(pyramid_board, players, game_ui);
+    game.run();
+
+    delete pyramid_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
 int main() {
 
     srand(static_cast<unsigned int>(time(0)));
@@ -154,9 +168,10 @@ int main() {
         cout << "6. Connect Four X-O\n";
 		cout << "7. Diamond X-O \n";
         cout << "8. Word Tic-Tac-Toe \n";
-		cout << "9. Exit \n";
+        cout << "9. Pyramid X-O \n";
+		cout << "10. Exit \n";
         cout << "===================================== \n";
-        cout << "Enter your choice (1-8): ";
+        cout << "Enter your choice (1-10): ";
 
         cin >> choice;
 
@@ -186,6 +201,9 @@ int main() {
             play_word_xo();
 			break;
         case 9:
+            play_pyramid_xo();
+			break;
+        case 10:
             cout << "Thank you for playing!\n";
             break;
         default:
@@ -193,7 +211,7 @@ int main() {
             break;
         }
 
-    } while (choice != 9);
+    } while (choice != 10);
 
     return 0;
 }

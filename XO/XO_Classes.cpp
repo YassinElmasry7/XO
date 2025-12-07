@@ -1285,3 +1285,200 @@ Move<char>* WordXO_UI::get_move(Player<char>* player) {
 
     return new Move<char>(x, y, letter);
 }
+// Pyramid Tic-Tac-Toe implementation
+
+PyramidXO_Board::PyramidXO_Board() : Board(4, 5) {
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+
+    valid_cells = vector<vector<bool>>(4, vector<bool>(5, false));
+    initialize_pyramid_shape();
+}
+
+void PyramidXO_Board::initialize_pyramid_shape() {
+    // Row 0 (top) - 1 cell
+    valid_cells[0][2] = true;
+
+    // Row 1 - 3 cells
+    valid_cells[1][1] = true;
+    valid_cells[1][2] = true;
+    valid_cells[1][3] = true;
+
+    // Row 2 - 3 cells (continuing the pyramid)
+    valid_cells[2][0] = true;
+    valid_cells[2][1] = true;
+    valid_cells[2][2] = true;
+    valid_cells[2][3] = true;
+    valid_cells[2][4] = true;
+
+    // Row 3 (bottom) - 5 cells
+    valid_cells[3][0] = true;
+    valid_cells[3][1] = true;
+    valid_cells[3][2] = true;
+    valid_cells[3][3] = true;
+    valid_cells[3][4] = true;
+
+    // Mark invalid cells with space
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (!valid_cells[i][j]) {
+                board[i][j] = ' ';
+            }
+        }
+    }
+}
+
+bool PyramidXO_Board::is_valid_cell(int x, int y) const {
+    if (x < 0 || x >= rows || y < 0 || y >= cols) return false;
+    return valid_cells[x][y];
+}
+
+bool PyramidXO_Board::update_board(Move<char>* move) {
+    int x = move->get_x();
+    int y = move->get_y();
+    char symbol = move->get_symbol();
+
+    if (!is_valid_cell(x, y) || board[x][y] != blank_symbol) {
+        return false;
+    }
+
+    n_moves++;
+    board[x][y] = toupper(symbol);
+    return true;
+}
+
+bool PyramidXO_Board::check_win(char symbol) {
+    // Check rows
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j <= 2; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i, j + 1) && is_valid_cell(i, j + 2) &&
+                board[i][j] == symbol && board[i][j + 1] == symbol && board[i][j + 2] == symbol) {
+                return true;
+            }
+        }
+    }
+
+    // Check columns
+    for (int j = 0; j < 5; j++) {
+        for (int i = 0; i <= 1; i++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i + 1, j) && is_valid_cell(i + 2, j) &&
+                board[i][j] == symbol && board[i + 1][j] == symbol && board[i + 2][j] == symbol) {
+                return true;
+            }
+        }
+    }
+
+    // Check diagonals (top-left to bottom-right)
+    for (int i = 0; i <= 1; i++) {
+        for (int j = 0; j <= 2; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i + 1, j + 1) && is_valid_cell(i + 2, j + 2) &&
+                board[i][j] == symbol && board[i + 1][j + 1] == symbol && board[i + 2][j + 2] == symbol) {
+                return true;
+            }
+        }
+    }
+
+    // Check diagonals (top-right to bottom-left)
+    for (int i = 0; i <= 1; i++) {
+        for (int j = 2; j < 5; j++) {
+            if (is_valid_cell(i, j) && is_valid_cell(i + 1, j - 1) && is_valid_cell(i + 2, j - 2) &&
+                board[i][j] == symbol && board[i + 1][j - 1] == symbol && board[i + 2][j - 2] == symbol) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+bool PyramidXO_Board::is_win(Player<char>* player) {
+    return check_win(player->get_symbol());
+}
+
+bool PyramidXO_Board::is_draw(Player<char>* player) {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (valid_cells[i][j] && board[i][j] == blank_symbol) {
+                return false;
+            }
+        }
+    }
+    return !is_win(player);
+}
+
+bool PyramidXO_Board::game_is_over(Player<char>* player) {
+    return is_win(player) || is_draw(player);
+}
+
+PyramidXO_UI::PyramidXO_UI() : UI<char>("", 3) {}
+
+Player<char>* PyramidXO_UI::create_player(string& name, char symbol, PlayerType type) {
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+        << " player: " << name << " (" << symbol << ")\n";
+    return new Player<char>(name, symbol, type);
+}
+
+void PyramidXO_UI::display_board_matrix(const vector<vector<char>>& matrix) const {
+    cout << "       0   1   2   3   4\n";
+    cout << "      -------------------\n";
+
+    for (int i = 0; i < 4; ++i) {
+        cout << "   " << i << " |";
+        for (int j = 0; j < 5; ++j) {
+            cout << " " << matrix[i][j] << " |";
+        }
+        cout << "\n";
+
+        if (i < 3) {
+            cout << "      -------------------\n";
+        }
+    }
+    cout << "      -------------------\n\n";
+}
+
+Move<char>* PyramidXO_UI::get_move(Player<char>* player) {
+    int x, y;
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\n" << player->get_name() << "'s turn (" << player->get_symbol() << ")\n";
+        cout << "Enter coordinates (row column): ";
+        cout << "\nValid rows: 0-3, Valid columns depend on row:\n";
+        cout << "Row 0: column 2 only\n";
+        cout << "Row 1: columns 1-3\n";
+        cout << "Row 2-3: columns 0-4\n";
+        cin >> x >> y;
+
+        PyramidXO_Board* pyramid_board = dynamic_cast<PyramidXO_Board*>(player->get_board_ptr());
+
+        if (!pyramid_board->is_valid_cell(x, y)) {
+            cout << "Invalid position! That cell is not part of the pyramid.\n";
+            return get_move(player);
+        }
+    }
+    else if (player->get_type() == PlayerType::COMPUTER) {
+        PyramidXO_Board* pyramid_board = dynamic_cast<PyramidXO_Board*>(player->get_board_ptr());
+        vector<pair<int, int>> valid_moves;
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (pyramid_board->is_valid_cell(i, j) &&
+                    pyramid_board->get_board_matrix()[i][j] == '.') {
+                    valid_moves.push_back({ i, j });
+                }
+            }
+        }
+
+        if (!valid_moves.empty()) {
+            auto move = valid_moves[rand() % valid_moves.size()];
+            x = move.first;
+            y = move.second;
+            cout << "Computer plays at position (" << x << "," << y << ")\n";
+        }
+        else {
+            x = y = 0;
+        }
+    }
+
+    return new Move<char>(x, y, player->get_symbol());
+}

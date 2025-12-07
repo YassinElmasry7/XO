@@ -230,5 +230,33 @@ public:
     Player<char>* create_player(string& name, char symbol, PlayerType type);
     virtual Move<char>* get_move(Player<char>* player);
 };
+class PyramidXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    vector<vector<bool>> valid_cells;
+    int cols = 5;
+
+    void initialize_pyramid_shape();
+    bool check_win(char symbol);
+
+public:
+    PyramidXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    bool is_valid_cell(int x, int y) const;
+};
+
+class PyramidXO_UI : public UI<char> {
+public:
+    PyramidXO_UI();
+    ~PyramidXO_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
+    virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
+};
 
 #endif // XO_CLASSES_H
