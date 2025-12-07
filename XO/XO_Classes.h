@@ -259,4 +259,5 @@ public:
     virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
 };
 
+
 #endif // XO_CLASSES_H
