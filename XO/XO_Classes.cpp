@@ -1482,3 +1482,144 @@ Move<char>* PyramidXO_UI::get_move(Player<char>* player) {
 
     return new Move<char>(x, y, player->get_symbol());
 }
+InfinityXO_Board::InfinityXO_Board() : Board(3, 3) {
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+    move_history.clear();
+    moves_since_last_removal = 0;
+}
+
+bool InfinityXO_Board::update_board(Move<char>* move) {
+    int x = move->get_x();
+    int y = move->get_y();
+    char symbol = move->get_symbol();
+
+    if (x < 0 || x >= rows || y < 0 || y >= columns || board[x][y] != blank_symbol) {
+        return false;
+    }
+
+    move_history.push_back({{x, y}, symbol});
+
+    n_moves++;
+    moves_since_last_removal++;
+    board[x][y] = symbol;
+
+    if (moves_since_last_removal >= 3) {
+        remove_oldest_move();
+        moves_since_last_removal = 0;
+    }
+
+    return true;
+}
+
+void InfinityXO_Board::remove_oldest_move() {
+    if (move_history.empty()) {
+        return;
+    }
+
+    auto oldest = move_history.front();
+    int x = oldest.first.first;
+    int y = oldest.first.second;
+
+    board[x][y] = blank_symbol;
+
+    move_history.erase(move_history.begin());
+
+    cout << "\n>>> Oldest move at (" << x << "," << y << ") has been removed!\n";
+}
+
+bool InfinityXO_Board::has_three_in_row(char symbol) {
+    for (int i = 0; i < 3; i++) {
+        if (board[i][0] == symbol && board[i][1] == symbol && board[i][2] == symbol) {
+            return true;
+        }
+    }
+
+    for (int j = 0; j < 3; j++) {
+        if (board[0][j] == symbol && board[1][j] == symbol && board[2][j] == symbol) {
+            return true;
+        }
+    }
+
+    if (board[0][0] == symbol && board[1][1] == symbol && board[2][2] == symbol) {
+        return true;
+    }
+
+    if (board[0][2] == symbol && board[1][1] == symbol && board[2][0] == symbol) {
+        return true;
+    }
+
+    return false;
+}
+
+bool InfinityXO_Board::is_win(Player<char>* player) {
+    return has_three_in_row(player->get_symbol());
+}
+
+bool InfinityXO_Board::is_draw(Player<char>* player) {
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (board[i][j] == blank_symbol) {
+                return false;
+            }
+        }
+    }
+    return !is_win(player);
+}
+
+bool InfinityXO_Board::game_is_over(Player<char>* player) {
+    return is_win(player);
+}
+
+InfinityXO_UI::InfinityXO_UI() : UI<char>("", 3) {}
+
+Player<char>* InfinityXO_UI::create_player(string& name, char symbol, PlayerType type) {
+    cout << "Creating " << (type == PlayerType::HUMAN ? "human" : "computer")
+         << " player: " << name << " (" << symbol << ")\n";
+    cout << "Infinity Tic-Tac-Toe Rules:\n";
+    cout << "- After every 3 total moves, the oldest mark disappears\n";
+    cout << "- Win by getting 3 in a row before your marks disappear!\n";
+    return new Player<char>(name, symbol, type);
+}
+
+Move<char>* InfinityXO_UI::get_move(Player<char>* player) {
+    int x, y;
+
+    InfinityXO_Board* infinity_board = dynamic_cast<InfinityXO_Board*>(player->get_board_ptr());
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        cout << "\n=== " << player->get_name() << "'s turn (" << player->get_symbol() << ") ===\n";
+        cout << "Moves until next removal: " << 3 - infinity_board->get_moves_since_last_removal() << "\n";
+        cout << "Total moves made: " << infinity_board->get_total_moves() << "\n";
+        cout << "Enter coordinates (row column, 0-2): ";
+        cin >> x >> y;
+
+        if (x < 0 || x >= 3 || y < 0 || y >= 3) {
+            cout << "Invalid coordinates! Please enter values between 0-2.\n";
+            return get_move(player);
+        }
+    }
+    else if (player->get_type() == PlayerType::COMPUTER) {
+        bool found = false;
+        for (int i = 0; i < 3 && !found; i++) {
+            for (int j = 0; j < 3 && !found; j++) {
+                if (infinity_board->get_board_matrix()[i][j] == '.') {
+                    x = i;
+                    y = j;
+                    found = true;
+                }
+            }
+        }
+
+        if (!found) {
+            x = 0;
+            y = 0;
+        }
+
+        cout << "Computer plays at position (" << x << "," << y << ")\n";
+    }
+
+    return new Move<char>(x, y, player->get_symbol());
+}

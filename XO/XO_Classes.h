@@ -259,5 +259,34 @@ public:
     virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
 };
 
+class InfinityXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    vector<pair<pair<int, int>, char>> move_history; // Track moves in chronological order
+    int moves_since_last_removal = 0;
+
+    void remove_oldest_move();
+    bool has_three_in_row(char symbol);
+
+public:
+    InfinityXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    int get_moves_since_last_removal() const { return moves_since_last_removal; }
+    int get_total_moves() const { return n_moves; }
+};
+
+class InfinityXO_UI : public UI<char> {
+public:
+    InfinityXO_UI();
+    ~InfinityXO_UI() {};
+    Player<char>* create_player(string& name, char symbol, PlayerType type);
+    virtual Move<char>* get_move(Player<char>* player);
+};
+
 
 #endif // XO_CLASSES_H

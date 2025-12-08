@@ -150,8 +150,27 @@ void play_pyramid_xo() {
     delete[] players;
     delete game_ui;
 }
-int main() {
+void play_infinity_xo() {
+    cout << "\n=== Starting Infinity Tic-Tac-Toe ===\n";
+    cout << "Rules:\n";
+    cout << "1. Standard 3x3 grid\n";
+    cout << "2. After every 3 moves (total), the oldest mark disappears\n";
+    cout << "3. Win by getting 3 in a row before your marks disappear!\n";
 
+    UI<char>* game_ui = new InfinityXO_UI();
+    Board<char>* infinity_board = new InfinityXO_Board();
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> game(infinity_board, players, game_ui);
+    game.run();
+
+    delete infinity_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
+
+int main() {
     srand(static_cast<unsigned int>(time(0)));
 
     int choice;
@@ -164,54 +183,58 @@ int main() {
         cout << "2. Reverse X-O \n";
         cout << "3. Obstacle X-O \n";
         cout << "4. 5x5 X-O \n";
-		cout << "5. 4x4 X-O \n";
+        cout << "5. 4x4 X-O \n";
         cout << "6. Connect Four X-O\n";
-		cout << "7. Diamond X-O \n";
+        cout << "7. Diamond X-O \n";
         cout << "8. Word Tic-Tac-Toe \n";
         cout << "9. Pyramid X-O \n";
-		cout << "10. Exit \n";
+        cout << "10. Infinity Tic-Tac-Toe \n";
+        cout << "11. Exit \n";
         cout << "===================================== \n";
-        cout << "Enter your choice (1-10): ";
+        cout << "Enter your choice (1-11): ";
 
         cin >> choice;
 
         switch (choice) {
-        case 1:
-            play_math_xo();
-            break;
-        case 2:
-            play_reverse_xo();
-            break;
-        case 3:
-            play_obstacle_xo();
-            break;
-        case 4:
-			play_five_x_five();
-			break;
-        case 5:
-            play_four_x_four();
-			break;
-        case 6:
-            play_connect_four();
-            break;
-		case 7:
-            play_diamond_xo();
-			break;
-        case 8:
-            play_word_xo();
-			break;
-        case 9:
-            play_pyramid_xo();
-			break;
-        case 10:
-            cout << "Thank you for playing!\n";
-            break;
-        default:
-            cout << "Invalid choice! Please try again.\n";
-            break;
+            case 1:
+                play_math_xo();
+                break;
+            case 2:
+                play_reverse_xo();
+                break;
+            case 3:
+                play_obstacle_xo();
+                break;
+            case 4:
+                play_five_x_five();
+                break;
+            case 5:
+                play_four_x_four();
+                break;
+            case 6:
+                play_connect_four();
+                break;
+            case 7:
+                play_diamond_xo();
+                break;
+            case 8:
+                play_word_xo();
+                break;
+            case 9:
+                play_pyramid_xo();
+                break;
+            case 10:
+                play_infinity_xo();
+                break;
+            case 11:
+                cout << "Thank you for playing!\n";
+                break;
+            default:
+                cout << "Invalid choice! Please try again.\n";
+                break;
         }
 
-    } while (choice != 10);
+    } while (choice != 11);
 
     return 0;
 }
