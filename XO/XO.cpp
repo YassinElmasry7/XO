@@ -180,12 +180,6 @@ void play_pyramid_xo() {
     delete game_ui;
 }
 void play_infinity_xo() {
-    cout << "\n=== Starting Infinity Tic-Tac-Toe ===\n";
-    cout << "Rules:\n";
-    cout << "1. Standard 3x3 grid\n";
-    cout << "2. After every 3 moves (total), the oldest mark disappears\n";
-    cout << "3. Win by getting 3 in a row before your marks disappear!\n";
-
     UI<char>* game_ui = new InfinityXO_UI();
     Board<char>* infinity_board = new InfinityXO_Board();
     Player<char>** players = game_ui->setup_players();
