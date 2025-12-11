@@ -1,0 +1,14 @@
+<map id="ConnectFour_Board::game_is_over" name="ConnectFour_Board::game_is_over">
+<area shape="rect" id="Node000001" title="Check if the game is over." alt="" coords="5,43,150,85"/>
+<area shape="rect" id="Node000002" href="$class_connect_four___board.html#ab8c8b53ba702701601eaa55a07ac1ee9" title="Check if the game ended in a draw." alt="" coords="198,13,342,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,50,182,45,183,51,150,56"/>
+<area shape="rect" id="Node000004" href="$class_connect_four___board.html#aebb2d80d9bc27e45cf345c24bbbc2d22" title="Check if a player has won." alt="" coords="390,72,534,115"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="150,67,375,84,375,89,150,72"/>
+<area shape="rect" id="Node000003" href="$class_connect_four___board.html#af2c90e3808b2e4a21b868839a2712b3b" title=" " alt="" coords="390,5,534,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,29,375,28,375,33,342,34"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="343,54,376,64,375,69,341,59"/>
+<area shape="rect" id="Node000005" href="$class_connect_four___board.html#acd2aa635bf78da4660d9bcd4d0f2e75e" title=" " alt="" coords="582,43,727,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="534,80,567,75,567,80,535,85"/>
+<area shape="rect" id="Node000006" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="588,109,721,136"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="535,102,573,108,572,113,534,107"/>
+</map>

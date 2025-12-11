@@ -1,0 +1,7 @@
+<map id="PyramidXO_Board::PyramidXO_Board" name="PyramidXO_Board::PyramidXO_Board">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,189,69"/>
+<area shape="rect" id="Node000002" href="$class_board.html#ae5dfded241ee3644196e2f6074d1d0b1" title=" " alt="" coords="255,5,401,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,34,239,27,240,33,190,39"/>
+<area shape="rect" id="Node000003" href="$class_pyramid_x_o___board.html#a1a878048df4325b8ca41ab4fb616b350" title=" " alt="" coords="237,56,419,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,57,222,61,221,66,189,62"/>
+</map>

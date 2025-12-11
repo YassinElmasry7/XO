@@ -1,0 +1,12 @@
+<map id="ConnectFour_Board::is_column_full" name="ConnectFour_Board::is_column_full">
+<area shape="rect" id="Node000001" title=" " alt="" coords="423,80,567,123"/>
+<area shape="rect" id="Node000002" href="$class_connect_four___u_i.html#a3b8fec2373471044c0e2c0f307a20834" title="Ask the user (or AI) to make a move." alt="" coords="198,29,375,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="408,80,336,59,337,54,409,74"/>
+<area shape="rect" id="Node000003" href="$class_connect_four___board.html#ab8c8b53ba702701601eaa55a07ac1ee9" title="Check if the game ended in a draw." alt="" coords="214,80,359,123"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="408,104,359,104,359,99,408,99"/>
+<area shape="rect" id="Node000005" href="$class_connect_four___board.html#a5dd5856b13402ec0a611a4fbe2bb9dc1" title="Update the board with a new move." alt="" coords="214,147,359,189"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="413,130,356,149,355,143,411,125"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="322,16,310,10,286,8,264,10,253,15,250,20,255,27,251,30,245,21,249,11,263,5,286,3,311,5,324,12"/>
+<area shape="rect" id="Node000004" href="$class_connect_four___board.html#ae48fb5c6048942ff37a389bcac725751" title="Check if the game is over." alt="" coords="5,80,150,123"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="199,104,150,104,150,99,199,99"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="PyramidXO_Board::check_win" name="PyramidXO_Board::check_win">
+<area shape="rect" id="Node000001" title=" " alt="" coords="667,13,864,40"/>
+<area shape="rect" id="Node000002" href="$class_pyramid_x_o___board.html#ac465b2bb65da64531965c84546d3a89c" title="Check if a player has won." alt="" coords="448,13,619,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="652,29,620,29,620,24,652,24"/>
+<area shape="rect" id="Node000003" href="$class_pyramid_x_o___board.html#a3063e33245885a5e4e148d822f74761e" title="Check if the game is over." alt="" coords="5,5,173,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,29,173,29,173,24,432,24"/>
+<area shape="rect" id="Node000004" href="$class_pyramid_x_o___board.html#a10f25c5964b7d0d91c091d1eb036d8d1" title="Check if the game ended in a draw." alt="" coords="221,39,400,65"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="433,41,401,44,400,39,432,35"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="205,43,173,39,174,34,205,37"/>
+</map>

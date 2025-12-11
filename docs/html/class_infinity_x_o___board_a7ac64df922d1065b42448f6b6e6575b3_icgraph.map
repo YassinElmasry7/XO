@@ -1,0 +1,6 @@
+<map id="InfinityXO_Board::get_moves_since_last_removal" name="InfinityXO_Board::get_moves_since_last_removal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="211,21,393,64"/>
+<area shape="rect" id="Node000002" href="$class_infinity_x_o___u_i.html#a15d92544970c320d8eec8b6007f0e1fa" title="Ask the user (or AI) to make a move." alt="" coords="5,29,163,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,45,163,45,163,40,195,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="121,16,108,10,84,8,61,10,49,15,46,20,52,27,47,30,41,21,45,11,60,5,84,3,110,5,124,12"/>
+</map>

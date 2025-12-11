@@ -1,0 +1,26 @@
+PROJECT_NAME           = "Board Games Collection"
+PROJECT_NUMBER         = 1.0
+OUTPUT_DIRECTORY       = docs
+GENERATE_HTML          = YES
+INPUT                  = .
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# DIAGRAM SETTINGS
+HAVE_DOT               = YES
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DOT_IMAGE_FORMAT       = png
+DOT_PATH               = "C:/Program Files/Graphviz/bin"

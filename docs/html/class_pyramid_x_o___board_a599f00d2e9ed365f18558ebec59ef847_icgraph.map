@@ -1,0 +1,17 @@
+<map id="PyramidXO_Board::is_valid_cell" name="PyramidXO_Board::is_valid_cell">
+<area shape="rect" id="Node000001" title=" " alt="" coords="912,80,1057,123"/>
+<area shape="rect" id="Node000002" href="$class_pyramid_x_o___board.html#a286a01ddc7a6636040628f3776925d81" title=" " alt="" coords="667,13,864,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="919,76,863,55,824,43,826,38,865,49,921,71"/>
+<area shape="rect" id="Node000006" href="$class_pyramid_x_o___u_i.html#ab16ed1e3a89883e324ebf1362fd4315a" title="Ask the user (or AI) to make a move." alt="" coords="681,88,850,115"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="896,104,850,104,850,99,896,99"/>
+<area shape="rect" id="Node000007" href="$class_pyramid_x_o___board.html#a8457e93d1a12e70d8f9b7aae341cc189" title="Update the board with a new move." alt="" coords="678,139,853,181"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="897,127,849,141,847,135,896,122"/>
+<area shape="rect" id="Node000003" href="$class_pyramid_x_o___board.html#ac465b2bb65da64531965c84546d3a89c" title="Check if a player has won." alt="" coords="448,13,619,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="652,29,620,29,620,24,652,24"/>
+<area shape="rect" id="Node000004" href="$class_pyramid_x_o___board.html#a3063e33245885a5e4e148d822f74761e" title="Check if the game is over." alt="" coords="5,5,173,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="432,29,173,29,173,24,432,24"/>
+<area shape="rect" id="Node000005" href="$class_pyramid_x_o___board.html#a10f25c5964b7d0d91c091d1eb036d8d1" title="Check if the game ended in a draw." alt="" coords="221,39,400,65"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="433,41,401,44,400,39,432,35"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="205,43,173,39,174,34,205,37"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="803,75,790,69,765,67,743,69,730,73,727,79,733,86,729,89,722,79,726,69,741,63,766,61,791,64,805,70"/>
+</map>

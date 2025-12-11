@@ -1,0 +1,11 @@
+<map id="ConnectFour_Board::is_draw" name="ConnectFour_Board::is_draw">
+<area shape="rect" id="Node000001" title="Check if the game ended in a draw." alt="" coords="5,39,150,81"/>
+<area shape="rect" id="Node000002" href="$class_connect_four___board.html#af2c90e3808b2e4a21b868839a2712b3b" title=" " alt="" coords="198,5,342,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,45,182,39,183,44,150,50"/>
+<area shape="rect" id="Node000003" href="$class_connect_four___board.html#aebb2d80d9bc27e45cf345c24bbbc2d22" title="Check if a player has won." alt="" coords="198,72,342,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,70,183,76,182,81,150,75"/>
+<area shape="rect" id="Node000004" href="$class_connect_four___board.html#acd2aa635bf78da4660d9bcd4d0f2e75e" title=" " alt="" coords="390,43,534,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="342,80,374,75,375,80,343,85"/>
+<area shape="rect" id="Node000005" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="396,109,529,136"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="343,102,380,108,379,113,342,107"/>
+</map>

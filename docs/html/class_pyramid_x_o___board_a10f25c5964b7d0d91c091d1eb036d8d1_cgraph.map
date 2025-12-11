@@ -1,0 +1,11 @@
+<map id="PyramidXO_Board::is_draw" name="PyramidXO_Board::is_draw">
+<area shape="rect" id="Node000001" title="Check if the game ended in a draw." alt="" coords="5,39,185,65"/>
+<area shape="rect" id="Node000002" href="$class_pyramid_x_o___board.html#ac465b2bb65da64531965c84546d3a89c" title="Check if a player has won." alt="" coords="233,39,404,65"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,49,217,49,217,55,185,55"/>
+<area shape="rect" id="Node000003" href="$class_pyramid_x_o___board.html#a286a01ddc7a6636040628f3776925d81" title=" " alt="" coords="452,13,648,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="404,40,436,36,437,42,405,45"/>
+<area shape="rect" id="Node000005" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="484,64,617,91"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="405,59,469,66,468,71,404,64"/>
+<area shape="rect" id="Node000004" href="$class_pyramid_x_o___board.html#a599f00d2e9ed365f18558ebec59ef847" title=" " alt="" coords="696,5,842,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="649,24,681,24,681,29,649,29"/>
+</map>

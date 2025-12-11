@@ -1,0 +1,8 @@
+<map id="WordXO_Board::is_win" name="WordXO_Board::is_win">
+<area shape="rect" id="Node000001" title="Check if a player has won." alt="" coords="414,13,568,40"/>
+<area shape="rect" id="Node000002" href="$class_word_x_o___board.html#a0f73e346b6cd49c1c9c5edd34c8c372a" title="Check if the game is over." alt="" coords="5,5,156,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,29,156,29,156,24,398,24"/>
+<area shape="rect" id="Node000003" href="$class_word_x_o___board.html#a55554513b002d9fddc47f9b5b1f29d23" title="Check if the game ended in a draw." alt="" coords="204,39,366,65"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="399,41,367,45,366,39,398,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="188,43,156,39,156,33,188,37"/>
+</map>

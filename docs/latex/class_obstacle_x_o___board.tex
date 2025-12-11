@@ -1,0 +1,544 @@
+\doxysection{Obstacle\+XO\+\_\+\+Board Class Reference}
+\hypertarget{class_obstacle_x_o___board}{}\label{class_obstacle_x_o___board}\index{ObstacleXO\_Board@{ObstacleXO\_Board}}
+
+
+{\ttfamily \#include $<$XO\+\_\+\+Classes.\+h$>$}
+
+
+
+Inheritance diagram for Obstacle\+XO\+\_\+\+Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{class_obstacle_x_o___board__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Obstacle\+XO\+\_\+\+Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{class_obstacle_x_o___board__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obstacle_x_o___board_aa9ee615c268dd63024827866b8ebcfc8}{Obstacle\+XO\+\_\+\+Board}} ()
+\item 
+bool \mbox{\hyperlink{class_obstacle_x_o___board_ab54396f73631727fc7cfd88d6dd16249}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Update the board with a new move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_obstacle_x_o___board_abf69352796411e1758512e2857da46f8}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if a player has won. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_obstacle_x_o___board_a41efc7d9b735c98948aaf66854d00f0d}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if a player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_obstacle_x_o___board_af92d16bd5f371c99b9c765895d8af197}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if the game ended in a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_obstacle_x_o___board_aca37280b85759dae6c043434cf45b4ba}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_obstacle_x_o___board_a51cf17b179a4e5f532f720576591aa2b}{get\+\_\+round\+\_\+count}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_obstacle_x_o___board_a09a60be78fe38cf93516cb597567d555}{add\+\_\+random\+\_\+obstacles}} ()
+\item 
+bool \mbox{\hyperlink{class_obstacle_x_o___board_a28b9e70cf07a78cf3c6274874ace3b08}{has\+\_\+four\+\_\+in\+\_\+row}} (char symbol)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_obstacle_x_o___board_aa04723e12c7e791dde912269f924b089}{blank\+\_\+symbol}} = \textquotesingle{}.\textquotesingle{}
+\item 
+char \mbox{\hyperlink{class_obstacle_x_o___board_ad467d19b7ccd005d2a3230ee3c858a07}{obstacle\+\_\+symbol}} = \textquotesingle{}\#\textquotesingle{}
+\item 
+int \mbox{\hyperlink{class_obstacle_x_o___board_adc9ad2317d9496a013065310baceb2a7}{round\+\_\+count}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00046}{46}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_obstacle_x_o___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_obstacle_x_o___board_aa9ee615c268dd63024827866b8ebcfc8}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\index{ObstacleXO\_Board@{ObstacleXO\_Board}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{ObstacleXO\_Board()}{ObstacleXO\_Board()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_aa9ee615c268dd63024827866b8ebcfc8} 
+Obstacle\+XO\+\_\+\+Board\+::\+Obstacle\+XO\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00249}{249}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(6,\ 6)\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ row\ :\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ row)}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ \mbox{\hyperlink{class_obstacle_x_o___board_aa04723e12c7e791dde912269f924b089}{blank\_symbol}};}
+\DoxyCodeLine{00253\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8h_source_l00048}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00056}{Board$<$ char $>$\+::\+Board()}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_aa9ee615c268dd63024827866b8ebcfc8_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{class_obstacle_x_o___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_obstacle_x_o___board_a09a60be78fe38cf93516cb597567d555}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!add\_random\_obstacles@{add\_random\_obstacles}}
+\index{add\_random\_obstacles@{add\_random\_obstacles}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{add\_random\_obstacles()}{add\_random\_obstacles()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_a09a60be78fe38cf93516cb597567d555} 
+void Obstacle\+XO\+\_\+\+Board\+::add\+\_\+random\+\_\+obstacles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00274}{274}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordtype}{int}\ obstacles\_added\ =\ 0;}
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_attempts\ =\ 20;}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordflow}{while}\ (obstacles\_added\ <\ 2\ \&\&\ max\_attempts-\/-\/\ >\ 0)\ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ rand()\ \%\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ rand()\ \%\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ ==\ \mbox{\hyperlink{class_obstacle_x_o___board_aa04723e12c7e791dde912269f924b089}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ \mbox{\hyperlink{class_obstacle_x_o___board_ad467d19b7ccd005d2a3230ee3c858a07}{obstacle\_symbol}};}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ obstacles\_added++;}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ \ \ \ \ \}}
+\DoxyCodeLine{00286\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8h_source_l00048}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00048}{Board$<$ char $>$\+::columns}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00049}{obstacle\+\_\+symbol}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00047}{Board$<$ char $>$\+::rows}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00255}{update\+\_\+board()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_a09a60be78fe38cf93516cb597567d555_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obstacle_x_o___board_aca37280b85759dae6c043434cf45b4ba}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_aca37280b85759dae6c043434cf45b4ba} 
+bool Obstacle\+XO\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the game is over. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00342}{342}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_obstacle_x_o___board_abf69352796411e1758512e2857da46f8}{is\_win}}(player)\ ||\ \mbox{\hyperlink{class_obstacle_x_o___board_af92d16bd5f371c99b9c765895d8af197}{is\_draw}}(player);}
+\DoxyCodeLine{00344\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8cpp_source_l00330}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00288}{is\+\_\+win()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_aca37280b85759dae6c043434cf45b4ba_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obstacle_x_o___board_a51cf17b179a4e5f532f720576591aa2b}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!get\_round\_count@{get\_round\_count}}
+\index{get\_round\_count@{get\_round\_count}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{get\_round\_count()}{get\_round\_count()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_a51cf17b179a4e5f532f720576591aa2b} 
+int Obstacle\+XO\+\_\+\+Board\+::get\+\_\+round\+\_\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00063}{63}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_obstacle_x_o___board_adc9ad2317d9496a013065310baceb2a7}{round\_count}};\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8h_source_l00050}{round\+\_\+count}}.
+
+\Hypertarget{class_obstacle_x_o___board_a28b9e70cf07a78cf3c6274874ace3b08}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!has\_four\_in\_row@{has\_four\_in\_row}}
+\index{has\_four\_in\_row@{has\_four\_in\_row}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{has\_four\_in\_row()}{has\_four\_in\_row()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_a28b9e70cf07a78cf3c6274874ace3b08} 
+bool Obstacle\+XO\+\_\+\+Board\+::has\+\_\+four\+\_\+in\+\_\+row (\begin{DoxyParamCaption}\item[{char}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00293}{293}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ -\/\ 4;\ ++j)\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j\ +\ 1]\ ==\ symbol\ \&\&}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j\ +\ 2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j\ +\ 3]\ ==\ symbol)\ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00301\ \ \ \ \ \}}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ ++j)\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ -\/\ 4;\ ++i)\ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 1][j]\ ==\ symbol\ \&\&}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 2][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 3][j]\ ==\ symbol)\ \{}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00309\ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ -\/\ 4;\ ++i)\ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ -\/\ 4;\ ++j)\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 1][j\ +\ 1]\ ==\ symbol\ \&\&}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 2][j\ +\ 2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 3][j\ +\ 3]\ ==\ symbol)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00317\ \ \ \ \ \}}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ -\/\ 4;\ ++i)\ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 3;\ j\ <\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ ++j)\ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 1][j\ -\/\ 1]\ ==\ symbol\ \&\&}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 2][j\ -\/\ 2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 3][j\ -\/\ 3]\ ==\ symbol)\ \{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00328\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00048}{Board$<$ char $>$\+::columns}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00047}{Board$<$ char $>$\+::rows}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00288}{is\+\_\+win()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_a28b9e70cf07a78cf3c6274874ace3b08_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obstacle_x_o___board_af92d16bd5f371c99b9c765895d8af197}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_af92d16bd5f371c99b9c765895d8af197} 
+bool Obstacle\+XO\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the game ended in a draw. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00330}{330}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordtype}{int}\ empty\_cells\ =\ 0;}
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ ++i)\ \{}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ ++j)\ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ \mbox{\hyperlink{class_obstacle_x_o___board_aa04723e12c7e791dde912269f924b089}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ empty\_cells++;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00338\ \ \ \ \ \}}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordflow}{return}\ (empty\_cells\ ==\ 0\ \&\&\ !\mbox{\hyperlink{class_obstacle_x_o___board_abf69352796411e1758512e2857da46f8}{is\_win}}(player));}
+\DoxyCodeLine{00340\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8h_source_l00048}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00048}{Board$<$ char $>$\+::columns}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00288}{is\+\_\+win()}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00047}{Board$<$ char $>$\+::rows}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00342}{game\+\_\+is\+\_\+over()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_af92d16bd5f371c99b9c765895d8af197_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_af92d16bd5f371c99b9c765895d8af197_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obstacle_x_o___board_a41efc7d9b735c98948aaf66854d00f0d}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_a41efc7d9b735c98948aaf66854d00f0d} 
+bool Obstacle\+XO\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has lost. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00059}{59}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_obstacle_x_o___board_abf69352796411e1758512e2857da46f8}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_abf69352796411e1758512e2857da46f8} 
+bool Obstacle\+XO\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if a player has won. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00288}{288}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordtype}{char}\ symbol\ =\ player-\/>get\_symbol();}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_obstacle_x_o___board_a28b9e70cf07a78cf3c6274874ace3b08}{has\_four\_in\_row}}(symbol);}
+\DoxyCodeLine{00291\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00163}{Player$<$ T $>$\+::get\+\_\+symbol()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00293}{has\+\_\+four\+\_\+in\+\_\+row()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00342}{game\+\_\+is\+\_\+over()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00330}{is\+\_\+draw()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_abf69352796411e1758512e2857da46f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_abf69352796411e1758512e2857da46f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_obstacle_x_o___board_ab54396f73631727fc7cfd88d6dd16249}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_ab54396f73631727fc7cfd88d6dd16249} 
+bool Obstacle\+XO\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the board with a new move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move object containing position and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00255}{255}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\mbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\mbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ move-\/>\mbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ ||}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ \mbox{\hyperlink{class_obstacle_x_o___board_aa04723e12c7e791dde912269f924b089}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00263\ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ \ \ \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00265\ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(mark);}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ \%\ 2\ ==\ 0)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obstacle_x_o___board_adc9ad2317d9496a013065310baceb2a7}{round\_count}}++;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_obstacle_x_o___board_a09a60be78fe38cf93516cb597567d555}{add\_random\_obstacles}}();}
+\DoxyCodeLine{00270\ \ \ \ \ \}}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00272\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8cpp_source_l00274}{add\+\_\+random\+\_\+obstacles()}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00048}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00048}{Board$<$ char $>$\+::columns}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00129}{Move$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00123}{Move$<$ T $>$\+::get\+\_\+x()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00126}{Move$<$ T $>$\+::get\+\_\+y()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00050}{Board$<$ char $>$\+::n\+\_\+moves}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00050}{round\+\_\+count}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00047}{Board$<$ char $>$\+::rows}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_obstacle_x_o___board_ab54396f73631727fc7cfd88d6dd16249_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_obstacle_x_o___board_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_obstacle_x_o___board_aa04723e12c7e791dde912269f924b089}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!blank\_symbol@{blank\_symbol}}
+\index{blank\_symbol@{blank\_symbol}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{blank\_symbol}{blank\_symbol}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_aa04723e12c7e791dde912269f924b089} 
+char Obstacle\+XO\+\_\+\+Board\+::blank\+\_\+symbol = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00048}{48}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00274}{add\+\_\+random\+\_\+obstacles()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00330}{is\+\_\+draw()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00249}{Obstacle\+XO\+\_\+\+Board()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00255}{update\+\_\+board()}}.
+
+\Hypertarget{class_obstacle_x_o___board_ad467d19b7ccd005d2a3230ee3c858a07}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!obstacle\_symbol@{obstacle\_symbol}}
+\index{obstacle\_symbol@{obstacle\_symbol}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{obstacle\_symbol}{obstacle\_symbol}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_ad467d19b7ccd005d2a3230ee3c858a07} 
+char Obstacle\+XO\+\_\+\+Board\+::obstacle\+\_\+symbol = \textquotesingle{}\#\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00049}{49}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00274}{add\+\_\+random\+\_\+obstacles()}}.
+
+\Hypertarget{class_obstacle_x_o___board_adc9ad2317d9496a013065310baceb2a7}\index{ObstacleXO\_Board@{ObstacleXO\_Board}!round\_count@{round\_count}}
+\index{round\_count@{round\_count}!ObstacleXO\_Board@{ObstacleXO\_Board}}
+\doxysubsubsection{\texorpdfstring{round\_count}{round\_count}}
+{\footnotesize\ttfamily \label{class_obstacle_x_o___board_adc9ad2317d9496a013065310baceb2a7} 
+int Obstacle\+XO\+\_\+\+Board\+::round\+\_\+count = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00050}{50}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8h_source_l00063}{get\+\_\+round\+\_\+count()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00255}{update\+\_\+board()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+XO/\mbox{\hyperlink{_x_o___classes_8h}{XO\+\_\+\+Classes.\+h}}\item 
+XO/\mbox{\hyperlink{_x_o___classes_8cpp}{XO\+\_\+\+Classes.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+<map id="DiamondXO_Board::has_four_diagonal2" name="DiamondXO_Board::has_four_diagonal2">
+<area shape="rect" id="Node000001" title=" " alt="" coords="676,5,836,48"/>
+<area shape="rect" id="Node000002" href="$class_diamond_x_o___board.html#a10d64582ffc29716fb41da6ef9bcc84c" title="Check if a player has won." alt="" coords="454,13,628,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="661,29,629,29,629,24,661,24"/>
+<area shape="rect" id="Node000003" href="$class_diamond_x_o___board.html#a8162e11a379c31e8407e0cc6c83f4ef6" title="Check if the game is over." alt="" coords="5,5,176,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,29,176,29,176,24,439,24"/>
+<area shape="rect" id="Node000004" href="$class_diamond_x_o___board.html#a9dd62abf7bd68d18b385c20ee3cadb22" title="Check if the game ended in a draw." alt="" coords="224,39,406,65"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="439,41,407,44,406,39,438,36"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="208,43,176,39,176,34,209,37"/>
+</map>

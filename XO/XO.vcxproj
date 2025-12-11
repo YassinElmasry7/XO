@@ -130,6 +130,9 @@
     <ClInclude Include="BoardGame_Classes.h" />
     <ClInclude Include="XO_Classes.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Doxyfile" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

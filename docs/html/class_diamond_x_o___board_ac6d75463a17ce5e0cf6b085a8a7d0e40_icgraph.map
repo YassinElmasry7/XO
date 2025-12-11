@@ -1,0 +1,38 @@
+<map id="DiamondXO_Board::is_valid_cell" name="DiamondXO_Board::is_valid_cell">
+<area shape="rect" id="Node000001" title=" " alt="" coords="902,313,1050,356"/>
+<area shape="rect" id="Node000002" href="$class_diamond_x_o___u_i.html#ab5ed007cb4745664ed6c907fc6dddb8d" title="Ask the user (or AI) to make a move." alt="" coords="679,29,851,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="965,299,952,247,930,185,897,123,876,95,852,70,835,59,837,54,855,66,880,91,902,120,935,183,958,246,971,297"/>
+<area shape="rect" id="Node000003" href="$class_diamond_x_o___board.html#acf96e4aa1fe636238645aaa396bdb6c8" title=" " alt="" coords="685,80,845,123"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="959,300,942,262,919,218,889,175,852,137,835,125,838,121,855,133,893,171,923,216,947,260,964,298"/>
+<area shape="rect" id="Node000007" href="$class_diamond_x_o___board.html#a0e68aa5524a1cb8e01b0f4e5df2d0ff9" title=" " alt="" coords="685,147,845,189"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="949,302,907,252,881,226,852,204,832,192,835,188,855,199,884,222,911,248,953,299"/>
+<area shape="rect" id="Node000008" href="$class_diamond_x_o___board.html#ac4c392e9bc1d87d1e609ec0e7991faad" title=" " alt="" coords="685,213,845,256"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="924,308,853,270,826,259,828,254,855,266,927,303"/>
+<area shape="rect" id="Node000009" href="$class_diamond_x_o___board.html#ad5559a264b0747760bb625a11b3f3d15" title=" " alt="" coords="685,280,845,323"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="886,323,845,317,845,311,886,318"/>
+<area shape="rect" id="Node000010" href="$class_diamond_x_o___board.html#a5e898444b5be09793b68c839f8ada77b" title=" " alt="" coords="685,347,845,389"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="886,351,845,358,845,353,886,346"/>
+<area shape="rect" id="Node000011" href="$class_diamond_x_o___board.html#a43e141f98b5af73e13040664085e638d" title=" " alt="" coords="685,413,845,456"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="927,366,855,404,828,415,826,410,853,399,924,361"/>
+<area shape="rect" id="Node000012" href="$class_diamond_x_o___board.html#a6e73c932e10f377fa36dc7f4bd3abf21" title=" " alt="" coords="685,480,845,523"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="953,370,911,421,884,447,855,470,835,482,832,477,852,466,881,443,907,418,949,367"/>
+<area shape="rect" id="Node000013" href="$class_diamond_x_o___board.html#a42782a720e994c7b7897fb2dd7c7ce7c" title=" " alt="" coords="685,547,845,589"/>
+<area shape="poly" id="edge20_Node000001_Node000013" title=" " alt="" coords="964,371,947,410,923,454,893,498,855,537,838,548,835,544,852,533,889,495,919,451,942,407,959,369"/>
+<area shape="rect" id="Node000014" href="$class_diamond_x_o___board.html#a65590f94b5cf542132588ac82426531a" title="Update the board with a new move." alt="" coords="676,613,854,656"/>
+<area shape="poly" id="edge22_Node000001_Node000014" title=" " alt="" coords="970,372,956,423,933,485,900,548,880,577,855,603,840,615,837,611,852,599,875,574,896,545,929,483,951,422,965,371"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="801,16,789,10,765,8,743,10,731,15,728,20,734,27,729,30,723,21,727,11,742,5,765,3,790,5,803,12"/>
+<area shape="rect" id="Node000004" href="$class_diamond_x_o___board.html#a10d64582ffc29716fb41da6ef9bcc84c" title="Check if a player has won." alt="" coords="454,321,628,348"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="683,133,678,137,632,183,595,236,568,285,551,322,546,320,563,283,590,233,628,180,675,133,680,129"/>
+<area shape="rect" id="Node000005" href="$class_diamond_x_o___board.html#a8162e11a379c31e8407e0cc6c83f4ef6" title="Check if the game is over." alt="" coords="5,313,176,356"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="439,337,176,337,176,332,439,332"/>
+<area shape="rect" id="Node000006" href="$class_diamond_x_o___board.html#a9dd62abf7bd68d18b385c20ee3cadb22" title="Check if the game ended in a draw." alt="" coords="224,347,406,373"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="439,349,407,352,406,347,438,344"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="208,351,176,347,176,342,209,345"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="685,199,678,204,639,233,604,266,555,323,551,319,600,262,636,229,675,199,683,194"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="691,265,677,270,569,323,567,318,675,266,689,260"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="671,318,629,324,628,319,670,313"/>
+<area shape="poly" id="edge15_Node000010_Node000004" title=" " alt="" coords="670,357,628,350,629,345,671,351"/>
+<area shape="poly" id="edge17_Node000011_Node000004" title=" " alt="" coords="689,410,675,404,567,351,569,346,677,399,691,405"/>
+<area shape="poly" id="edge19_Node000012_Node000004" title=" " alt="" coords="683,475,675,470,636,440,600,407,551,350,555,347,604,403,639,436,678,466,685,470"/>
+<area shape="poly" id="edge21_Node000013_Node000004" title=" " alt="" coords="680,541,675,537,628,490,590,436,563,386,546,350,551,347,568,384,595,433,632,486,678,533,683,536"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="DiamondXO_Board::DiamondXO_Board" name="DiamondXO_Board::DiamondXO_Board">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,195,69"/>
+<area shape="rect" id="Node000002" href="$class_board.html#ae5dfded241ee3644196e2f6074d1d0b1" title=" " alt="" coords="262,5,409,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,34,246,27,247,32,196,39"/>
+<area shape="rect" id="Node000003" href="$class_diamond_x_o___board.html#a29be353784a1a884e2002ef34798a85a" title=" " alt="" coords="243,56,428,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,57,228,61,227,67,195,62"/>
+</map>

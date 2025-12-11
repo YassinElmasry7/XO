@@ -1,0 +1,21 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_board.html" title=" " alt="" coords="5,208,110,235"/>
+<area shape="rect" id="Node000001" href="$class_connect_four___board.html" title=" " alt="" coords="158,5,294,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="65,192,78,158,98,118,123,78,156,42,174,30,177,35,159,46,128,81,102,121,83,160,70,194"/>
+<area shape="rect" id="Node000002" href="$class_diamond_x_o___board.html" title=" " alt="" coords="161,56,291,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="72,193,106,142,130,116,156,92,177,81,179,86,159,97,133,120,110,146,76,196"/>
+<area shape="rect" id="Node000003" href="$class_five_x_five___board.html" title=" " alt="" coords="168,107,284,133"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="84,195,117,169,156,143,181,132,183,136,159,148,120,173,87,200"/>
+<area shape="rect" id="Node000004" href="$class_four_x_four___board.html" title=" " alt="" coords="165,157,287,184"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="118,200,178,182,180,187,120,205"/>
+<area shape="rect" id="Node000005" href="$class_infinity_x_o___board.html" title=" " alt="" coords="168,208,284,235"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="125,219,168,219,168,224,125,224"/>
+<area shape="rect" id="Node000006" href="$class_obstacle_x_o___board.html" title=" " alt="" coords="160,259,292,285"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="120,237,180,256,178,261,118,242"/>
+<area shape="rect" id="Node000007" href="$class_pyramid_x_o___board.html" title=" " alt="" coords="162,309,290,336"/>
+<area shape="poly" id="edge7_Node000000_Node000007" title=" " alt="" coords="87,243,120,270,159,295,183,306,181,311,156,300,117,274,84,247"/>
+<area shape="rect" id="Node000008" href="$class_reverse_x_o___board.html" title=" " alt="" coords="163,360,289,387"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="76,247,110,297,133,323,159,346,179,357,177,362,156,350,130,327,106,300,72,250"/>
+<area shape="rect" id="Node000009" href="$class_word_x_o___board.html" title=" " alt="" coords="171,411,281,437"/>
+<area shape="poly" id="edge9_Node000000_Node000009" title=" " alt="" coords="70,249,83,282,102,322,128,362,159,397,177,408,174,412,156,401,123,365,98,325,78,284,65,250"/>
+</map>

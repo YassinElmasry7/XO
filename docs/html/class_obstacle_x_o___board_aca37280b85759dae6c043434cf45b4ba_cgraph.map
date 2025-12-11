@@ -1,0 +1,12 @@
+<map id="ObstacleXO_Board::game_is_over" name="ObstacleXO_Board::game_is_over">
+<area shape="rect" id="Node000001" title="Check if the game is over." alt="" coords="5,27,177,69"/>
+<area shape="rect" id="Node000002" href="$class_obstacle_x_o___board.html#af92d16bd5f371c99b9c765895d8af197" title="Check if the game ended in a draw." alt="" coords="225,9,408,36"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,36,209,32,209,37,177,41"/>
+<area shape="rect" id="Node000003" href="$class_obstacle_x_o___board.html#abf69352796411e1758512e2857da46f8" title="Check if a player has won." alt="" coords="456,35,631,61"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="177,45,440,45,440,51,177,51"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="409,30,441,34,440,39,408,36"/>
+<area shape="rect" id="Node000004" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="693,5,826,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="631,33,677,27,678,32,632,39"/>
+<area shape="rect" id="Node000005" href="$class_obstacle_x_o___board.html#a28b9e70cf07a78cf3c6274874ace3b08" title=" " alt="" coords="679,56,840,99"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="632,57,664,62,663,67,631,63"/>
+</map>

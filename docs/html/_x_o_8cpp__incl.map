@@ -1,0 +1,33 @@
+<map id="XO/XO.cpp" name="XO/XO.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="362,5,446,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,229,77,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="361,23,315,28,260,37,203,55,151,82,117,112,90,148,69,185,54,216,49,214,64,182,85,145,113,109,147,78,201,50,258,32,314,22,361,18"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="288,229,341,256"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="386,34,363,55,342,81,329,115,321,151,316,214,311,213,315,150,323,113,337,79,359,51,383,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="203,229,258,256"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="361,28,302,40,232,63,197,80,164,101,136,126,113,156,108,168,113,180,124,191,142,202,189,223,187,228,140,207,120,195,108,183,103,168,108,153,132,122,161,96,194,75,230,58,300,35,360,22"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="480,80,544,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="424,30,482,69,479,73,421,35"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="568,80,637,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="439,30,555,72,553,77,437,35"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="661,80,720,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="447,27,646,77,645,82,446,32"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="744,80,797,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="447,24,570,44,729,77,728,82,569,49,446,29"/>
+<area shape="rect" id="Node000009" href="$_board_game___classes_8h.html" title="Core framework for board games." alt="" coords="122,155,277,181"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="379,35,339,56,297,82,257,114,223,146,220,142,254,110,294,78,337,51,376,30"/>
+<area shape="rect" id="Node000011" href="$_x_o___classes_8h.html" title="This file contains all the derived classes from BoardGame_Classes.h." alt="" coords="352,80,455,107"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="406,33,406,64,401,64,401,33"/>
+<area shape="poly" id="edge11_Node000009_Node000002" title=" " alt="" coords="173,184,84,225,82,220,171,179"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="221,180,283,218,280,223,218,184"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="207,181,222,214,217,216,203,183"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="112,229,178,256"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="192,183,166,218,162,215,188,180"/>
+<area shape="poly" id="edge16_Node000011_Node000003" title=" " alt="" coords="406,107,401,142,386,183,369,205,348,222,345,218,365,201,381,180,396,141,401,106"/>
+<area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="391,109,258,221,255,217,387,105"/>
+<area shape="poly" id="edge14_Node000011_Node000009" title=" " alt="" coords="369,110,251,151,249,146,367,105"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="453,155,557,181"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="423,105,476,143,473,147,420,109"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="581,155,656,181"/>
+<area shape="poly" id="edge18_Node000011_Node000013" title=" " alt="" coords="442,105,567,147,566,152,440,110"/>
+</map>

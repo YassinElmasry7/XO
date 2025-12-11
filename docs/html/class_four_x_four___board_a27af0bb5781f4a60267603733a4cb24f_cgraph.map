@@ -1,0 +1,7 @@
+<map id="FourXFour_Board::FourXFour_Board" name="FourXFour_Board::FourXFour_Board">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,194,69"/>
+<area shape="rect" id="Node000002" href="$class_board.html#ae5dfded241ee3644196e2f6074d1d0b1" title=" " alt="" coords="257,5,403,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,33,241,27,242,33,194,39"/>
+<area shape="rect" id="Node000003" href="$class_four_x_four___board.html#aaacfc8cbbab899464ed3190b85f3ec1e" title=" " alt="" coords="242,56,418,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,57,227,62,226,67,194,63"/>
+</map>

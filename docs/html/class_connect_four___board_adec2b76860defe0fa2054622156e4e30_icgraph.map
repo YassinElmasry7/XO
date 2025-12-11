@@ -1,0 +1,8 @@
+<map id="ConnectFour_Board::get_lowest_empty_row" name="ConnectFour_Board::get_lowest_empty_row">
+<area shape="rect" id="Node000001" title=" " alt="" coords="231,51,384,93"/>
+<area shape="rect" id="Node000002" href="$class_connect_four___u_i.html#a3b8fec2373471044c0e2c0f307a20834" title="Ask the user (or AI) to make a move." alt="" coords="5,29,183,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,62,183,58,184,52,216,57"/>
+<area shape="rect" id="Node000003" href="$class_connect_four___board.html#a5dd5856b13402ec0a611a4fbe2bb9dc1" title="Update the board with a new move." alt="" coords="22,80,166,123"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="216,87,167,94,166,89,215,82"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="131,16,118,10,94,8,72,10,60,15,57,20,62,27,58,30,51,21,56,11,70,5,94,3,119,5,133,12"/>
+</map>

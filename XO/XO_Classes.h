@@ -1,3 +1,8 @@
+ /**
+  * @file XO_Classes.h
+  * @brief This file contains all the derived classes from BoardGame_Classes.h
+  */
+
 #ifndef XO_CLASSES_H
 #define XO_CLASSES_H
 

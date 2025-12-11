@@ -1,0 +1,7 @@
+<map id="FourXFour_Board::has_three_in_row" name="FourXFour_Board::has_three_in_row">
+<area shape="rect" id="Node000001" title=" " alt="" coords="428,5,578,48"/>
+<area shape="rect" id="Node000002" href="$class_four_x_four___board.html#aff82868be199b94464fcb88d2f22c602" title="Check if a player has won." alt="" coords="215,13,380,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,29,380,29,380,24,412,24"/>
+<area shape="rect" id="Node000003" href="$class_four_x_four___board.html#ab561451bd4fe96d4439ce072341453cb" title="Check if the game is over." alt="" coords="5,5,167,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="199,29,167,29,167,24,199,24"/>
+</map>

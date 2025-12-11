@@ -1,0 +1,7 @@
+<map id="FiveXFive_Board::get_player_score" name="FiveXFive_Board::get_player_score">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,147,48"/>
+<area shape="rect" id="Node000002" href="$class_five_x_five___board.html#a240768c02341e80056d1f7a21a0f0a12" title=" " alt="" coords="195,5,370,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,24,179,24,179,29,147,29"/>
+<area shape="rect" id="Node000003" href="$class_five_x_five___board.html#a33be820bbd8fa54a2f7183519b97889a" title=" " alt="" coords="418,5,573,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="371,24,402,24,402,29,371,29"/>
+</map>

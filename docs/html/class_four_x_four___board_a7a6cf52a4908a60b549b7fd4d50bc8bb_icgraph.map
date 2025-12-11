@@ -1,0 +1,7 @@
+<map id="FourXFour_Board::isAdjacent" name="FourXFour_Board::isAdjacent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="468,13,658,40"/>
+<area shape="rect" id="Node000002" href="$class_four_x_four___board.html#a70e3c2aee7a9fd541098e911f10952b1" title=" " alt="" coords="222,13,420,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,29,420,29,420,24,452,24"/>
+<area shape="rect" id="Node000003" href="$class_four_x_four___board.html#a8e4e59abf2fac16d91d3b0f9d73b2f9c" title="Update the board with a new move." alt="" coords="5,5,174,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="206,29,174,29,174,24,206,24"/>
+</map>

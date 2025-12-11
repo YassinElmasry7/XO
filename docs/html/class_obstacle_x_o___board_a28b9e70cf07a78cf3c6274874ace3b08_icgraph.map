@@ -1,0 +1,10 @@
+<map id="ObstacleXO_Board::has_four_in_row" name="ObstacleXO_Board::has_four_in_row">
+<area shape="rect" id="Node000001" title=" " alt="" coords="679,5,840,48"/>
+<area shape="rect" id="Node000002" href="$class_obstacle_x_o___board.html#abf69352796411e1758512e2857da46f8" title="Check if a player has won." alt="" coords="456,13,631,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="664,29,632,29,632,24,664,24"/>
+<area shape="rect" id="Node000003" href="$class_obstacle_x_o___board.html#aca37280b85759dae6c043434cf45b4ba" title="Check if the game is over." alt="" coords="5,5,177,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,29,177,29,177,24,441,24"/>
+<area shape="rect" id="Node000004" href="$class_obstacle_x_o___board.html#af92d16bd5f371c99b9c765895d8af197" title="Check if the game ended in a draw." alt="" coords="225,39,408,65"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="441,41,409,44,408,39,440,36"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="209,43,177,39,177,34,210,37"/>
+</map>

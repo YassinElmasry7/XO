@@ -1,0 +1,5 @@
+<map id="ObstacleXO_Board::add_random_obstacles" name="ObstacleXO_Board::add_random_obstacles">
+<area shape="rect" id="Node000001" title=" " alt="" coords="232,5,392,48"/>
+<area shape="rect" id="Node000002" href="$class_obstacle_x_o___board.html#ab54396f73631727fc7cfd88d6dd16249" title="Update the board with a new move." alt="" coords="5,5,184,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,29,184,29,184,24,216,24"/>
+</map>

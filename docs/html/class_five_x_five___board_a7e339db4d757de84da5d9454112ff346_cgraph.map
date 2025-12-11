@@ -1,0 +1,7 @@
+<map id="FiveXFive_Board::is_draw" name="FiveXFive_Board::is_draw">
+<area shape="rect" id="Node000001" title="Check if the game ended in a draw." alt="" coords="5,13,173,40"/>
+<area shape="rect" id="Node000002" href="$class_five_x_five___board.html#a240768c02341e80056d1f7a21a0f0a12" title=" " alt="" coords="221,5,396,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,24,205,24,205,29,173,29"/>
+<area shape="rect" id="Node000003" href="$class_five_x_five___board.html#a33be820bbd8fa54a2f7183519b97889a" title=" " alt="" coords="444,5,599,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,24,428,24,428,29,397,29"/>
+</map>

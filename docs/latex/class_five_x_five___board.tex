@@ -1,0 +1,527 @@
+\doxysection{Five\+XFive\+\_\+\+Board Class Reference}
+\hypertarget{class_five_x_five___board}{}\label{class_five_x_five___board}\index{FiveXFive\_Board@{FiveXFive\_Board}}
+
+
+{\ttfamily \#include $<$XO\+\_\+\+Classes.\+h$>$}
+
+
+
+Inheritance diagram for Five\+XFive\+\_\+\+Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_five_x_five___board__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Five\+XFive\+\_\+\+Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_five_x_five___board__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_five_x_five___board_a14420bb7effd64a57e9deaca6e28c25c}{Five\+XFive\+\_\+\+Board}} ()
+\item 
+bool \mbox{\hyperlink{class_five_x_five___board_a9c2afe8718ed9e75ef6eb72b275769b1}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move)
+\begin{DoxyCompactList}\small\item\em Update the board with a new move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_five_x_five___board_ac495be84603b1d526cccd46976336915}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if a player has won. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_five_x_five___board_ab6f4d3dfef19b2befef7f710b79929f6}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if a player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_five_x_five___board_a7e339db4d757de84da5d9454112ff346}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if the game ended in a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_five_x_five___board_a6f7f4b606f6fedf63f7d61a3d4423f5f}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_five_x_five___board_a5a57e5e0d34a2b220b015a8c93e34fe8}{get\+\_\+player\+\_\+score}} (char symbol)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_five_x_five___board_a33be820bbd8fa54a2f7183519b97889a}{count\+\_\+three\+\_\+in\+\_\+row}} (char symbol)
+\item 
+void \mbox{\hyperlink{class_five_x_five___board_a240768c02341e80056d1f7a21a0f0a12}{calculate\+\_\+final\+\_\+scores}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_five_x_five___board_ab119005712837def4607dfc14546c472}{blank\+\_\+symbol}} = \textquotesingle{}.\textquotesingle{}
+\item 
+int \mbox{\hyperlink{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492}{final\+\_\+scoreX}} = 0
+\item 
+int \mbox{\hyperlink{class_five_x_five___board_a262eb0bf5456a3a1b6cf3145b0a6f3a0}{final\+\_\+scoreO}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00066}{66}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_five_x_five___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_five_x_five___board_a14420bb7effd64a57e9deaca6e28c25c}\index{FiveXFive\_Board@{FiveXFive\_Board}!FiveXFive\_Board@{FiveXFive\_Board}}
+\index{FiveXFive\_Board@{FiveXFive\_Board}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{FiveXFive\_Board()}{FiveXFive\_Board()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a14420bb7effd64a57e9deaca6e28c25c} 
+Five\+XFive\+\_\+\+Board\+::\+Five\+XFive\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00374}{374}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}(5,\ 5)\ \{}
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ row\ :\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}})}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ cell\ :\ row)}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ cell\ =\ \mbox{\hyperlink{class_five_x_five___board_ab119005712837def4607dfc14546c472}{blank\_symbol}};}
+\DoxyCodeLine{00378\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8h_source_l00068}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00056}{Board$<$ char $>$\+::\+Board()}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_five_x_five___board_a14420bb7effd64a57e9deaca6e28c25c_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{class_five_x_five___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_five_x_five___board_a240768c02341e80056d1f7a21a0f0a12}\index{FiveXFive\_Board@{FiveXFive\_Board}!calculate\_final\_scores@{calculate\_final\_scores}}
+\index{calculate\_final\_scores@{calculate\_final\_scores}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{calculate\_final\_scores()}{calculate\_final\_scores()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a240768c02341e80056d1f7a21a0f0a12} 
+void Five\+XFive\+\_\+\+Board\+::calculate\+\_\+final\+\_\+scores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00424}{424}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00425\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492}{final\_scoreX}}\ ==\ 0)\ \{\ }
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492}{final\_scoreX}}\ =\ \mbox{\hyperlink{class_five_x_five___board_a33be820bbd8fa54a2f7183519b97889a}{count\_three\_in\_row}}(\textcolor{charliteral}{'X'});}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_five_x_five___board_a262eb0bf5456a3a1b6cf3145b0a6f3a0}{final\_scoreO}}\ =\ \mbox{\hyperlink{class_five_x_five___board_a33be820bbd8fa54a2f7183519b97889a}{count\_three\_in\_row}}(\textcolor{charliteral}{'O'});}
+\DoxyCodeLine{00428\ \ \ \ \ \}}
+\DoxyCodeLine{00429\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8cpp_source_l00394}{count\+\_\+three\+\_\+in\+\_\+row()}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00070}{final\+\_\+scoreO}}, and \mbox{\hyperlink{_x_o___classes_8h_source_l00069}{final\+\_\+scoreX}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00455}{get\+\_\+player\+\_\+score()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00444}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00431}{is\+\_\+win()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_five_x_five___board_a240768c02341e80056d1f7a21a0f0a12_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_five_x_five___board_a240768c02341e80056d1f7a21a0f0a12_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_five_x_five___board_a33be820bbd8fa54a2f7183519b97889a}\index{FiveXFive\_Board@{FiveXFive\_Board}!count\_three\_in\_row@{count\_three\_in\_row}}
+\index{count\_three\_in\_row@{count\_three\_in\_row}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{count\_three\_in\_row()}{count\_three\_in\_row()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a33be820bbd8fa54a2f7183519b97889a} 
+int Five\+XFive\+\_\+\+Board\+::count\+\_\+three\+\_\+in\+\_\+row (\begin{DoxyParamCaption}\item[{char}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00394}{394}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00395\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}};\ i++)\ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}};\ j++)\ \{}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ <=\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ -\/\ 3)\ \{}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j\ +\ 1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j\ +\ 2]\ ==\ symbol)}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <=\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ -\/\ 3)\ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 1][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 2][j]\ ==\ symbol)}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <=\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ -\/\ 3\ \&\&\ j\ <=\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ -\/\ 3)\ \{}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 1][j\ +\ 1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 2][j\ +\ 2]\ ==\ symbol)}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ }
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <=\ rows\ -\/\ 3\ \&\&\ j\ >=\ 2)\ \{}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 1][j\ -\/\ 1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i\ +\ 2][j\ -\/\ 2]\ ==\ symbol)}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00420\ \ \ \ \ \}}
+\DoxyCodeLine{00421\ \ \ \ \ \textcolor{keywordflow}{return}\ count;}
+\DoxyCodeLine{00422\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00048}{Board$<$ char $>$\+::columns}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00047}{Board$<$ char $>$\+::rows}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00424}{calculate\+\_\+final\+\_\+scores()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_five_x_five___board_a33be820bbd8fa54a2f7183519b97889a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_five_x_five___board_a6f7f4b606f6fedf63f7d61a3d4423f5f}\index{FiveXFive\_Board@{FiveXFive\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a6f7f4b606f6fedf63f7d61a3d4423f5f} 
+bool Five\+XFive\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the game is over. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00451}{451}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00452\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ ==\ 24);}
+\DoxyCodeLine{00453\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00050}{Board$<$ char $>$\+::n\+\_\+moves}}.
+
+\Hypertarget{class_five_x_five___board_a5a57e5e0d34a2b220b015a8c93e34fe8}\index{FiveXFive\_Board@{FiveXFive\_Board}!get\_player\_score@{get\_player\_score}}
+\index{get\_player\_score@{get\_player\_score}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{get\_player\_score()}{get\_player\_score()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a5a57e5e0d34a2b220b015a8c93e34fe8} 
+int Five\+XFive\+\_\+\+Board\+::get\+\_\+player\+\_\+score (\begin{DoxyParamCaption}\item[{char}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00455}{455}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00456\ \ \ \ \ \mbox{\hyperlink{class_five_x_five___board_a240768c02341e80056d1f7a21a0f0a12}{calculate\_final\_scores}}();}
+\DoxyCodeLine{00457\ \ \ \ \ \textcolor{keywordflow}{return}\ (symbol\ ==\ \textcolor{charliteral}{'X'})\ ?\ \mbox{\hyperlink{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492}{final\_scoreX}}\ :\ \mbox{\hyperlink{class_five_x_five___board_a262eb0bf5456a3a1b6cf3145b0a6f3a0}{final\_scoreO}};}
+\DoxyCodeLine{00458\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8cpp_source_l00424}{calculate\+\_\+final\+\_\+scores()}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00070}{final\+\_\+scoreO}}, and \mbox{\hyperlink{_x_o___classes_8h_source_l00069}{final\+\_\+scoreX}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o_8cpp_source_l00062}{play\+\_\+five\+\_\+x\+\_\+five()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_five_x_five___board_a5a57e5e0d34a2b220b015a8c93e34fe8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_five_x_five___board_a5a57e5e0d34a2b220b015a8c93e34fe8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_five_x_five___board_a7e339db4d757de84da5d9454112ff346}\index{FiveXFive\_Board@{FiveXFive\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a7e339db4d757de84da5d9454112ff346} 
+bool Five\+XFive\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if the game ended in a draw. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00444}{444}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00445\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ <\ 24)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00447\ \ \ \ \ \mbox{\hyperlink{class_five_x_five___board_a240768c02341e80056d1f7a21a0f0a12}{calculate\_final\_scores}}();}
+\DoxyCodeLine{00448\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492}{final\_scoreX}}\ ==\ \mbox{\hyperlink{class_five_x_five___board_a262eb0bf5456a3a1b6cf3145b0a6f3a0}{final\_scoreO}};}
+\DoxyCodeLine{00449\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8cpp_source_l00424}{calculate\+\_\+final\+\_\+scores()}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00070}{final\+\_\+scoreO}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00069}{final\+\_\+scoreX}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00050}{Board$<$ char $>$\+::n\+\_\+moves}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_five_x_five___board_a7e339db4d757de84da5d9454112ff346_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_five_x_five___board_ab6f4d3dfef19b2befef7f710b79929f6}\index{FiveXFive\_Board@{FiveXFive\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_ab6f4d3dfef19b2befef7f710b79929f6} 
+bool Five\+XFive\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has lost. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00080}{80}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_five_x_five___board_ac495be84603b1d526cccd46976336915}\index{FiveXFive\_Board@{FiveXFive\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_ac495be84603b1d526cccd46976336915} 
+bool Five\+XFive\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check if a player has won. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00431}{431}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}\ <\ 24)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00434\ \ \ \ \ \mbox{\hyperlink{class_five_x_five___board_a240768c02341e80056d1f7a21a0f0a12}{calculate\_final\_scores}}();}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>get\_symbol()\ ==\ \textcolor{charliteral}{'X'})\ \{}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492}{final\_scoreX}}\ >\ \mbox{\hyperlink{class_five_x_five___board_a262eb0bf5456a3a1b6cf3145b0a6f3a0}{final\_scoreO}};}
+\DoxyCodeLine{00438\ \ \ \ \ \}}
+\DoxyCodeLine{00439\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_five_x_five___board_a262eb0bf5456a3a1b6cf3145b0a6f3a0}{final\_scoreO}}\ >\ \mbox{\hyperlink{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492}{final\_scoreX}};}
+\DoxyCodeLine{00441\ \ \ \ \ \}}
+\DoxyCodeLine{00442\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8cpp_source_l00424}{calculate\+\_\+final\+\_\+scores()}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00070}{final\+\_\+scoreO}}, \mbox{\hyperlink{_x_o___classes_8h_source_l00069}{final\+\_\+scoreX}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00163}{Player$<$ T $>$\+::get\+\_\+symbol()}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00050}{Board$<$ char $>$\+::n\+\_\+moves}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_five_x_five___board_ac495be84603b1d526cccd46976336915_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_five_x_five___board_a9c2afe8718ed9e75ef6eb72b275769b1}\index{FiveXFive\_Board@{FiveXFive\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a9c2afe8718ed9e75ef6eb72b275769b1} 
+bool Five\+XFive\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the board with a new move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move object containing position and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00380}{380}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\mbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00382\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\mbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00383\ \ \ \ \ \textcolor{keywordtype}{char}\ symbol\ =\ move-\/>\mbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}\ ||\ y\ <\ 0\ ||\ y\ >=\ \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}\ ||\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ \mbox{\hyperlink{class_five_x_five___board_ab119005712837def4607dfc14546c472}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00387\ \ \ \ \ \}}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \ \ \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00390\ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(symbol);}
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00392\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8h_source_l00068}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00048}{Board$<$ char $>$\+::columns}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00129}{Move$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00123}{Move$<$ T $>$\+::get\+\_\+x()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00126}{Move$<$ T $>$\+::get\+\_\+y()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00050}{Board$<$ char $>$\+::n\+\_\+moves}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00047}{Board$<$ char $>$\+::rows}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_five_x_five___board_a9c2afe8718ed9e75ef6eb72b275769b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_five_x_five___board_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_five_x_five___board_ab119005712837def4607dfc14546c472}\index{FiveXFive\_Board@{FiveXFive\_Board}!blank\_symbol@{blank\_symbol}}
+\index{blank\_symbol@{blank\_symbol}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{blank\_symbol}{blank\_symbol}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_ab119005712837def4607dfc14546c472} 
+char Five\+XFive\+\_\+\+Board\+::blank\+\_\+symbol = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00068}{68}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00374}{Five\+XFive\+\_\+\+Board()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00380}{update\+\_\+board()}}.
+
+\Hypertarget{class_five_x_five___board_a262eb0bf5456a3a1b6cf3145b0a6f3a0}\index{FiveXFive\_Board@{FiveXFive\_Board}!final\_scoreO@{final\_scoreO}}
+\index{final\_scoreO@{final\_scoreO}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{final\_scoreO}{final\_scoreO}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a262eb0bf5456a3a1b6cf3145b0a6f3a0} 
+int Five\+XFive\+\_\+\+Board\+::final\+\_\+scoreO = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00070}{70}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00424}{calculate\+\_\+final\+\_\+scores()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00455}{get\+\_\+player\+\_\+score()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00444}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00431}{is\+\_\+win()}}.
+
+\Hypertarget{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492}\index{FiveXFive\_Board@{FiveXFive\_Board}!final\_scoreX@{final\_scoreX}}
+\index{final\_scoreX@{final\_scoreX}!FiveXFive\_Board@{FiveXFive\_Board}}
+\doxysubsubsection{\texorpdfstring{final\_scoreX}{final\_scoreX}}
+{\footnotesize\ttfamily \label{class_five_x_five___board_a669ed68aedfc85a2185c0ae592a63492} 
+int Five\+XFive\+\_\+\+Board\+::final\+\_\+scoreX = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00069}{69}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00424}{calculate\+\_\+final\+\_\+scores()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00455}{get\+\_\+player\+\_\+score()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00444}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00431}{is\+\_\+win()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+XO/\mbox{\hyperlink{_x_o___classes_8h}{XO\+\_\+\+Classes.\+h}}\item 
+XO/\mbox{\hyperlink{_x_o___classes_8cpp}{XO\+\_\+\+Classes.\+cpp}}\end{DoxyCompactItemize}

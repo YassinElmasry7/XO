@@ -1,0 +1,27 @@
+<map id="XO/XO_Classes.cpp" name="XO/XO_Classes.cpp">
+<area shape="rect" id="Node000001" title="This file contains all the derived classes from BoardGame_Classes.h." alt="" coords="216,5,354,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,229,77,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,35,165,53,140,66,117,82,91,112,71,148,57,184,49,215,44,213,52,182,66,146,86,109,114,78,137,61,163,48,215,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="119,229,185,256"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="247,35,206,53,160,78,117,113,98,133,83,156,80,173,87,189,100,205,117,218,114,222,96,208,82,192,75,173,79,154,94,130,113,109,157,74,204,48,245,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="360,80,421,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="305,30,361,69,358,73,302,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="445,80,509,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="319,30,431,72,430,77,318,35"/>
+<area shape="rect" id="Node000006" href="$_x_o___classes_8h.html" title="This file contains all the derived classes from BoardGame_Classes.h." alt="" coords="233,80,337,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="288,33,288,64,282,64,282,33"/>
+<area shape="rect" id="Node000007" href="$_board_game___classes_8h.html" title="Core framework for board games." alt="" coords="93,155,248,181"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="266,109,205,148,202,144,264,105"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="424,229,477,256"/>
+<area shape="poly" id="edge12_Node000006_Node000008" title=" " alt="" coords="337,103,462,130,514,143,539,153,545,164,545,174,535,194,516,211,492,225,489,221,512,207,531,191,540,173,540,165,535,157,512,148,461,135,336,108"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="233,229,289,256"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="286,108,268,214,263,213,280,107"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="323,155,426,181"/>
+<area shape="poly" id="edge13_Node000006_Node000010" title=" " alt="" coords="302,105,349,143,345,147,299,109"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="451,155,525,181"/>
+<area shape="poly" id="edge14_Node000006_Node000011" title=" " alt="" coords="321,105,439,146,437,151,319,110"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="149,184,78,224,76,219,147,180"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="170,183,161,215,156,213,165,181"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="220,179,409,228,408,233,218,184"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="188,180,235,218,232,222,184,184"/>
+</map>

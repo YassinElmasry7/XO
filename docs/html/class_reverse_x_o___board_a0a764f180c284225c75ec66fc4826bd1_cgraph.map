@@ -1,0 +1,13 @@
+<map id="ReverseXO_Board::game_is_over" name="ReverseXO_Board::game_is_over">
+<area shape="rect" id="Node000001" title="Check if the game is over." alt="" coords="5,23,171,65"/>
+<area shape="rect" id="Node000002" href="$class_reverse_x_o___board.html#ae5a52f78eec9ee1bd0979644c5281cb4" title="Check if the game ended in a draw." alt="" coords="219,31,396,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,41,203,41,203,47,171,47"/>
+<area shape="rect" id="Node000003" href="$class_reverse_x_o___board.html#ad9335f7d016b63384e41432489820ca2" title="Check if a player has lost." alt="" coords="444,5,618,32"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="171,23,218,16,327,10,428,11,428,16,327,16,219,21,171,28"/>
+<area shape="rect" id="Node000005" href="$class_reverse_x_o___board.html#aa295a544751a396c708ee702acab307d" title="Check if a player has won." alt="" coords="447,68,616,95"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="172,59,219,67,329,75,431,79,431,84,328,81,218,72,171,65"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,31,428,28,429,33,396,37"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="391,55,433,62,432,67,391,61"/>
+<area shape="rect" id="Node000004" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="666,5,800,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="619,16,651,16,651,21,619,21"/>
+</map>

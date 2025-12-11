@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['game_5fis_5fover_0',['game_is_over',['../class_board.html#ae0e4575ec3cc4b6eb9f367ffb2beed13',1,'Board::game_is_over()'],['../class_math_x_o___board.html#addc8537b46fb788a7147cce4dad8322c',1,'MathXO_Board::game_is_over()'],['../class_reverse_x_o___board.html#a0a764f180c284225c75ec66fc4826bd1',1,'ReverseXO_Board::game_is_over()'],['../class_obstacle_x_o___board.html#aca37280b85759dae6c043434cf45b4ba',1,'ObstacleXO_Board::game_is_over()'],['../class_five_x_five___board.html#a6f7f4b606f6fedf63f7d61a3d4423f5f',1,'FiveXFive_Board::game_is_over()'],['../class_four_x_four___board.html#ab561451bd4fe96d4439ce072341453cb',1,'FourXFour_Board::game_is_over()'],['../class_connect_four___board.html#ae48fb5c6048942ff37a389bcac725751',1,'ConnectFour_Board::game_is_over()'],['../class_diamond_x_o___board.html#a8162e11a379c31e8407e0cc6c83f4ef6',1,'DiamondXO_Board::game_is_over()'],['../class_word_x_o___board.html#a0f73e346b6cd49c1c9c5edd34c8c372a',1,'WordXO_Board::game_is_over()'],['../class_pyramid_x_o___board.html#a3063e33245885a5e4e148d822f74761e',1,'PyramidXO_Board::game_is_over()'],['../class_infinity_x_o___board.html#a423bb869b44f160df63336950e5c6e47',1,'InfinityXO_Board::game_is_over()']]],
+  ['gamemanager_1',['GameManager',['../class_game_manager.html',1,'GameManager&lt; T &gt;'],['../class_game_manager.html#addaf3682d9783bdc432a8e3273b5b92c',1,'GameManager::GameManager()']]],
+  ['get_5favailable_5fnumbers_2',['get_available_numbers',['../class_math_x_o___board.html#aeed978c22ef9a9b57d6fa8fe71213a3d',1,'MathXO_Board']]],
+  ['get_5fboard_5fmatrix_3',['get_board_matrix',['../class_board.html#a117f2e61fdb7deccca333bbbc9c62d3a',1,'Board']]],
+  ['get_5fboard_5fptr_4',['get_board_ptr',['../class_player.html#a508617eddfae8915d098102d480fc888',1,'Player']]],
+  ['get_5fcell_5',['get_cell',['../class_board.html#a93558c58e60ca4291c6044828afd260b',1,'Board']]],
+  ['get_5fcells_5fas_5fstring_6',['get_cells_as_string',['../class_word_x_o___board.html#a50dbade4f1f5c205efbd02c4788ad86c',1,'WordXO_Board']]],
+  ['get_5fcolumns_7',['get_columns',['../class_board.html#ac665e1ed1f49125fab248e2c9ddfd608',1,'Board']]],
+  ['get_5fdiamond_5fsize_8',['get_diamond_size',['../class_diamond_x_o___board.html#a8bb696eba077b5c9637b2da3d419a47a',1,'DiamondXO_Board']]],
+  ['get_5flowest_5fempty_5frow_9',['get_lowest_empty_row',['../class_connect_four___board.html#adec2b76860defe0fa2054622156e4e30',1,'ConnectFour_Board']]],
+  ['get_5fmove_10',['get_move',['../class_u_i.html#a8befa259c38c57e6ae2e8ed81c476337',1,'UI::get_move()'],['../class_math_x_o___u_i.html#ab4fe7c90496af8f7bd2cd2e324493e43',1,'MathXO_UI::get_move()'],['../class_reverse_x_o___u_i.html#a7f482af9d77f72ba6507695cc070e3cf',1,'ReverseXO_UI::get_move()'],['../class_obstacle_x_o___u_i.html#aab689d97241f24a713f56e46c187101e',1,'ObstacleXO_UI::get_move()'],['../class_five_x_five___u_i.html#a9df00e1afa46187470efe307fef2da8e',1,'FiveXFive_UI::get_move()'],['../class_four_x_four___u_i.html#a0dc9bbddd13d96c98e8371ecb90da13a',1,'FourXFour_UI::get_move()'],['../class_connect_four___u_i.html#a3b8fec2373471044c0e2c0f307a20834',1,'ConnectFour_UI::get_move()'],['../class_diamond_x_o___u_i.html#ab5ed007cb4745664ed6c907fc6dddb8d',1,'DiamondXO_UI::get_move()'],['../class_word_x_o___u_i.html#aad91a34cf6b4f8042a8a0676d2411c87',1,'WordXO_UI::get_move()'],['../class_pyramid_x_o___u_i.html#ab16ed1e3a89883e324ebf1362fd4315a',1,'PyramidXO_UI::get_move()'],['../class_infinity_x_o___u_i.html#a15d92544970c320d8eec8b6007f0e1fa',1,'InfinityXO_UI::get_move()']]],
+  ['get_5fmoves_5fsince_5flast_5fremoval_11',['get_moves_since_last_removal',['../class_infinity_x_o___board.html#a7ac64df922d1065b42448f6b6e6575b3',1,'InfinityXO_Board']]],
+  ['get_5fn_5fmoves_12',['get_n_moves',['../class_board.html#a512d0bd8c282985c410d677c82eb3b78',1,'Board']]],
+  ['get_5fname_13',['get_name',['../class_player.html#aed2af19790ba73190e3ebeea589518e1',1,'Player']]],
+  ['get_5fplayer_5fname_14',['get_player_name',['../class_u_i.html#a7b1603de1f73fbb4006e4f00a27c44da',1,'UI']]],
+  ['get_5fplayer_5fpieces_15',['get_player_pieces',['../class_four_x_four___board.html#a95438a42ed0cf03b732b16081d50010d',1,'FourXFour_Board']]],
+  ['get_5fplayer_5fscore_16',['get_player_score',['../class_five_x_five___board.html#a5a57e5e0d34a2b220b015a8c93e34fe8',1,'FiveXFive_Board']]],
+  ['get_5fplayer_5ftype_5fchoice_17',['get_player_type_choice',['../class_u_i.html#ac3d45fea2bbcaa0372d8e5101e116ca1',1,'UI']]],
+  ['get_5fround_5fcount_18',['get_round_count',['../class_obstacle_x_o___board.html#a51cf17b179a4e5f532f720576591aa2b',1,'ObstacleXO_Board']]],
+  ['get_5frows_19',['get_rows',['../class_board.html#a93b130eff67bd4476fab27be8341cb78',1,'Board']]],
+  ['get_5fsymbol_20',['get_symbol',['../class_move.html#a595bf740852c05a1cb425ef2640fd4ff',1,'Move::get_symbol()'],['../class_player.html#af56f0bf98c0423a3a75b0848607d03a4',1,'Player::get_symbol()']]],
+  ['get_5ftotal_5fmoves_21',['get_total_moves',['../class_infinity_x_o___board.html#a03692ef8652d202e612d7d8859ed842d',1,'InfinityXO_Board']]],
+  ['get_5ftype_22',['get_type',['../class_player.html#a2df3bd299bf7aecfa2275ec6902a60f8',1,'Player']]],
+  ['get_5fx_23',['get_x',['../class_move.html#a9d4f543a81e361f872d37bcfb64d5b55',1,'Move']]],
+  ['get_5fy_24',['get_y',['../class_move.html#a96469802a55c9083a1e93c7edec8a00c',1,'Move']]]
+];

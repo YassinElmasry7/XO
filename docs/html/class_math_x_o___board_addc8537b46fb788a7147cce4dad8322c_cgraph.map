@@ -1,0 +1,8 @@
+<map id="MathXO_Board::game_is_over" name="MathXO_Board::game_is_over">
+<area shape="rect" id="Node000001" title="Check if the game is over." alt="" coords="5,23,154,65"/>
+<area shape="rect" id="Node000002" href="$class_math_x_o___board.html#a676c41f1aa0db51b4d8737dee7d3bd72" title="Check if the game ended in a draw." alt="" coords="202,5,362,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,32,186,28,186,33,154,37"/>
+<area shape="rect" id="Node000003" href="$class_math_x_o___board.html#a8e584a5ae33be8f820b6cb94a7b9da44" title="Check if a player has won." alt="" coords="410,31,562,57"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="154,41,394,41,394,47,154,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,26,395,30,394,35,362,31"/>
+</map>

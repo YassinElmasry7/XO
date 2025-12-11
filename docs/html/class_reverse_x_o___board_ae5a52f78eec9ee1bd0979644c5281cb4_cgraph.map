@@ -1,0 +1,9 @@
+<map id="ReverseXO_Board::is_draw" name="ReverseXO_Board::is_draw">
+<area shape="rect" id="Node000001" title="Check if the game ended in a draw." alt="" coords="5,31,183,57"/>
+<area shape="rect" id="Node000002" href="$class_reverse_x_o___board.html#ad9335f7d016b63384e41432489820ca2" title="Check if a player has lost." alt="" coords="231,5,405,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,31,215,28,215,33,183,37"/>
+<area shape="rect" id="Node000004" href="$class_reverse_x_o___board.html#aa295a544751a396c708ee702acab307d" title="Check if a player has won." alt="" coords="233,56,403,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,51,218,55,217,61,182,57"/>
+<area shape="rect" id="Node000003" href="$class_player.html#af56f0bf98c0423a3a75b0848607d03a4" title="Get the player&#39;s symbol." alt="" coords="453,5,586,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="405,16,437,16,437,21,405,21"/>
+</map>
