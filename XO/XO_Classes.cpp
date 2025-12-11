@@ -1085,7 +1085,7 @@ Player<char>* DiamondXO_UI::create_player(string& name, char symbol, PlayerType 
 
 void DiamondXO_UI::display_board_matrix(const vector<vector<char>>& matrix) const {
     cout << "       0   1   2   3   4   5   6\n";
-    cout << "      -----------------------------\n";
+    cout << "      ---------------------------\n";
 
     for (int i = 0; i < 7; ++i) {
         cout << "   " << i << " |";
@@ -1095,10 +1095,10 @@ void DiamondXO_UI::display_board_matrix(const vector<vector<char>>& matrix) cons
         cout << "\n";
 
         if (i < 6) {
-            cout << "      -----------------------------\n";
+            cout << "      ---------------------------\n";
         }
     }
-    cout << "      -----------------------------\n\n";
+    cout << "      ---------------------------\n\n";
 }
 
 Move<char>* DiamondXO_UI::get_move(Player<char>* player) {
