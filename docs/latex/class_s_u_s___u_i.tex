@@ -1,0 +1,277 @@
+\doxysection{SUS\+\_\+\+UI Class Reference}
+\hypertarget{class_s_u_s___u_i}{}\label{class_s_u_s___u_i}\index{SUS\_UI@{SUS\_UI}}
+
+
+{\ttfamily \#include $<$XO\+\_\+\+Classes.\+h$>$}
+
+
+
+Inheritance diagram for SUS\+\_\+\+UI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{class_s_u_s___u_i__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for SUS\+\_\+\+UI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{class_s_u_s___u_i__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_u_s___u_i_ac1a13d00ecf04b1ea3af53f1c08949c1}{SUS\+\_\+\+UI}} ()
+\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_u_s___u_i_ae510c6c91efc4a17d7dadb4282e00e84}{create\+\_\+player}} (string \&name, char symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type) override
+\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_u_s___u_i_a9c7a3c09a5e18a3d89f448ea93b6dea6}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Ask the user (or AI) to make a move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_u_s___u_i_a24c1d67ea76050e7bee6159e9ba39aa2}{setup\+\_\+players}} () override
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00319}{319}} of file \mbox{\hyperlink{_x_o___classes_8h_source}{XO\+\_\+\+Classes.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_s_u_s___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_u_s___u_i_ac1a13d00ecf04b1ea3af53f1c08949c1}\index{SUS\_UI@{SUS\_UI}!SUS\_UI@{SUS\_UI}}
+\index{SUS\_UI@{SUS\_UI}!SUS\_UI@{SUS\_UI}}
+\doxysubsubsection{\texorpdfstring{SUS\_UI()}{SUS\_UI()}}
+{\footnotesize\ttfamily \label{class_s_u_s___u_i_ac1a13d00ecf04b1ea3af53f1c08949c1} 
+SUS\+\_\+\+UI\+::\+SUS\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01757}{1757}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01757\ :\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI<char>}}(\textcolor{stringliteral}{"{}Welcome\ to\ SUS\ Game\ (S-\/U-\/S\ Sequence)"{}},\ 3)\ \{\}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00209}{UI$<$ char $>$\+::\+UI()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_s_u_s___u_i_ac1a13d00ecf04b1ea3af53f1c08949c1_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{class_s_u_s___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_u_s___u_i_ae510c6c91efc4a17d7dadb4282e00e84}\index{SUS\_UI@{SUS\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!SUS\_UI@{SUS\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_s_u_s___u_i_ae510c6c91efc4a17d7dadb4282e00e84} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} SUS\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01759}{1759}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01759\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01760\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Player<char>(name,\ symbol,\ type);}
+\DoxyCodeLine{01761\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01817}{setup\+\_\+players()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_s_u_s___u_i_ae510c6c91efc4a17d7dadb4282e00e84_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_s_u_s___u_i_a9c7a3c09a5e18a3d89f448ea93b6dea6}\index{SUS\_UI@{SUS\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!SUS\_UI@{SUS\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_s_u_s___u_i_a9c7a3c09a5e18a3d89f448ea93b6dea6} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} SUS\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ask the user (or AI) to make a move. 
+
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01763}{1763}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01763\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01764\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{01765\ \ \ \ \ \textcolor{keywordtype}{char}\ mark\ =\ player-\/>get\_symbol();}
+\DoxyCodeLine{01766\ \ \ \ \ Board<char>*\ board\_ptr\ =\ player-\/>get\_board\_ptr();}
+\DoxyCodeLine{01767\ }
+\DoxyCodeLine{01768\ \ \ \ \ \textcolor{keywordflow}{if}\ (player-\/>get\_type()\ ==\ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{PlayerType::HUMAN}})\ \{}
+\DoxyCodeLine{01769\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ valid\_input\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01770\ }
+\DoxyCodeLine{01771\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!valid\_input)\ \{}
+\DoxyCodeLine{01772\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nPlayer\ "{}}\ <<\ player-\/>get\_name()\ <<\ \textcolor{stringliteral}{"{}\ ("{}}\ <<\ mark\ <<\ \textcolor{stringliteral}{"{}),\ enter\ move\ (Row\ Col)\ in\ the\ range\ (0\ -\/\ 0)\ to\ (2\ -\/\ 2):\ "{}};}
+\DoxyCodeLine{01773\ }
+\DoxyCodeLine{01774\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(cin\ >>\ x\ >>\ y))\ \{}
+\DoxyCodeLine{01775\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ Invalid\ input\ format.\ Please\ enter\ two\ numbers\ for\ coordinates\ (Row\ Col)\ in\ the\ range\ 0-\/2.\(\backslash\)n"{}};}
+\DoxyCodeLine{01776\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.clear();}
+\DoxyCodeLine{01777\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{01778\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{01779\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01780\ }
+\DoxyCodeLine{01781\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ board\_ptr-\/>\mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}()\ ||\ y\ <\ 0\ ||\ y\ >=\ board\_ptr-\/>\mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}())\ \{}
+\DoxyCodeLine{01782\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ Coordinate\ out\ of\ range.\ Please\ enter\ numbers\ between\ 0\ and\ 2.\(\backslash\)n"{}};}
+\DoxyCodeLine{01783\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{01784\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01785\ }
+\DoxyCodeLine{01786\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (board\_ptr-\/>\mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\_board\_matrix}}()[x][y]\ !=\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{01787\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ That\ cell\ is\ already\ occupied.\ Choose\ an\ empty\ cell.\(\backslash\)n"{}};}
+\DoxyCodeLine{01788\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{01789\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01790\ }
+\DoxyCodeLine{01791\ \ \ \ \ \ \ \ \ \ \ \ \ valid\_input\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01792\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01793\ \ \ \ \ \}}
+\DoxyCodeLine{01794\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{01795\ \ \ \ \ \ \ \ \ vector<pair<int,\ int>>\ empty\_cells;}
+\DoxyCodeLine{01796\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ board\_ptr-\/>\mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\_rows}}();\ ++i)\ \{}
+\DoxyCodeLine{01797\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ board\_ptr-\/>\mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\_columns}}();\ ++j)\ \{}
+\DoxyCodeLine{01798\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (board\_ptr-\/>\mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\_board\_matrix}}()[i][j]\ ==\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{01799\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ empty\_cells.push\_back(\{\ i,\ j\ \});}
+\DoxyCodeLine{01800\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01801\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01802\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01803\ }
+\DoxyCodeLine{01804\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!empty\_cells.empty())\ \{}
+\DoxyCodeLine{01805\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rand\_index\ =\ rand()\ \%\ empty\_cells.size();}
+\DoxyCodeLine{01806\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ empty\_cells[rand\_index].first;}
+\DoxyCodeLine{01807\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ empty\_cells[rand\_index].second;}
+\DoxyCodeLine{01808\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01809\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{01810\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(-\/1,\ -\/1,\ mark);}
+\DoxyCodeLine{01811\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01812\ \ \ \ \ \}}
+\DoxyCodeLine{01813\ }
+\DoxyCodeLine{01814\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Move<char>(x,\ y,\ mark);}
+\DoxyCodeLine{01815\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00087}{Board$<$ T $>$\+::get\+\_\+board\+\_\+matrix()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00166}{Player$<$ T $>$\+::get\+\_\+board\+\_\+ptr()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00095}{Board$<$ T $>$\+::get\+\_\+columns()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00157}{Player$<$ T $>$\+::get\+\_\+name()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00092}{Board$<$ T $>$\+::get\+\_\+rows()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00163}{Player$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00160}{Player$<$ T $>$\+::get\+\_\+type()}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00030}{HUMAN}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_s_u_s___u_i_a9c7a3c09a5e18a3d89f448ea93b6dea6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_s_u_s___u_i_a24c1d67ea76050e7bee6159e9ba39aa2}\index{SUS\_UI@{SUS\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!SUS\_UI@{SUS\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_s_u_s___u_i_a24c1d67ea76050e7bee6159e9ba39aa2} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} SUS\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set up players for the game. 
+
+Default implementation of setting up two players. 
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ char $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01817}{1817}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01817\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01818\ \ \ \ \ Player<char>**\ players\ =\ \textcolor{keyword}{new}\ Player<char>*[2];}
+\DoxyCodeLine{01819\ \ \ \ \ vector<string>\ type\_options\ =\ \{\ \textcolor{stringliteral}{"{}Human"{}},\ \textcolor{stringliteral}{"{}Computer"{}}\ \};}
+\DoxyCodeLine{01820\ }
+\DoxyCodeLine{01821\ \ \ \ \ \textcolor{keywordtype}{string}\ name1\ =\ \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ S"{}});}
+\DoxyCodeLine{01822\ \ \ \ \ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type1\ =\ \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ S"{}},\ type\_options);}
+\DoxyCodeLine{01823\ \ \ \ \ players[0]\ =\ \mbox{\hyperlink{class_s_u_s___u_i_ae510c6c91efc4a17d7dadb4282e00e84}{create\_player}}(name1,\ \textcolor{charliteral}{'S'},\ type1);}
+\DoxyCodeLine{01824\ }
+\DoxyCodeLine{01825\ \ \ \ \ \textcolor{keywordtype}{string}\ name2\ =\ \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\_player\_name}}(\textcolor{stringliteral}{"{}Player\ U"{}});}
+\DoxyCodeLine{01826\ \ \ \ \ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type2\ =\ \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\_player\_type\_choice}}(\textcolor{stringliteral}{"{}Player\ U"{}},\ type\_options);}
+\DoxyCodeLine{01827\ \ \ \ \ players[1]\ =\ \mbox{\hyperlink{class_s_u_s___u_i_ae510c6c91efc4a17d7dadb4282e00e84}{create\_player}}(name2,\ \textcolor{charliteral}{'U'},\ type2);}
+\DoxyCodeLine{01828\ }
+\DoxyCodeLine{01829\ \ \ \ \ \textcolor{keywordflow}{return}\ players;}
+\DoxyCodeLine{01830\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_x_o___classes_8cpp_source_l01759}{create\+\_\+player()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00186}{UI$<$ char $>$\+::get\+\_\+player\+\_\+name()}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00196}{UI$<$ char $>$\+::get\+\_\+player\+\_\+type\+\_\+choice()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_u_s___u_i_a24c1d67ea76050e7bee6159e9ba39aa2_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+XO/\mbox{\hyperlink{_x_o___classes_8h}{XO\+\_\+\+Classes.\+h}}\item 
+XO/\mbox{\hyperlink{_x_o___classes_8cpp}{XO\+\_\+\+Classes.\+cpp}}\end{DoxyCompactItemize}

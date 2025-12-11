@@ -1,21 +1,23 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_u_i.html" title=" " alt="" coords="5,208,88,235"/>
+<area shape="rect" id="Node000000" href="$class_u_i.html" title=" " alt="" coords="5,233,88,260"/>
 <area shape="rect" id="Node000001" href="$class_connect_four___u_i.html" title=" " alt="" coords="136,5,250,32"/>
-<area shape="poly" id="edge11_Node000000_Node000001" title=" " alt="" coords="53,192,81,119,104,78,134,42,151,30,154,35,137,46,108,81,86,121,58,194"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="51,217,61,179,77,133,101,85,134,42,150,30,153,35,138,46,106,88,82,135,66,180,56,219"/>
 <area shape="rect" id="Node000002" href="$class_diamond_x_o___u_i.html" title=" " alt="" coords="139,56,247,83"/>
-<area shape="poly" id="edge12_Node000000_Node000002" title=" " alt="" coords="59,193,89,143,110,116,134,93,152,81,155,85,137,97,114,120,94,146,63,196"/>
+<area shape="poly" id="edge13_Node000000_Node000002" title=" " alt="" coords="55,218,85,156,107,123,134,93,151,81,154,85,137,97,111,126,89,159,60,220"/>
 <area shape="rect" id="Node000003" href="$class_five_x_five___u_i.html" title=" " alt="" coords="146,107,240,133"/>
-<area shape="poly" id="edge13_Node000000_Node000003" title=" " alt="" coords="70,195,100,169,134,143,156,131,158,136,137,148,103,173,74,199"/>
+<area shape="poly" id="edge14_Node000000_Node000003" title=" " alt="" coords="64,219,94,181,134,143,153,132,156,136,137,147,98,184,68,222"/>
 <area shape="rect" id="Node000004" href="$class_four_x_four___u_i.html" title=" " alt="" coords="143,157,243,184"/>
-<area shape="poly" id="edge14_Node000000_Node000004" title=" " alt="" coords="101,200,151,182,153,187,103,205"/>
+<area shape="poly" id="edge15_Node000000_Node000004" title=" " alt="" coords="82,223,134,194,158,182,161,187,137,198,85,227"/>
 <area shape="rect" id="Node000005" href="$class_infinity_x_o___u_i.html" title=" " alt="" coords="146,208,240,235"/>
-<area shape="poly" id="edge15_Node000000_Node000005" title=" " alt="" coords="103,219,145,219,145,224,103,224"/>
+<area shape="poly" id="edge16_Node000000_Node000005" title=" " alt="" coords="102,234,145,227,146,232,103,240"/>
 <area shape="rect" id="Node000006" href="$class_obstacle_x_o___u_i.html" title=" " alt="" coords="138,259,248,285"/>
-<area shape="poly" id="edge16_Node000000_Node000006" title=" " alt="" coords="103,238,153,256,151,261,101,243"/>
+<area shape="poly" id="edge17_Node000000_Node000006" title=" " alt="" coords="104,254,138,260,138,265,103,259"/>
 <area shape="rect" id="Node000007" href="$class_pyramid_x_o___u_i.html" title=" " alt="" coords="140,309,246,336"/>
-<area shape="poly" id="edge17_Node000000_Node000007" title=" " alt="" coords="74,244,103,270,137,295,158,307,156,311,134,300,100,274,70,248"/>
+<area shape="poly" id="edge18_Node000000_Node000007" title=" " alt="" coords="85,266,137,295,161,306,158,311,134,300,82,271"/>
 <area shape="rect" id="Node000008" href="$class_reverse_x_o___u_i.html" title=" " alt="" coords="141,360,245,387"/>
-<area shape="poly" id="edge18_Node000000_Node000008" title=" " alt="" coords="63,247,94,297,114,323,137,346,155,357,152,362,134,350,110,326,89,300,59,250"/>
-<area shape="rect" id="Node000009" href="$class_word_x_o___u_i.html" title=" " alt="" coords="149,411,237,437"/>
-<area shape="poly" id="edge19_Node000000_Node000009" title=" " alt="" coords="58,249,86,322,108,361,137,397,154,408,151,412,134,401,104,364,81,324,53,251"/>
+<area shape="poly" id="edge19_Node000000_Node000008" title=" " alt="" coords="68,271,98,309,137,346,156,357,153,362,134,350,94,313,64,275"/>
+<area shape="rect" id="Node000009" href="$class_s_u_s___u_i.html" title=" " alt="" coords="159,411,227,437"/>
+<area shape="poly" id="edge20_Node000000_Node000009" title=" " alt="" coords="60,273,89,335,111,368,137,397,160,411,157,415,134,401,107,371,85,337,55,275"/>
+<area shape="rect" id="Node000010" href="$class_word_x_o___u_i.html" title=" " alt="" coords="149,461,237,488"/>
+<area shape="poly" id="edge21_Node000000_Node000010" title=" " alt="" coords="56,275,66,313,82,359,106,406,138,447,153,459,150,463,134,451,101,409,77,361,61,314,51,276"/>
 </map>

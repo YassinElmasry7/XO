@@ -22,6 +22,8 @@ var annotated_dup =
     [ "PyramidXO_UI", "class_pyramid_x_o___u_i.html", "class_pyramid_x_o___u_i" ],
     [ "ReverseXO_Board", "class_reverse_x_o___board.html", "class_reverse_x_o___board" ],
     [ "ReverseXO_UI", "class_reverse_x_o___u_i.html", "class_reverse_x_o___u_i" ],
+    [ "SUS_Board", "class_s_u_s___board.html", "class_s_u_s___board" ],
+    [ "SUS_UI", "class_s_u_s___u_i.html", "class_s_u_s___u_i" ],
     [ "UI", "class_u_i.html", "class_u_i" ],
     [ "WordXO_Board", "class_word_x_o___board.html", "class_word_x_o___board" ],
     [ "WordXO_UI", "class_word_x_o___u_i.html", "class_word_x_o___u_i" ]

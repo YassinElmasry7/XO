@@ -893,33 +893,32 @@ DiamondXO_Board::DiamondXO_Board() : Board(7, 7) {
 }
 
 void DiamondXO_Board::initialize_diamond_shape() {
-    // Row 0
     valid_cells[0][3] = true;
-    // Row 1
+
     valid_cells[1][2] = true;
     valid_cells[1][3] = true;
     valid_cells[1][4] = true;
-    // Row 2
+
     valid_cells[2][1] = true;
     valid_cells[2][2] = true;
     valid_cells[2][3] = true;
     valid_cells[2][4] = true;
     valid_cells[2][5] = true;
-    // Row 3
+
     for (int j = 0; j < 7; j++) {
         valid_cells[3][j] = true;
     }
-    // Row 4
+
     valid_cells[4][1] = true;
     valid_cells[4][2] = true;
     valid_cells[4][3] = true;
     valid_cells[4][4] = true;
     valid_cells[4][5] = true;
-    // Row 5
+
     valid_cells[5][2] = true;
     valid_cells[5][3] = true;
     valid_cells[5][4] = true;
-    // Row 6
+
     valid_cells[6][3] = true;
     for (int i = 0; i < 7; i++) {
         for (int j = 0; j < 7; j++) {
@@ -1045,8 +1044,6 @@ bool DiamondXO_Board::has_four_diagonal2(char symbol) {
 
 bool DiamondXO_Board::is_win(Player<char>* player) {
     char symbol = player->get_symbol();
-
-    // Check all combinations of different directions
 
     if (has_three_horizontal(symbol) && has_four_vertical(symbol)) return true;
     if (has_three_horizontal(symbol) && has_four_diagonal1(symbol)) return true;
@@ -1195,7 +1192,6 @@ bool WordXO_Board::update_board(Move<char>* move) {
 bool WordXO_Board::is_win(Player<char>* player) {
     char symbol = player->get_symbol();
 
-    // Check rows
     for (int i = 0; i < 3; ++i) {
         if (board[i][0] != blank_symbol && board[i][1] != blank_symbol && board[i][2] != blank_symbol) {
             string word = get_cells_as_string(i, 0, i, 1, i, 2);
@@ -1203,7 +1199,6 @@ bool WordXO_Board::is_win(Player<char>* player) {
         }
     }
 
-    // Check columns
     for (int j = 0; j < 3; ++j) {
         if (board[0][j] != blank_symbol && board[1][j] != blank_symbol && board[2][j] != blank_symbol) {
             string word = get_cells_as_string(0, j, 1, j, 2, j);
@@ -1211,13 +1206,11 @@ bool WordXO_Board::is_win(Player<char>* player) {
         }
     }
 
-    // Check diagonal 1
     if (board[0][0] != blank_symbol && board[1][1] != blank_symbol && board[2][2] != blank_symbol) {
         string word = get_cells_as_string(0, 0, 1, 1, 2, 2);
         if (is_valid_word(word)) return true;
     }
 
-    // Check diagonal 2
     if (board[0][2] != blank_symbol && board[1][1] != blank_symbol && board[2][0] != blank_symbol) {
         string word = get_cells_as_string(0, 2, 1, 1, 2, 0);
         if (is_valid_word(word)) return true;
@@ -1289,7 +1282,7 @@ Move<char>* WordXO_UI::get_move(Player<char>* player) {
 
     return new Move<char>(x, y, letter);
 }
-// Pyramid Tic-Tac-Toe implementation
+
 
 PyramidXO_Board::PyramidXO_Board() : Board(4, 5) {
     for (auto& row : board)
@@ -1301,29 +1294,24 @@ PyramidXO_Board::PyramidXO_Board() : Board(4, 5) {
 }
 
 void PyramidXO_Board::initialize_pyramid_shape() {
-    // Row 0 (top) - 1 cell
     valid_cells[0][2] = true;
 
-    // Row 1 - 3 cells
     valid_cells[1][1] = true;
     valid_cells[1][2] = true;
     valid_cells[1][3] = true;
 
-    // Row 2 - 3 cells (continuing the pyramid)
     valid_cells[2][0] = true;
     valid_cells[2][1] = true;
     valid_cells[2][2] = true;
     valid_cells[2][3] = true;
     valid_cells[2][4] = true;
 
-    // Row 3 (bottom) - 5 cells
     valid_cells[3][0] = true;
     valid_cells[3][1] = true;
     valid_cells[3][2] = true;
     valid_cells[3][3] = true;
     valid_cells[3][4] = true;
 
-    // Mark invalid cells with space
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 5; j++) {
             if (!valid_cells[i][j]) {
@@ -1353,7 +1341,6 @@ bool PyramidXO_Board::update_board(Move<char>* move) {
 }
 
 bool PyramidXO_Board::check_win(char symbol) {
-    // Check rows
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j <= 2; j++) {
             if (is_valid_cell(i, j) && is_valid_cell(i, j + 1) && is_valid_cell(i, j + 2) &&
@@ -1363,7 +1350,6 @@ bool PyramidXO_Board::check_win(char symbol) {
         }
     }
 
-    // Check columns
     for (int j = 0; j < 5; j++) {
         for (int i = 0; i <= 1; i++) {
             if (is_valid_cell(i, j) && is_valid_cell(i + 1, j) && is_valid_cell(i + 2, j) &&
@@ -1373,7 +1359,6 @@ bool PyramidXO_Board::check_win(char symbol) {
         }
     }
 
-    // Check diagonals (top-left to bottom-right)
     for (int i = 0; i <= 1; i++) {
         for (int j = 0; j <= 2; j++) {
             if (is_valid_cell(i, j) && is_valid_cell(i + 1, j + 1) && is_valid_cell(i + 2, j + 2) &&
@@ -1383,7 +1368,6 @@ bool PyramidXO_Board::check_win(char symbol) {
         }
     }
 
-    // Check diagonals (top-right to bottom-left)
     for (int i = 0; i <= 1; i++) {
         for (int j = 2; j < 5; j++) {
             if (is_valid_cell(i, j) && is_valid_cell(i + 1, j - 1) && is_valid_cell(i + 2, j - 2) &&
@@ -1626,4 +1610,221 @@ Move<char>* InfinityXO_UI::get_move(Player<char>* player) {
     }
 
     return new Move<char>(x, y, player->get_symbol());
+}
+
+bool is_on_board_safe(int x, int y, int rows, int columns) {
+    return x >= 0 && x < rows && y >= 0 && y < columns;
+}
+
+SUS_Board::SUS_Board() : Board(3, 3) {
+    for (auto& row : board)
+        for (auto& cell : row)
+            cell = blank_symbol;
+    player1_score = 0;
+    player2_score = 0;
+}
+
+int SUS_Board::calculate_new_sus_score(int last_x, int last_y) const {
+    int new_score = 0;
+    char current_mark = board[last_x][last_y];
+
+    vector<pair<int, int>> directions = { {1, 0}, {0, 1}, {1, 1}, {1, -1} };
+
+    for (const auto& dir : directions) {
+        int dx = dir.first;
+        int dy = dir.second;
+
+        if (current_mark == 'S') {
+            int x1_next = last_x + dx;
+            int y1_next = last_y + dy;
+            int x2_next = last_x + 2 * dx;
+            int y2_next = last_y + 2 * dy;
+
+            if (is_on_board_safe(x1_next, y1_next, rows, columns) &&
+                is_on_board_safe(x2_next, y2_next, rows, columns) &&
+                board[x1_next][y1_next] == 'U' &&
+                board[x2_next][y2_next] == 'S') {
+                new_score++;
+            }
+        }
+
+        if (current_mark == 'U') {
+            int x_prev = last_x - dx;
+            int y_prev = last_y - dy;
+            int x_next = last_x + dx;
+            int y_next = last_y + dy;
+
+            if (is_on_board_safe(x_prev, y_prev, rows, columns) &&
+                is_on_board_safe(x_next, y_next, rows, columns) &&
+                board[x_prev][y_prev] == 'S' &&
+                board[x_next][y_next] == 'S') {
+                new_score++;
+            }
+        }
+
+        if (current_mark == 'S') {
+            int x1_prev = last_x - dx;
+            int y1_prev = last_y - dy;
+            int x2_prev = last_x - 2 * dx;
+            int y2_prev = last_y - 2 * dy;
+
+            if (is_on_board_safe(x1_prev, y1_prev, rows, columns) &&
+                is_on_board_safe(x2_prev, y2_prev, rows, columns) &&
+                board[x2_prev][y2_prev] == 'S' &&
+                board[x1_prev][y1_prev] == 'U') {
+                new_score++;
+            }
+        }
+    }
+    return new_score;
+}
+
+int SUS_Board::get_player_score(int player_index) const {
+    if (player_index == 0) return player1_score;
+    if (player_index == 1) return player2_score;
+    return 0;
+}
+
+
+bool SUS_Board::update_board(Move<char>* move) {
+    int x = move->get_x();
+    int y = move->get_y();
+    char mark = toupper(move->get_symbol());
+
+    if (!(x < 0 || x >= rows || y < 0 || y >= columns) &&
+        (board[x][y] == blank_symbol) && (mark == 'S' || mark == 'U')) {
+
+        n_moves++;
+        board[x][y] = mark;
+
+        int new_points = calculate_new_sus_score(x, y);
+
+        if (mark == 'S') {
+            player1_score += new_points;
+        }
+        else {
+            player2_score += new_points;
+        }
+
+        return true;
+    }
+    return false;
+}
+
+bool SUS_Board::is_win(Player<char>* player) {
+    if (n_moves == 9) {
+        int player_index = (player->get_symbol() == 'S') ? 0 : 1;
+
+        int current_score = get_player_score(player_index);
+        int opponent_score = get_player_score(1 - player_index);
+
+        return (current_score > opponent_score);
+    }
+    return false;
+}
+
+bool SUS_Board::is_draw(Player<char>* player) {
+    if (n_moves == 9) {
+        return (player1_score == player2_score);
+    }
+    return false;
+}
+
+bool SUS_Board::game_is_over(Player<char>* player) {
+    return (n_moves == 9);
+}
+
+string SUS_Board::get_final_result_message(Player<char>** players) {
+    string result;
+
+    int score1 = get_player_score(0);
+    int score2 = get_player_score(1);
+
+    if (score1 > score2) {
+        result = players[0]->get_name() + " wins with " + to_string(score1) + " point(s)!\n";
+    }
+    else if (score2 > score1) {
+        result = players[1]->get_name() + " wins with " + to_string(score2) + " point(s)!\n";
+    }
+    else {
+        result = " It's a draw! Both players scored " + to_string(score1) + " point(s).\n";
+    }
+
+    return result;
+}
+
+
+SUS_UI::SUS_UI() : UI<char>("Welcome to SUS Game (S-U-S Sequence)", 3) {}
+
+Player<char>* SUS_UI::create_player(string& name, char symbol, PlayerType type) {
+    return new Player<char>(name, symbol, type);
+}
+
+Move<char>* SUS_UI::get_move(Player<char>* player) {
+    int x, y;
+    char mark = player->get_symbol();
+    Board<char>* board_ptr = player->get_board_ptr();
+
+    if (player->get_type() == PlayerType::HUMAN) {
+        bool valid_input = false;
+
+        while (!valid_input) {
+            cout << "\nPlayer " << player->get_name() << " (" << mark << "), enter move (Row Col) in the range (0 - 0) to (2 - 2): ";
+
+            if (!(cin >> x >> y)) {
+                cout << " Invalid input format. Please enter two numbers for coordinates (Row Col) in the range 0-2.\n";
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                continue;
+            }
+
+            if (x < 0 || x >= board_ptr->get_rows() || y < 0 || y >= board_ptr->get_columns()) {
+                cout << " Coordinate out of range. Please enter numbers between 0 and 2.\n";
+                continue;
+            }
+
+            if (board_ptr->get_board_matrix()[x][y] != '.') {
+                cout << " That cell is already occupied. Choose an empty cell.\n";
+                continue;
+            }
+
+            valid_input = true;
+        }
+    }
+    else {
+        vector<pair<int, int>> empty_cells;
+        for (int i = 0; i < board_ptr->get_rows(); ++i) {
+            for (int j = 0; j < board_ptr->get_columns(); ++j) {
+                if (board_ptr->get_board_matrix()[i][j] == '.') {
+                    empty_cells.push_back({ i, j });
+                }
+            }
+        }
+
+        if (!empty_cells.empty()) {
+            int rand_index = rand() % empty_cells.size();
+            x = empty_cells[rand_index].first;
+            y = empty_cells[rand_index].second;
+        }
+        else {
+            return new Move<char>(-1, -1, mark);
+        }
+    }
+
+    return new Move<char>(x, y, mark);
+}
+
+Player<char>** SUS_UI::setup_players() {
+    Player<char>** players = new Player<char>*[2];
+    vector<string> type_options = { "Human", "Computer" };
+
+    string name1 = get_player_name("Player S");
+    PlayerType type1 = get_player_type_choice("Player S", type_options);
+    players[0] = create_player(name1, 'S', type1);
+
+    string name2 = get_player_name("Player U");
+    PlayerType type2 = get_player_type_choice("Player U", type_options);
+    players[1] = create_player(name2, 'U', type2);
+
+    return players;
 }

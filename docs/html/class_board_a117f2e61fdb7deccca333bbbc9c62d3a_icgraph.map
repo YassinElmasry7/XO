@@ -1,27 +1,29 @@
 <map id="Board::get_board_matrix" name="Board::get_board_matrix">
-<area shape="rect" id="Node000001" title="Return a copy of the current board as a 2D vector." alt="" coords="226,304,389,331"/>
+<area shape="rect" id="Node000001" title="Return a copy of the current board as a 2D vector." alt="" coords="226,329,389,356"/>
 <area shape="rect" id="Node000002" href="$class_diamond_x_o___u_i.html#ab5ed007cb4745664ed6c907fc6dddb8d" title="Ask the user (or AI) to make a move." alt="" coords="6,29,177,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,290,282,242,258,183,223,122,201,94,176,70,158,59,160,54,179,66,205,91,227,119,263,180,287,240,302,288"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="298,314,285,262,261,196,226,128,203,97,176,70,158,59,161,54,179,66,207,94,230,125,266,194,290,260,303,313"/>
 <area shape="rect" id="Node000003" href="$class_five_x_five___u_i.html#a9df00e1afa46187470efe307fef2da8e" title="Ask the user (or AI) to make a move." alt="" coords="13,80,170,107"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="293,291,276,252,250,206,217,160,176,121,156,110,159,105,179,117,221,157,255,203,280,250,298,288"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="295,315,279,272,254,220,220,166,199,142,176,121,157,110,160,105,179,117,203,138,224,163,259,217,284,270,300,314"/>
 <area shape="rect" id="Node000004" href="$class_four_x_four___u_i.html#a0dc9bbddd13d96c98e8371ecb90da13a" title="Ask the user (or AI) to make a move." alt="" coords="10,155,173,181"/>
-<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="284,294,238,244,209,218,176,196,152,184,154,180,179,191,212,214,242,240,288,290"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="288,318,242,256,211,223,176,196,154,184,156,180,179,191,215,219,246,253,292,314"/>
 <area shape="rect" id="Node000005" href="$class_infinity_x_o___u_i.html#a15d92544970c320d8eec8b6007f0e1fa" title="Ask the user (or AI) to make a move." alt="" coords="13,229,170,256"/>
-<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="257,300,177,271,141,259,143,254,179,265,259,295"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="272,323,227,296,177,270,146,259,147,254,179,266,230,291,274,318"/>
 <area shape="rect" id="Node000006" href="$class_math_x_o___u_i.html#ab4fe7c90496af8f7bd2cd2e324493e43" title="Ask the user (or AI) to make a move." alt="" coords="17,304,166,331"/>
-<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="210,320,167,320,167,315,210,315"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="210,334,166,329,167,323,211,329"/>
 <area shape="rect" id="Node000007" href="$class_obstacle_x_o___u_i.html#aab689d97241f24a713f56e46c187101e" title="Ask the user (or AI) to make a move." alt="" coords="5,355,178,381"/>
-<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="233,337,152,357,151,351,232,332"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="211,357,178,361,178,355,210,351"/>
 <area shape="rect" id="Node000008" href="$class_pyramid_x_o___u_i.html#ab16ed1e3a89883e324ebf1362fd4315a" title="Ask the user (or AI) to make a move." alt="" coords="7,429,176,456"/>
-<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="271,341,179,396,118,431,116,426,176,391,268,337"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="264,365,124,431,121,426,261,361"/>
 <area shape="rect" id="Node000009" href="$class_reverse_x_o___u_i.html#a7f482af9d77f72ba6507695cc070e3cf" title="Ask the user (or AI) to make a move." alt="" coords="8,480,175,507"/>
-<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="292,346,247,408,215,442,179,470,156,482,154,477,176,466,211,438,242,405,288,343"/>
-<area shape="rect" id="Node000010" href="$class_word_x_o___u_i.html#aad91a34cf6b4f8042a8a0676d2411c87" title="Ask the user (or AI) to make a move." alt="" coords="16,555,167,581"/>
-<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="296,346,251,429,218,477,179,521,153,541,126,556,123,552,150,536,176,517,214,474,247,426,292,343"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="288,370,242,421,212,447,179,470,154,482,152,477,176,466,209,443,238,417,284,366"/>
+<area shape="rect" id="Node000010" href="$class_s_u_s___u_i.html#a9c7a3c09a5e18a3d89f448ea93b6dea6" title="Ask the user (or AI) to make a move." alt="" coords="26,531,157,557"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="296,371,277,406,251,446,218,486,179,521,157,533,155,528,176,516,214,483,247,443,272,403,291,369"/>
+<area shape="rect" id="Node000011" href="$class_word_x_o___u_i.html#aad91a34cf6b4f8042a8a0676d2411c87" title="Ask the user (or AI) to make a move." alt="" coords="16,605,167,632"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="298,372,280,414,254,466,221,521,180,571,154,592,127,607,124,603,151,587,176,567,216,518,250,464,276,412,293,370"/>
 <area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="129,16,116,10,91,8,69,10,57,15,54,20,59,27,55,30,48,21,53,11,68,5,92,3,117,5,131,12"/>
 <area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="129,142,116,136,91,133,69,135,57,140,54,145,59,153,55,156,48,146,53,136,68,130,92,128,117,131,131,137"/>
 <area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="129,216,116,210,91,208,69,210,57,215,54,220,59,227,55,230,48,221,53,211,68,205,92,203,117,205,131,212"/>
 <area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="129,291,116,285,91,283,69,285,57,289,54,295,59,302,55,305,48,295,53,286,68,279,92,277,117,280,131,286"/>
 <area shape="poly" id="edge12_Node000008_Node000008" title=" " alt="" coords="129,416,116,410,91,408,69,410,57,415,54,420,59,427,55,430,48,421,53,411,68,405,92,403,117,405,131,412"/>
-<area shape="poly" id="edge15_Node000010_Node000010" title=" " alt="" coords="129,542,116,536,91,533,69,535,57,540,54,545,59,553,55,556,48,546,53,536,68,530,92,528,117,531,131,537"/>
+<area shape="poly" id="edge16_Node000011_Node000011" title=" " alt="" coords="129,592,116,586,91,584,69,586,57,591,54,596,59,603,55,606,48,597,53,587,68,581,92,579,117,581,131,588"/>
 </map>

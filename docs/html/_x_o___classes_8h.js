@@ -7,6 +7,10 @@ var _x_o___classes_8h =
     [ "FourXFour_Board", "class_four_x_four___board.html", "class_four_x_four___board" ],
     [ "ConnectFour_Board", "class_connect_four___board.html", "class_connect_four___board" ],
     [ "DiamondXO_Board", "class_diamond_x_o___board.html", "class_diamond_x_o___board" ],
+    [ "WordXO_Board", "class_word_x_o___board.html", "class_word_x_o___board" ],
+    [ "PyramidXO_Board", "class_pyramid_x_o___board.html", "class_pyramid_x_o___board" ],
+    [ "InfinityXO_Board", "class_infinity_x_o___board.html", "class_infinity_x_o___board" ],
+    [ "SUS_Board", "class_s_u_s___board.html", "class_s_u_s___board" ],
     [ "MathXO_UI", "class_math_x_o___u_i.html", "class_math_x_o___u_i" ],
     [ "ReverseXO_UI", "class_reverse_x_o___u_i.html", "class_reverse_x_o___u_i" ],
     [ "ObstacleXO_UI", "class_obstacle_x_o___u_i.html", "class_obstacle_x_o___u_i" ],
@@ -14,10 +18,8 @@ var _x_o___classes_8h =
     [ "FourXFour_UI", "class_four_x_four___u_i.html", "class_four_x_four___u_i" ],
     [ "ConnectFour_UI", "class_connect_four___u_i.html", "class_connect_four___u_i" ],
     [ "DiamondXO_UI", "class_diamond_x_o___u_i.html", "class_diamond_x_o___u_i" ],
-    [ "WordXO_Board", "class_word_x_o___board.html", "class_word_x_o___board" ],
     [ "WordXO_UI", "class_word_x_o___u_i.html", "class_word_x_o___u_i" ],
-    [ "PyramidXO_Board", "class_pyramid_x_o___board.html", "class_pyramid_x_o___board" ],
     [ "PyramidXO_UI", "class_pyramid_x_o___u_i.html", "class_pyramid_x_o___u_i" ],
-    [ "InfinityXO_Board", "class_infinity_x_o___board.html", "class_infinity_x_o___board" ],
-    [ "InfinityXO_UI", "class_infinity_x_o___u_i.html", "class_infinity_x_o___u_i" ]
+    [ "InfinityXO_UI", "class_infinity_x_o___u_i.html", "class_infinity_x_o___u_i" ],
+    [ "SUS_UI", "class_s_u_s___u_i.html", "class_s_u_s___u_i" ]
 ];

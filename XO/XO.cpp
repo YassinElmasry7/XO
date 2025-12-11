@@ -29,6 +29,31 @@ void play_math_xo(){
     delete game_ui;
 }
 
+void play_sus_xo() {
+    cout << "SUS Game Started (Win by highest S-U-S sequences)" << endl;
+
+    UI<char>* game_ui = new SUS_UI();
+    Board<char>* game_board = new SUS_Board();
+    Player<char>** players = game_ui->setup_players();
+
+    GameManager<char> game(game_board, players, game_ui);
+    game.run();
+
+    SUS_Board* sus_board = dynamic_cast<SUS_Board*>(game_board);
+
+    if (sus_board) {
+        if (sus_board->game_is_over(nullptr)) {
+            cout << "\n--- Final Results ---\n";
+            cout << sus_board->get_final_result_message(players);
+        }
+    }
+
+    delete sus_board;
+    for (int i = 0; i < 2; ++i) delete players[i];
+    delete[] players;
+    delete game_ui;
+}
+
 void play_reverse_xo() {
     cout << "\n=== Starting Reverse X-O Game ===\n";
     UI<char>* game_ui = new ReverseXO_UI();
@@ -183,54 +208,58 @@ int main() {
         cout << "\n===================================== \n";
         cout << "        BOARD GAMES COLLECTION \n";
         cout << "===================================== \n";
-        cout << "1. Mathematical X-O \n";
-        cout << "2. Reverse X-O \n";
-        cout << "3. Obstacle X-O \n";
-        cout << "4. 5x5 X-O \n";
-        cout << "5. 4x4 X-O \n";
-        cout << "6. Connect Four X-O\n";
-        cout << "7. Diamond X-O \n";
-        cout << "8. Word Tic-Tac-Toe \n";
-        cout << "9. Pyramid X-O \n";
-        cout << "10. Infinity Tic-Tac-Toe \n";
-        cout << "11. Exit \n";
+		cout << "1. SUS X-O\n";
+        cout << "2. Mathematical X-O \n";
+        cout << "3. Reverse X-O \n";
+        cout << "4. Obstacle X-O \n";
+        cout << "5. 5x5 X-O \n";
+        cout << "6. 4x4 X-O \n";
+        cout << "7. Connect Four X-O\n";
+        cout << "8. Diamond X-O \n";
+        cout << "9. Word Tic-Tac-Toe \n";
+        cout << "10. Pyramid X-O \n";
+        cout << "11. Infinity Tic-Tac-Toe \n";
+        cout << "12. Exit \n";
         cout << "===================================== \n";
-        cout << "Enter your choice (1-11): ";
+        cout << "Enter your choice (1-12): ";
 
         cin >> choice;
 
         switch (choice) {
             case 1:
-                play_math_xo();
+                play_sus_xo();
                 break;
             case 2:
-                play_reverse_xo();
+                play_math_xo();
                 break;
             case 3:
-                play_obstacle_xo();
+                play_reverse_xo();
                 break;
             case 4:
-                play_five_x_five();
+                play_obstacle_xo();
                 break;
             case 5:
-                play_four_x_four();
+                play_five_x_five();
                 break;
             case 6:
-                play_connect_four();
+                play_four_x_four();
                 break;
             case 7:
-                play_diamond_xo();
+                play_connect_four();
                 break;
             case 8:
-                play_word_xo();
+                play_diamond_xo();
                 break;
             case 9:
-                play_pyramid_xo();
+                play_word_xo();
                 break;
             case 10:
-                play_infinity_xo();
+                play_pyramid_xo();
                 break;
             case 11:
+                play_infinity_xo();
+                break;
+            case 12:
                 cout << "Thank you for playing!\n";
                 break;
             default:
@@ -238,7 +267,7 @@ int main() {
                 break;
         }
 
-    } while (choice != 11);
+    } while (choice != 12);
 
     return 0;
 }

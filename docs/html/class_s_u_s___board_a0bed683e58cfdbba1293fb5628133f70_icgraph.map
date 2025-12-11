@@ -1,0 +1,11 @@
+<map id="SUS_Board::get_player_score" name="SUS_Board::get_player_score">
+<area shape="rect" id="Node000001" title=" " alt="" coords="438,35,596,77"/>
+<area shape="rect" id="Node000002" href="$class_s_u_s___board.html#a54fee337d2b56c54c6969276b46b2e3f" title=" " alt="" coords="245,5,390,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="423,45,390,40,391,35,423,40"/>
+<area shape="rect" id="Node000005" href="$class_s_u_s___board.html#a2230a0e70a119a14e7e7380ba9b2cb90" title="Check if a player has won." alt="" coords="251,72,384,99"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="423,72,385,78,384,73,423,67"/>
+<area shape="rect" id="Node000003" href="$_x_o_8cpp.html#ad7090c4c3c68db4f5f1ae3e8663186b1" title=" " alt="" coords="103,13,197,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,29,197,29,197,24,229,24"/>
+<area shape="rect" id="Node000004" href="$_x_o_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,29,55,29,55,24,87,24"/>
+</map>

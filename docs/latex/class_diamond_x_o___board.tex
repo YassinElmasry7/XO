@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Diamond\+XO\+\_\+\+Board\+:
-\nopagebreak
+Inheritance diagram for Diamond\+XO\+\_\+\+Board\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Diamond\+XO\+\_\+\+Board\+:
 \end{figure}
 
 
-Collaboration diagram for Diamond\+XO\+\_\+\+Board\+:
-\nopagebreak
+Collaboration diagram for Diamond\+XO\+\_\+\+Board\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -138,8 +136,7 @@ Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00886}{886}} of 
 
 References \mbox{\hyperlink{_x_o___classes_8h_source_l00128}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00056}{Board$<$ char $>$\+::\+Board()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00895}{initialize\+\_\+diamond\+\_\+shape()}}, and \mbox{\hyperlink{_x_o___classes_8h_source_l00129}{valid\+\_\+cells}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -167,21 +164,20 @@ Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01077}{1077}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01074}{1074}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{01077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{01078\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_diamond_x_o___board_a10d64582ffc29716fb41da6ef9bcc84c}{is\_win}}(player)\ ||\ \mbox{\hyperlink{class_diamond_x_o___board_a9dd62abf7bd68d18b385c20ee3cadb22}{is\_draw}}(player);}
-\DoxyCodeLine{01079\ \}}
+\DoxyCodeLine{01074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01075\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_diamond_x_o___board_a10d64582ffc29716fb41da6ef9bcc84c}{is\_win}}(player)\ ||\ \mbox{\hyperlink{class_diamond_x_o___board_a9dd62abf7bd68d18b385c20ee3cadb22}{is\_draw}}(player);}
+\DoxyCodeLine{01076\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_x_o___classes_8cpp_source_l01066}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+References \mbox{\hyperlink{_x_o___classes_8cpp_source_l01063}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -211,42 +207,40 @@ bool Diamond\+XO\+\_\+\+Board\+::has\+\_\+four\+\_\+diagonal1 (\begin{DoxyParamC
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01021}{1021}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01020}{1020}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{01021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{01022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 3;\ i++)\ \{}
-\DoxyCodeLine{01023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ 3;\ j++)\ \{}
-\DoxyCodeLine{01024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j+1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j+2)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+3,\ j+3)\ \&\&}
-\DoxyCodeLine{01025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j+1]\ ==\ symbol\ \&\&\ }
-\DoxyCodeLine{01026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j+2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+3][j+3]\ ==\ symbol)\ \{}
-\DoxyCodeLine{01027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01028\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01029\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01030\ \ \ \ \ \}}
-\DoxyCodeLine{01031\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{01032\ \}}
+\DoxyCodeLine{01020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01021\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 3;\ i++)\ \{}
+\DoxyCodeLine{01022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ 3;\ j++)\ \{}
+\DoxyCodeLine{01023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j+1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j+2)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+3,\ j+3)\ \&\&}
+\DoxyCodeLine{01024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j+1]\ ==\ symbol\ \&\&\ }
+\DoxyCodeLine{01025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j+2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+3][j+3]\ ==\ symbol)\ \{}
+\DoxyCodeLine{01026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01027\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01029\ \ \ \ \ \}}
+\DoxyCodeLine{01030\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01031\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=347pt]{class_diamond_x_o___board_acf96e4aa1fe636238645aaa396bdb6c8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -261,42 +255,40 @@ bool Diamond\+XO\+\_\+\+Board\+::has\+\_\+four\+\_\+diagonal2 (\begin{DoxyParamC
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01033}{1033}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01032}{1032}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{01033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{01034\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 3;\ i++)\ \{}
-\DoxyCodeLine{01035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 3;\ j\ <\ 7;\ j++)\ \{}
-\DoxyCodeLine{01036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j-\/1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j-\/2)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+3,\ j-\/3)\ \&\&}
-\DoxyCodeLine{01037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j-\/1]\ ==\ symbol\ \&\&\ }
-\DoxyCodeLine{01038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j-\/2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+3][j-\/3]\ ==\ symbol)\ \{}
-\DoxyCodeLine{01039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01040\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01041\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01042\ \ \ \ \ \}}
-\DoxyCodeLine{01043\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{01044\ \}}
+\DoxyCodeLine{01032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01033\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 3;\ i++)\ \{}
+\DoxyCodeLine{01034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 3;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{01035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j-\/1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j-\/2)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+3,\ j-\/3)\ \&\&}
+\DoxyCodeLine{01036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j-\/1]\ ==\ symbol\ \&\&\ }
+\DoxyCodeLine{01037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j-\/2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+3][j-\/3]\ ==\ symbol)\ \{}
+\DoxyCodeLine{01038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01041\ \ \ \ \ \}}
+\DoxyCodeLine{01042\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01043\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=347pt]{class_diamond_x_o___board_a0e68aa5524a1cb8e01b0f4e5df2d0ff9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -311,42 +303,40 @@ bool Diamond\+XO\+\_\+\+Board\+::has\+\_\+four\+\_\+horizontal (\begin{DoxyParam
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00997}{997}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00996}{996}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00997\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00998\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
-\DoxyCodeLine{00999\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ 3;\ j++)\ \{}
-\DoxyCodeLine{01000\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+2)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+3)\ \&\&}
-\DoxyCodeLine{01001\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+1]\ ==\ symbol\ \&\&\ }
-\DoxyCodeLine{01002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+3]\ ==\ symbol)\ \{}
-\DoxyCodeLine{01003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01004\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01005\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01006\ \ \ \ \ \}}
-\DoxyCodeLine{01007\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{01008\ \}}
+\DoxyCodeLine{00996\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00997\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
+\DoxyCodeLine{00998\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ 3;\ j++)\ \{}
+\DoxyCodeLine{00999\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+2)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+3)\ \&\&}
+\DoxyCodeLine{01000\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+1]\ ==\ symbol\ \&\&\ }
+\DoxyCodeLine{01001\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+2]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+3]\ ==\ symbol)\ \{}
+\DoxyCodeLine{01002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01003\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01004\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01005\ \ \ \ \ \}}
+\DoxyCodeLine{01006\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01007\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=347pt]{class_diamond_x_o___board_ac4c392e9bc1d87d1e609ec0e7991faad_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -361,42 +351,40 @@ bool Diamond\+XO\+\_\+\+Board\+::has\+\_\+four\+\_\+vertical (\begin{DoxyParamCa
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01009}{1009}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01008}{1008}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{01009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{01010\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
-\DoxyCodeLine{01011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 3;\ i++)\ \{}
-\DoxyCodeLine{01012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+3,\ j)\ \&\&}
-\DoxyCodeLine{01013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j]\ ==\ symbol\ \&\&\ }
-\DoxyCodeLine{01014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+3][j]\ ==\ symbol)\ \{}
-\DoxyCodeLine{01015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01016\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01017\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01018\ \ \ \ \ \}}
-\DoxyCodeLine{01019\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{01020\ \}}
+\DoxyCodeLine{01008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01009\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{01010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 3;\ i++)\ \{}
+\DoxyCodeLine{01011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+3,\ j)\ \&\&}
+\DoxyCodeLine{01012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j]\ ==\ symbol\ \&\&\ }
+\DoxyCodeLine{01013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+3][j]\ ==\ symbol)\ \{}
+\DoxyCodeLine{01014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01015\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01017\ \ \ \ \ \}}
+\DoxyCodeLine{01018\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01019\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=347pt]{class_diamond_x_o___board_ad5559a264b0747760bb625a11b3f3d15_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -411,41 +399,39 @@ bool Diamond\+XO\+\_\+\+Board\+::has\+\_\+three\+\_\+diagonal1 (\begin{DoxyParam
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00974}{974}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00973}{973}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00974\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00975\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 4;\ i++)\ \{}
-\DoxyCodeLine{00976\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ 4;\ j++)\ \{}
-\DoxyCodeLine{00977\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j+1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j+2)\ \&\&}
-\DoxyCodeLine{00978\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j+1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j+2]\ ==\ symbol)\ \{}
-\DoxyCodeLine{00979\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00980\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00981\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00982\ \ \ \ \ \}}
-\DoxyCodeLine{00983\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00984\ \}}
+\DoxyCodeLine{00973\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00974\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 4;\ i++)\ \{}
+\DoxyCodeLine{00975\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ 4;\ j++)\ \{}
+\DoxyCodeLine{00976\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j+1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j+2)\ \&\&}
+\DoxyCodeLine{00977\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j+1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j+2]\ ==\ symbol)\ \{}
+\DoxyCodeLine{00978\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00979\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00980\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00981\ \ \ \ \ \}}
+\DoxyCodeLine{00982\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00983\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=347pt]{class_diamond_x_o___board_a5e898444b5be09793b68c839f8ada77b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -460,41 +446,39 @@ bool Diamond\+XO\+\_\+\+Board\+::has\+\_\+three\+\_\+diagonal2 (\begin{DoxyParam
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00985}{985}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00984}{984}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00985\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00986\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 4;\ i++)\ \{}
-\DoxyCodeLine{00987\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 2;\ j\ <\ 7;\ j++)\ \{}
-\DoxyCodeLine{00988\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j-\/1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j-\/2)\ \&\&}
-\DoxyCodeLine{00989\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j-\/1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j-\/2]\ ==\ symbol)\ \{}
-\DoxyCodeLine{00990\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00991\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00992\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00993\ \ \ \ \ \}}
-\DoxyCodeLine{00994\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00995\ \}}
+\DoxyCodeLine{00984\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00985\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 4;\ i++)\ \{}
+\DoxyCodeLine{00986\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 2;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{00987\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j-\/1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j-\/2)\ \&\&}
+\DoxyCodeLine{00988\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j-\/1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j-\/2]\ ==\ symbol)\ \{}
+\DoxyCodeLine{00989\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00990\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00991\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00992\ \ \ \ \ \}}
+\DoxyCodeLine{00993\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00994\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=347pt]{class_diamond_x_o___board_a43e141f98b5af73e13040664085e638d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -509,41 +493,39 @@ bool Diamond\+XO\+\_\+\+Board\+::has\+\_\+three\+\_\+horizontal (\begin{DoxyPara
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00952}{952}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00951}{951}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00952\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00953\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
-\DoxyCodeLine{00954\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ 4;\ j++)\ \{}
-\DoxyCodeLine{00955\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+2)\ \&\&}
-\DoxyCodeLine{00956\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+2]\ ==\ symbol)\ \{}
-\DoxyCodeLine{00957\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00958\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00959\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00960\ \ \ \ \ \}}
-\DoxyCodeLine{00961\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00962\ \}}
+\DoxyCodeLine{00951\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00952\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
+\DoxyCodeLine{00953\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ 4;\ j++)\ \{}
+\DoxyCodeLine{00954\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+1)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j+2)\ \&\&}
+\DoxyCodeLine{00955\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+1]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j+2]\ ==\ symbol)\ \{}
+\DoxyCodeLine{00956\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00957\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00958\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00959\ \ \ \ \ \}}
+\DoxyCodeLine{00960\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00961\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=347pt]{class_diamond_x_o___board_a6e73c932e10f377fa36dc7f4bd3abf21_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -558,41 +540,39 @@ bool Diamond\+XO\+\_\+\+Board\+::has\+\_\+three\+\_\+vertical (\begin{DoxyParamC
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00963}{963}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00962}{962}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00963\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00964\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
-\DoxyCodeLine{00965\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 4;\ i++)\ \{}
-\DoxyCodeLine{00966\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j)\ \&\&}
-\DoxyCodeLine{00967\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j]\ ==\ symbol)\ \{}
-\DoxyCodeLine{00968\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00969\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00970\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00971\ \ \ \ \ \}}
-\DoxyCodeLine{00972\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00973\ \}}
+\DoxyCodeLine{00962\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00963\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{00964\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 4;\ i++)\ \{}
+\DoxyCodeLine{00965\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+1,\ j)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(i+2,\ j)\ \&\&}
+\DoxyCodeLine{00966\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+1][j]\ ==\ symbol\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i+2][j]\ ==\ symbol)\ \{}
+\DoxyCodeLine{00967\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00968\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00969\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00970\ \ \ \ \ \}}
+\DoxyCodeLine{00971\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00972\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=347pt]{class_diamond_x_o___board_a42782a720e994c7b7897fb2dd7c7ce7c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -612,42 +592,41 @@ Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00895}{895}} of 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00895\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00896\ \ \ \ \ \textcolor{comment}{//\ Row\ 0}}
-\DoxyCodeLine{00897\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[0][3]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00898\ \ \ \ \ \textcolor{comment}{//\ Row\ 1}}
-\DoxyCodeLine{00899\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[1][2]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00900\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[1][3]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00901\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[1][4]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00902\ \ \ \ \ \textcolor{comment}{//\ Row\ 2}}
-\DoxyCodeLine{00903\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][1]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00904\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][2]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00905\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][3]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00906\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][4]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00907\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][5]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00908\ \ \ \ \ \textcolor{comment}{//\ Row\ 3}}
-\DoxyCodeLine{00909\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
-\DoxyCodeLine{00910\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[3][j]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00911\ \ \ \ \ \}}
-\DoxyCodeLine{00912\ \ \ \ \ \textcolor{comment}{//\ Row\ 4}}
-\DoxyCodeLine{00913\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][1]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00914\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][2]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00915\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][3]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00916\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][4]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00917\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][5]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00918\ \ \ \ \ \textcolor{comment}{//\ Row\ 5}}
-\DoxyCodeLine{00919\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[5][2]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00920\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[5][3]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00921\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[5][4]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00922\ \ \ \ \ \textcolor{comment}{//\ Row\ 6}}
-\DoxyCodeLine{00923\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[6][3]\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00924\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
-\DoxyCodeLine{00925\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
-\DoxyCodeLine{00926\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[i][j])\ \{}
-\DoxyCodeLine{00927\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ \textcolor{charliteral}{'\ '};}
-\DoxyCodeLine{00928\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00929\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00930\ \ \ \ \ \}}
-\DoxyCodeLine{00931\ \}}
+\DoxyCodeLine{00896\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[0][3]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00897\ }
+\DoxyCodeLine{00898\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[1][2]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00899\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[1][3]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00900\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[1][4]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00901\ }
+\DoxyCodeLine{00902\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][1]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00903\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][2]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00904\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][3]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00905\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][4]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00906\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[2][5]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00907\ }
+\DoxyCodeLine{00908\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{00909\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[3][j]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00910\ \ \ \ \ \}}
+\DoxyCodeLine{00911\ }
+\DoxyCodeLine{00912\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][1]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00913\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][2]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00914\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][3]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00915\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][4]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00916\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[4][5]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00917\ }
+\DoxyCodeLine{00918\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[5][2]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00919\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[5][3]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00920\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[5][4]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00921\ }
+\DoxyCodeLine{00922\ \ \ \ \ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[6][3]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00923\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
+\DoxyCodeLine{00924\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{00925\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[i][j])\ \{}
+\DoxyCodeLine{00926\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ =\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00927\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00928\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00929\ \ \ \ \ \}}
+\DoxyCodeLine{00930\ \}}
 
 \end{DoxyCode}
 
@@ -658,8 +637,7 @@ References \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ cha
 
 Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00886}{Diamond\+XO\+\_\+\+Board()}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -682,40 +660,38 @@ Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01066}{1066}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01063}{1063}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{01066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{01067\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
-\DoxyCodeLine{01068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
-\DoxyCodeLine{01069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[i][j]\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ \mbox{\hyperlink{class_diamond_x_o___board_ab68fd34a2c45b7ec2467decaa815e9f7}{blank\_symbol}})\ \{}
-\DoxyCodeLine{01070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{01071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01072\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{01073\ \ \ \ \ \}}
-\DoxyCodeLine{01074\ \ \ \ \ \textcolor{keywordflow}{return}\ !\mbox{\hyperlink{class_diamond_x_o___board_a10d64582ffc29716fb41da6ef9bcc84c}{is\_win}}(player);}
-\DoxyCodeLine{01075\ \}}
+\DoxyCodeLine{01063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01064\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 7;\ i++)\ \{}
+\DoxyCodeLine{01065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 7;\ j++)\ \{}
+\DoxyCodeLine{01066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[i][j]\ \&\&\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[i][j]\ ==\ \mbox{\hyperlink{class_diamond_x_o___board_ab68fd34a2c45b7ec2467decaa815e9f7}{blank\_symbol}})\ \{}
+\DoxyCodeLine{01067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01070\ \ \ \ \ \}}
+\DoxyCodeLine{01071\ \ \ \ \ \textcolor{keywordflow}{return}\ !\mbox{\hyperlink{class_diamond_x_o___board_a10d64582ffc29716fb41da6ef9bcc84c}{is\_win}}(player);}
+\DoxyCodeLine{01072\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_x_o___classes_8h_source_l00128}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{is\+\_\+win()}}, and \mbox{\hyperlink{_x_o___classes_8h_source_l00129}{valid\+\_\+cells}}.
+References \mbox{\hyperlink{_x_o___classes_8h_source_l00128}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{is\+\_\+win()}}, and \mbox{\hyperlink{_x_o___classes_8h_source_l00129}{valid\+\_\+cells}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01077}{game\+\_\+is\+\_\+over()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01074}{game\+\_\+is\+\_\+over()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_diamond_x_o___board_a9dd62abf7bd68d18b385c20ee3cadb22_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -753,14 +729,14 @@ bool Diamond\+XO\+\_\+\+Board\+::is\+\_\+valid\+\_\+cell (\begin{DoxyParamCaptio
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{933}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{932}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00933\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00934\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ 7\ ||\ y\ <\ 0\ ||\ y\ >=\ 7)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00935\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[x][y];}
-\DoxyCodeLine{00936\ \}}
+\DoxyCodeLine{00932\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00933\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ 7\ ||\ y\ <\ 0\ ||\ y\ >=\ 7)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00934\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}{valid\_cells}}[x][y];}
+\DoxyCodeLine{00935\ \}}
 
 \end{DoxyCode}
 
@@ -769,10 +745,9 @@ References \mbox{\hyperlink{_x_o___classes_8h_source_l00129}{valid\+\_\+cells}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01107}{Diamond\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01021}{has\+\_\+four\+\_\+diagonal1()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01033}{has\+\_\+four\+\_\+diagonal2()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00997}{has\+\_\+four\+\_\+horizontal()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01009}{has\+\_\+four\+\_\+vertical()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00974}{has\+\_\+three\+\_\+diagonal1()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00985}{has\+\_\+three\+\_\+diagonal2()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00952}{has\+\_\+three\+\_\+horizontal()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00963}{has\+\_\+three\+\_\+vertical()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00938}{update\+\_\+board()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01104}{Diamond\+XO\+\_\+\+UI\+::get\+\_\+move()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01020}{has\+\_\+four\+\_\+diagonal1()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01032}{has\+\_\+four\+\_\+diagonal2()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00996}{has\+\_\+four\+\_\+horizontal()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01008}{has\+\_\+four\+\_\+vertical()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00973}{has\+\_\+three\+\_\+diagonal1()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00984}{has\+\_\+three\+\_\+diagonal2()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00951}{has\+\_\+three\+\_\+horizontal()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00962}{has\+\_\+three\+\_\+vertical()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00937}{update\+\_\+board()}}.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -795,49 +770,45 @@ Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01046}{1046}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01045}{1045}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{01046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{01047\ \ \ \ \ \textcolor{keywordtype}{char}\ symbol\ =\ player-\/>get\_symbol();}
-\DoxyCodeLine{01048\ }
-\DoxyCodeLine{01049\ \ \ \ \ \textcolor{comment}{//\ Check\ all\ combinations\ of\ different\ directions}}
-\DoxyCodeLine{01050\ }
-\DoxyCodeLine{01051\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a6e73c932e10f377fa36dc7f4bd3abf21}{has\_three\_horizontal}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ad5559a264b0747760bb625a11b3f3d15}{has\_four\_vertical}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01052\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a6e73c932e10f377fa36dc7f4bd3abf21}{has\_three\_horizontal}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_acf96e4aa1fe636238645aaa396bdb6c8}{has\_four\_diagonal1}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01053\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a6e73c932e10f377fa36dc7f4bd3abf21}{has\_three\_horizontal}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_a0e68aa5524a1cb8e01b0f4e5df2d0ff9}{has\_four\_diagonal2}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01054\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a42782a720e994c7b7897fb2dd7c7ce7c}{has\_three\_vertical}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac4c392e9bc1d87d1e609ec0e7991faad}{has\_four\_horizontal}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01055\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a42782a720e994c7b7897fb2dd7c7ce7c}{has\_three\_vertical}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_acf96e4aa1fe636238645aaa396bdb6c8}{has\_four\_diagonal1}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01056\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a42782a720e994c7b7897fb2dd7c7ce7c}{has\_three\_vertical}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_a0e68aa5524a1cb8e01b0f4e5df2d0ff9}{has\_four\_diagonal2}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01057\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a5e898444b5be09793b68c839f8ada77b}{has\_three\_diagonal1}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac4c392e9bc1d87d1e609ec0e7991faad}{has\_four\_horizontal}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01058\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a5e898444b5be09793b68c839f8ada77b}{has\_three\_diagonal1}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ad5559a264b0747760bb625a11b3f3d15}{has\_four\_vertical}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01059\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a5e898444b5be09793b68c839f8ada77b}{has\_three\_diagonal1}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_a0e68aa5524a1cb8e01b0f4e5df2d0ff9}{has\_four\_diagonal2}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01060\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a43e141f98b5af73e13040664085e638d}{has\_three\_diagonal2}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac4c392e9bc1d87d1e609ec0e7991faad}{has\_four\_horizontal}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01061\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a43e141f98b5af73e13040664085e638d}{has\_three\_diagonal2}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_acf96e4aa1fe636238645aaa396bdb6c8}{has\_four\_diagonal1}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{01062\ }
-\DoxyCodeLine{01063\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{01064\ \}}
+\DoxyCodeLine{01045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01046\ \ \ \ \ \textcolor{keywordtype}{char}\ symbol\ =\ player-\/>get\_symbol();}
+\DoxyCodeLine{01047\ }
+\DoxyCodeLine{01048\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a6e73c932e10f377fa36dc7f4bd3abf21}{has\_three\_horizontal}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ad5559a264b0747760bb625a11b3f3d15}{has\_four\_vertical}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01049\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a6e73c932e10f377fa36dc7f4bd3abf21}{has\_three\_horizontal}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_acf96e4aa1fe636238645aaa396bdb6c8}{has\_four\_diagonal1}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01050\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a6e73c932e10f377fa36dc7f4bd3abf21}{has\_three\_horizontal}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_a0e68aa5524a1cb8e01b0f4e5df2d0ff9}{has\_four\_diagonal2}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01051\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a42782a720e994c7b7897fb2dd7c7ce7c}{has\_three\_vertical}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac4c392e9bc1d87d1e609ec0e7991faad}{has\_four\_horizontal}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01052\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a42782a720e994c7b7897fb2dd7c7ce7c}{has\_three\_vertical}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_acf96e4aa1fe636238645aaa396bdb6c8}{has\_four\_diagonal1}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01053\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a42782a720e994c7b7897fb2dd7c7ce7c}{has\_three\_vertical}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_a0e68aa5524a1cb8e01b0f4e5df2d0ff9}{has\_four\_diagonal2}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01054\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a5e898444b5be09793b68c839f8ada77b}{has\_three\_diagonal1}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac4c392e9bc1d87d1e609ec0e7991faad}{has\_four\_horizontal}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01055\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a5e898444b5be09793b68c839f8ada77b}{has\_three\_diagonal1}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ad5559a264b0747760bb625a11b3f3d15}{has\_four\_vertical}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01056\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a5e898444b5be09793b68c839f8ada77b}{has\_three\_diagonal1}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_a0e68aa5524a1cb8e01b0f4e5df2d0ff9}{has\_four\_diagonal2}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01057\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a43e141f98b5af73e13040664085e638d}{has\_three\_diagonal2}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_ac4c392e9bc1d87d1e609ec0e7991faad}{has\_four\_horizontal}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01058\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_diamond_x_o___board_a43e141f98b5af73e13040664085e638d}{has\_three\_diagonal2}}(symbol)\ \&\&\ \mbox{\hyperlink{class_diamond_x_o___board_acf96e4aa1fe636238645aaa396bdb6c8}{has\_four\_diagonal1}}(symbol))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01059\ }
+\DoxyCodeLine{01060\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01061\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_board_game___classes_8h_source_l00163}{Player$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01021}{has\+\_\+four\+\_\+diagonal1()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01033}{has\+\_\+four\+\_\+diagonal2()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00997}{has\+\_\+four\+\_\+horizontal()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01009}{has\+\_\+four\+\_\+vertical()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00974}{has\+\_\+three\+\_\+diagonal1()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00985}{has\+\_\+three\+\_\+diagonal2()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00952}{has\+\_\+three\+\_\+horizontal()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00963}{has\+\_\+three\+\_\+vertical()}}.
+References \mbox{\hyperlink{_board_game___classes_8h_source_l00163}{Player$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01020}{has\+\_\+four\+\_\+diagonal1()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01032}{has\+\_\+four\+\_\+diagonal2()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00996}{has\+\_\+four\+\_\+horizontal()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01008}{has\+\_\+four\+\_\+vertical()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00973}{has\+\_\+three\+\_\+diagonal1()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00984}{has\+\_\+three\+\_\+diagonal2()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00951}{has\+\_\+three\+\_\+horizontal()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00962}{has\+\_\+three\+\_\+vertical()}}.
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01077}{game\+\_\+is\+\_\+over()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l01066}{is\+\_\+draw()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01074}{game\+\_\+is\+\_\+over()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l01063}{is\+\_\+draw()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_diamond_x_o___board_a10d64582ffc29716fb41da6ef9bcc84c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -868,31 +839,30 @@ Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board
 
 
 
-Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00938}{938}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l00937}{937}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00938\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00939\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\mbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
-\DoxyCodeLine{00940\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\mbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
-\DoxyCodeLine{00941\ \ \ \ \ \textcolor{keywordtype}{char}\ symbol\ =\ move-\/>\mbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
-\DoxyCodeLine{00942\ }
-\DoxyCodeLine{00943\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(x,\ y)\ ||\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ \mbox{\hyperlink{class_diamond_x_o___board_ab68fd34a2c45b7ec2467decaa815e9f7}{blank\_symbol}})\ \{}
-\DoxyCodeLine{00944\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00945\ \ \ \ \ \}}
-\DoxyCodeLine{00946\ }
-\DoxyCodeLine{00947\ \ \ \ \ \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
-\DoxyCodeLine{00948\ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(symbol);}
-\DoxyCodeLine{00949\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00950\ \}}
+\DoxyCodeLine{00937\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00938\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ move-\/>\mbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}();}
+\DoxyCodeLine{00939\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ move-\/>\mbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}();}
+\DoxyCodeLine{00940\ \ \ \ \ \textcolor{keywordtype}{char}\ symbol\ =\ move-\/>\mbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{00941\ }
+\DoxyCodeLine{00942\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_diamond_x_o___board_ac6d75463a17ce5e0cf6b085a8a7d0e40}{is\_valid\_cell}}(x,\ y)\ ||\ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ !=\ \mbox{\hyperlink{class_diamond_x_o___board_ab68fd34a2c45b7ec2467decaa815e9f7}{blank\_symbol}})\ \{}
+\DoxyCodeLine{00943\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00944\ \ \ \ \ \}}
+\DoxyCodeLine{00945\ }
+\DoxyCodeLine{00946\ \ \ \ \ \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\_moves}}++;}
+\DoxyCodeLine{00947\ \ \ \ \ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}[x][y]\ =\ toupper(symbol);}
+\DoxyCodeLine{00948\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00949\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{_x_o___classes_8h_source_l00128}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00129}{Move$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00123}{Move$<$ T $>$\+::get\+\_\+x()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00126}{Move$<$ T $>$\+::get\+\_\+y()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00050}{Board$<$ char $>$\+::n\+\_\+moves}}.
+References \mbox{\hyperlink{_x_o___classes_8h_source_l00128}{blank\+\_\+symbol}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00049}{Board$<$ char $>$\+::board}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00129}{Move$<$ T $>$\+::get\+\_\+symbol()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00123}{Move$<$ T $>$\+::get\+\_\+x()}}, \mbox{\hyperlink{_board_game___classes_8h_source_l00126}{Move$<$ T $>$\+::get\+\_\+y()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}, and \mbox{\hyperlink{_board_game___classes_8h_source_l00050}{Board$<$ char $>$\+::n\+\_\+moves}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -916,7 +886,7 @@ Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00128}{128}} of fi
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00886}{Diamond\+XO\+\_\+\+Board()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01066}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00938}{update\+\_\+board()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00886}{Diamond\+XO\+\_\+\+Board()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01063}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00937}{update\+\_\+board()}}.
 
 \Hypertarget{class_diamond_x_o___board_a9d495bf80af3f274547a5c99df86e62b}\index{DiamondXO\_Board@{DiamondXO\_Board}!valid\_cells@{valid\_cells}}
 \index{valid\_cells@{valid\_cells}!DiamondXO\_Board@{DiamondXO\_Board}}
@@ -930,7 +900,7 @@ Definition at line \mbox{\hyperlink{_x_o___classes_8h_source_l00129}{129}} of fi
 
 
 
-Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00886}{Diamond\+XO\+\_\+\+Board()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00895}{initialize\+\_\+diamond\+\_\+shape()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01066}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00933}{is\+\_\+valid\+\_\+cell()}}.
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l00886}{Diamond\+XO\+\_\+\+Board()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l00895}{initialize\+\_\+diamond\+\_\+shape()}}, \mbox{\hyperlink{_x_o___classes_8cpp_source_l01063}{is\+\_\+draw()}}, and \mbox{\hyperlink{_x_o___classes_8cpp_source_l00932}{is\+\_\+valid\+\_\+cell()}}.
 
 
 

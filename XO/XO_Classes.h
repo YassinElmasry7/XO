@@ -130,13 +130,13 @@ private:
 
     bool has_three_horizontal(char symbol);
     bool has_three_vertical(char symbol);
-    bool has_three_diagonal1(char symbol); // top-left to bottom-right
-    bool has_three_diagonal2(char symbol); // top-right to bottom-left
+    bool has_three_diagonal1(char symbol); 
+    bool has_three_diagonal2(char symbol); 
 
     bool has_four_horizontal(char symbol);
     bool has_four_vertical(char symbol);
-    bool has_four_diagonal1(char symbol); // top-left to bottom-right
-    bool has_four_diagonal2(char symbol); // top-right to bottom-left
+    bool has_four_diagonal1(char symbol); 
+    bool has_four_diagonal2(char symbol);
 
     void initialize_diamond_shape();
 
@@ -150,6 +150,86 @@ public:
 
     bool is_valid_cell(int x, int y) const;
     int get_diamond_size() const { return 7; }
+};
+
+class WordXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    unordered_set<string> dictionary;
+
+    void load_dictionary(const string& filename);
+    bool is_valid_word(const string& word) const;
+    string get_cells_as_string(int x1, int y1, int x2, int y2, int x3, int y3) const;
+
+public:
+    WordXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+};
+
+class PyramidXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    vector<vector<bool>> valid_cells;
+    int cols = 5;
+
+    void initialize_pyramid_shape();
+    bool check_win(char symbol);
+
+public:
+    PyramidXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    bool is_valid_cell(int x, int y) const;
+};
+
+class InfinityXO_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    vector<pair<pair<int, int>, char>> move_history; // Track moves in chronological order
+    int moves_since_last_removal = 0;
+
+    void remove_oldest_move();
+    bool has_three_in_row(char symbol);
+
+public:
+    InfinityXO_Board();
+    bool update_board(Move<char>* move);
+    bool is_win(Player<char>* player);
+    bool is_lose(Player<char>* player) { return false; }
+    bool is_draw(Player<char>* player);
+    bool game_is_over(Player<char>* player);
+
+    int get_moves_since_last_removal() const { return moves_since_last_removal; }
+    int get_total_moves() const { return n_moves; }
+};
+
+class SUS_Board : public Board<char> {
+private:
+    char blank_symbol = '.';
+    int player1_score = 0;
+    int player2_score = 0;
+
+    int calculate_new_sus_score(int last_x, int last_y) const;
+
+public:
+    SUS_Board();
+    bool update_board(Move<char>* move) override;
+    bool is_win(Player<char>* player) override;
+    bool is_lose(Player<char>* player) override { return false; };
+    bool is_draw(Player<char>* player) override;
+    bool game_is_over(Player<char>* player) override;
+
+    int get_player_score(int player_index) const;
+
+    string get_final_result_message(Player<char>** players);
 };
 
 class MathXO_UI : public UI<int> {
@@ -210,23 +290,6 @@ public:
     virtual Move<char>* get_move(Player<char>* player);
     virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
 };
-class WordXO_Board : public Board<char> {
-private:
-    char blank_symbol = '.';
-    unordered_set<string> dictionary;
-
-    void load_dictionary(const string& filename);
-    bool is_valid_word(const string& word) const;
-    string get_cells_as_string(int x1, int y1, int x2, int y2, int x3, int y3) const;
-
-public:
-    WordXO_Board();
-    bool update_board(Move<char>* move);
-    bool is_win(Player<char>* player);
-    bool is_lose(Player<char>* player) { return false; }
-    bool is_draw(Player<char>* player);
-    bool game_is_over(Player<char>* player);
-};
 
 class WordXO_UI : public UI<char> {
 public:
@@ -234,25 +297,6 @@ public:
     ~WordXO_UI() {};
     Player<char>* create_player(string& name, char symbol, PlayerType type);
     virtual Move<char>* get_move(Player<char>* player);
-};
-class PyramidXO_Board : public Board<char> {
-private:
-    char blank_symbol = '.';
-    vector<vector<bool>> valid_cells;
-    int cols = 5;
-
-    void initialize_pyramid_shape();
-    bool check_win(char symbol);
-
-public:
-    PyramidXO_Board();
-    bool update_board(Move<char>* move);
-    bool is_win(Player<char>* player);
-    bool is_lose(Player<char>* player) { return false; }
-    bool is_draw(Player<char>* player);
-    bool game_is_over(Player<char>* player);
-
-    bool is_valid_cell(int x, int y) const;
 };
 
 class PyramidXO_UI : public UI<char> {
@@ -264,27 +308,6 @@ public:
     virtual void display_board_matrix(const vector<vector<char>>& matrix) const;
 };
 
-class InfinityXO_Board : public Board<char> {
-private:
-    char blank_symbol = '.';
-    vector<pair<pair<int, int>, char>> move_history; // Track moves in chronological order
-    int moves_since_last_removal = 0;
-
-    void remove_oldest_move();
-    bool has_three_in_row(char symbol);
-
-public:
-    InfinityXO_Board();
-    bool update_board(Move<char>* move);
-    bool is_win(Player<char>* player);
-    bool is_lose(Player<char>* player) { return false; }
-    bool is_draw(Player<char>* player);
-    bool game_is_over(Player<char>* player);
-
-    int get_moves_since_last_removal() const { return moves_since_last_removal; }
-    int get_total_moves() const { return n_moves; }
-};
-
 class InfinityXO_UI : public UI<char> {
 public:
     InfinityXO_UI();
@@ -293,5 +316,11 @@ public:
     virtual Move<char>* get_move(Player<char>* player);
 };
 
-
+class SUS_UI : public UI<char> {
+public:
+    SUS_UI();
+    Player<char>* create_player(string& name, char symbol, PlayerType type) override;
+    Move<char>* get_move(Player<char>* player) override;
+    Player<char>** setup_players() override;
+};
 #endif // XO_CLASSES_H

@@ -10,14 +10,18 @@ This file contains all the derived classes from \doxylink{_board_game___classes_
 {\ttfamily \#include $<$cctype$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include "{}XO\+\_\+\+Classes.\+h"{}}\newline
-Include dependency graph for XO\+\_\+\+Classes.\+cpp\+:
-\nopagebreak
+Include dependency graph for XO\+\_\+\+Classes.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{_x_o___classes_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_x_o___classes_8cpp_af7ef32449c969cec4c5d3eaf34405925}{is\+\_\+on\+\_\+board\+\_\+safe}} (int x, int y, int rows, int columns)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -27,3 +31,37 @@ This file contains all the derived classes from \doxylink{_board_game___classes_
 
 Definition in file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
 
+
+
+\label{doc-func-members}
+\Hypertarget{_x_o___classes_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_x_o___classes_8cpp_af7ef32449c969cec4c5d3eaf34405925}\index{XO\_Classes.cpp@{XO\_Classes.cpp}!is\_on\_board\_safe@{is\_on\_board\_safe}}
+\index{is\_on\_board\_safe@{is\_on\_board\_safe}!XO\_Classes.cpp@{XO\_Classes.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_on\_board\_safe()}{is\_on\_board\_safe()}}
+{\footnotesize\ttfamily \label{_x_o___classes_8cpp_af7ef32449c969cec4c5d3eaf34405925} 
+bool is\+\_\+on\+\_\+board\+\_\+safe (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{rows}{, }\item[{int}]{columns}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_x_o___classes_8cpp_source_l01615}{1615}} of file \mbox{\hyperlink{_x_o___classes_8cpp_source}{XO\+\_\+\+Classes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01616\ \ \ \ \ \textcolor{keywordflow}{return}\ x\ >=\ 0\ \&\&\ x\ <\ rows\ \&\&\ y\ >=\ 0\ \&\&\ y\ <\ columns;}
+\DoxyCodeLine{01617\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_x_o___classes_8cpp_source_l01627}{SUS\+\_\+\+Board\+::calculate\+\_\+new\+\_\+sus\+\_\+score()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_x_o___classes_8cpp_af7ef32449c969cec4c5d3eaf34405925_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,5 @@
+<map id="Board::get_rows" name="Board::get_rows">
+<area shape="rect" id="Node000001" title="Get number of rows." alt="" coords="184,5,299,32"/>
+<area shape="rect" id="Node000002" href="$class_s_u_s___u_i.html#a9c7a3c09a5e18a3d89f448ea93b6dea6" title="Ask the user (or AI) to make a move." alt="" coords="5,5,136,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,21,136,21,136,16,168,16"/>
+</map>

@@ -133,11 +133,67 @@ Include dependency graph for XO_Classes.cpp:</div>
 </div>
 </div>
 <p><a href="_x_o___classes_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af7ef32449c969cec4c5d3eaf34405925" id="r_af7ef32449c969cec4c5d3eaf34405925"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7ef32449c969cec4c5d3eaf34405925">is_on_board_safe</a> (int x, int y, int rows, int columns)</td></tr>
+</table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains all the derived classes from <a class="el" href="_board_game___classes_8h.html" title="Core framework for board games.">BoardGame_Classes.h</a>. </p>
 
 <p class="definition">Definition in file <a class="el" href="_x_o___classes_8cpp_source.html">XO_Classes.cpp</a>.</p>
-</div></div><!-- contents -->
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="af7ef32449c969cec4c5d3eaf34405925" name="af7ef32449c969cec4c5d3eaf34405925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7ef32449c969cec4c5d3eaf34405925">&#9670;&#160;</a></span>is_on_board_safe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_on_board_safe </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rows</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>columns</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_x_o___classes_8cpp_source.html#l01615">1615</a> of file <a class="el" href="_x_o___classes_8cpp_source.html">XO_Classes.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1615</span>                                                           {</div>
+<div class="line"><span class="lineno"> 1616</span>    <span class="keywordflow">return</span> x &gt;= 0 &amp;&amp; x &lt; rows &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; columns;</div>
+<div class="line"><span class="lineno"> 1617</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="_x_o___classes_8cpp_source.html#l01627">SUS_Board::calculate_new_sus_score()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_x_o___classes_8cpp_af7ef32449c969cec4c5d3eaf34405925_icgraph.png" border="0" usemap="#a_x_o___classes_8cpp_af7ef32449c969cec4c5d3eaf34405925_icgraph" loading="lazy" alt=""/></div>
+<map name="a_x_o___classes_8cpp_af7ef32449c969cec4c5d3eaf34405925_icgraph" id="a_x_o___classes_8cpp_af7ef32449c969cec4c5d3eaf34405925_icgraph">
+<area shape="rect" title=" " alt="" coords="426,13,548,40"/>
+<area shape="rect" href="class_s_u_s___board.html#afb156087187517e2908fdb0597667526" title=" " alt="" coords="229,5,378,48"/>
+<area shape="poly" title=" " alt="" coords="410,29,379,29,379,24,410,24"/>
+<area shape="rect" href="class_s_u_s___board.html#a22679cdc9a91a17fea898c66ad821e45" title="Update the board with a new move." alt="" coords="5,13,181,40"/>
+<area shape="poly" title=" " alt="" coords="213,29,181,29,181,24,213,24"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

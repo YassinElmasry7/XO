@@ -144,6 +144,7 @@ Include dependency graph for XO.cpp:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a47d7b4eeb9c91c063ce3514e5ca96468" id="r_a47d7b4eeb9c91c063ce3514e5ca96468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47d7b4eeb9c91c063ce3514e5ca96468">play_math_xo</a> ()</td></tr>
+<tr class="memitem:ad7090c4c3c68db4f5f1ae3e8663186b1" id="r_ad7090c4c3c68db4f5f1ae3e8663186b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7090c4c3c68db4f5f1ae3e8663186b1">play_sus_xo</a> ()</td></tr>
 <tr class="memitem:adc24daa8cb21513fe3cd9480f0c75104" id="r_adc24daa8cb21513fe3cd9480f0c75104"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc24daa8cb21513fe3cd9480f0c75104">play_reverse_xo</a> ()</td></tr>
 <tr class="memitem:a749ef7d0edfd19a1799e3980cb8919a0" id="r_a749ef7d0edfd19a1799e3980cb8919a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a749ef7d0edfd19a1799e3980cb8919a0">play_obstacle_xo</a> ()</td></tr>
 <tr class="memitem:af4e66e02b8fb46e82028487922b2646e" id="r_af4e66e02b8fb46e82028487922b2646e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4e66e02b8fb46e82028487922b2646e">play_five_x_five</a> ()</td></tr>
@@ -171,150 +172,166 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00177">177</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>           {</div>
-<div class="line"><span class="lineno">  178</span>    srand(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(time(0)));</div>
-<div class="line"><span class="lineno">  179</span> </div>
-<div class="line"><span class="lineno">  180</span>    <span class="keywordtype">int</span> choice;</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">do</span> {</div>
-<div class="line"><span class="lineno">  183</span>        cout &lt;&lt; <span class="stringliteral">&quot;\n===================================== \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  184</span>        cout &lt;&lt; <span class="stringliteral">&quot;        BOARD GAMES COLLECTION \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  185</span>        cout &lt;&lt; <span class="stringliteral">&quot;===================================== \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  186</span>        cout &lt;&lt; <span class="stringliteral">&quot;1. Mathematical X-O \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  187</span>        cout &lt;&lt; <span class="stringliteral">&quot;2. Reverse X-O \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  188</span>        cout &lt;&lt; <span class="stringliteral">&quot;3. Obstacle X-O \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  189</span>        cout &lt;&lt; <span class="stringliteral">&quot;4. 5x5 X-O \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  190</span>        cout &lt;&lt; <span class="stringliteral">&quot;5. 4x4 X-O \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  191</span>        cout &lt;&lt; <span class="stringliteral">&quot;6. Connect Four X-O\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  192</span>        cout &lt;&lt; <span class="stringliteral">&quot;7. Diamond X-O \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  193</span>        cout &lt;&lt; <span class="stringliteral">&quot;8. Word Tic-Tac-Toe \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  194</span>        cout &lt;&lt; <span class="stringliteral">&quot;9. Pyramid X-O \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  195</span>        cout &lt;&lt; <span class="stringliteral">&quot;10. Infinity Tic-Tac-Toe \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  196</span>        cout &lt;&lt; <span class="stringliteral">&quot;11. Exit \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  197</span>        cout &lt;&lt; <span class="stringliteral">&quot;===================================== \n&quot;</span>;</div>
-<div class="line"><span class="lineno">  198</span>        cout &lt;&lt; <span class="stringliteral">&quot;Enter your choice (1-11): &quot;</span>;</div>
-<div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>        cin &gt;&gt; choice;</div>
-<div class="line"><span class="lineno">  201</span> </div>
-<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">switch</span> (choice) {</div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">  204</span>                <a class="code hl_function" href="#a47d7b4eeb9c91c063ce3514e5ca96468">play_math_xo</a>();</div>
-<div class="line"><span class="lineno">  205</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">  207</span>                <a class="code hl_function" href="#adc24daa8cb21513fe3cd9480f0c75104">play_reverse_xo</a>();</div>
-<div class="line"><span class="lineno">  208</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  209</span>            <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno">  210</span>                <a class="code hl_function" href="#a749ef7d0edfd19a1799e3980cb8919a0">play_obstacle_xo</a>();</div>
-<div class="line"><span class="lineno">  211</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  212</span>            <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">  213</span>                <a class="code hl_function" href="#af4e66e02b8fb46e82028487922b2646e">play_five_x_five</a>();</div>
-<div class="line"><span class="lineno">  214</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">case</span> 5:</div>
-<div class="line"><span class="lineno">  216</span>                <a class="code hl_function" href="#ac519027ee4017279b03301e1308e433a">play_four_x_four</a>();</div>
-<div class="line"><span class="lineno">  217</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  218</span>            <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno">  219</span>                <a class="code hl_function" href="#a10b869eceb72938be9ef06fe295c224f">play_connect_four</a>();</div>
-<div class="line"><span class="lineno">  220</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">case</span> 7:</div>
-<div class="line"><span class="lineno">  222</span>                <a class="code hl_function" href="#ad1c4254d7665cf030b1a69abcecce274">play_diamond_xo</a>();</div>
-<div class="line"><span class="lineno">  223</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  224</span>            <span class="keywordflow">case</span> 8:</div>
-<div class="line"><span class="lineno">  225</span>                <a class="code hl_function" href="#a461773ebcef3f2a0074f5ad49d6a33c7">play_word_xo</a>();</div>
-<div class="line"><span class="lineno">  226</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">case</span> 9:</div>
-<div class="line"><span class="lineno">  228</span>                <a class="code hl_function" href="#a706885ad82974c5f5a0fd7fdc2e38eb5">play_pyramid_xo</a>();</div>
-<div class="line"><span class="lineno">  229</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">case</span> 10:</div>
-<div class="line"><span class="lineno">  231</span>                <a class="code hl_function" href="#a881b94fd0747b7162a66c15a75e9beb5">play_infinity_xo</a>();</div>
-<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">case</span> 11:</div>
-<div class="line"><span class="lineno">  234</span>                cout &lt;&lt; <span class="stringliteral">&quot;Thank you for playing!\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  235</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  237</span>                cout &lt;&lt; <span class="stringliteral">&quot;Invalid choice! Please try again.\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  238</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  239</span>        }</div>
-<div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>    } <span class="keywordflow">while</span> (choice != 11);</div>
-<div class="line"><span class="lineno">  242</span> </div>
-<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  244</span>}</div>
-<div class="ttc" id="a_x_o_8cpp_html_a10b869eceb72938be9ef06fe295c224f"><div class="ttname"><a href="#a10b869eceb72938be9ef06fe295c224f">play_connect_four</a></div><div class="ttdeci">void play_connect_four()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00100">XO.cpp:100</a></div></div>
-<div class="ttc" id="a_x_o_8cpp_html_a461773ebcef3f2a0074f5ad49d6a33c7"><div class="ttname"><a href="#a461773ebcef3f2a0074f5ad49d6a33c7">play_word_xo</a></div><div class="ttdeci">void play_word_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00129">XO.cpp:129</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00202">202</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>           {</div>
+<div class="line"><span class="lineno">  203</span>    srand(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(time(0)));</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>    <span class="keywordtype">int</span> choice;</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">  208</span>        cout &lt;&lt; <span class="stringliteral">&quot;\n===================================== \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  209</span>        cout &lt;&lt; <span class="stringliteral">&quot;        BOARD GAMES COLLECTION \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  210</span>        cout &lt;&lt; <span class="stringliteral">&quot;===================================== \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  211</span>        cout &lt;&lt; <span class="stringliteral">&quot;1. SUS X-O\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  212</span>        cout &lt;&lt; <span class="stringliteral">&quot;2. Mathematical X-O \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  213</span>        cout &lt;&lt; <span class="stringliteral">&quot;3. Reverse X-O \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  214</span>        cout &lt;&lt; <span class="stringliteral">&quot;4. Obstacle X-O \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  215</span>        cout &lt;&lt; <span class="stringliteral">&quot;5. 5x5 X-O \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  216</span>        cout &lt;&lt; <span class="stringliteral">&quot;6. 4x4 X-O \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  217</span>        cout &lt;&lt; <span class="stringliteral">&quot;7. Connect Four X-O\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  218</span>        cout &lt;&lt; <span class="stringliteral">&quot;8. Diamond X-O \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  219</span>        cout &lt;&lt; <span class="stringliteral">&quot;9. Word Tic-Tac-Toe \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  220</span>        cout &lt;&lt; <span class="stringliteral">&quot;10. Pyramid X-O \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  221</span>        cout &lt;&lt; <span class="stringliteral">&quot;11. Infinity Tic-Tac-Toe \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  222</span>        cout &lt;&lt; <span class="stringliteral">&quot;12. Exit \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  223</span>        cout &lt;&lt; <span class="stringliteral">&quot;===================================== \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  224</span>        cout &lt;&lt; <span class="stringliteral">&quot;Enter your choice (1-12): &quot;</span>;</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>        cin &gt;&gt; choice;</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">switch</span> (choice) {</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">  230</span>                <a class="code hl_function" href="#ad7090c4c3c68db4f5f1ae3e8663186b1">play_sus_xo</a>();</div>
+<div class="line"><span class="lineno">  231</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">  233</span>                <a class="code hl_function" href="#a47d7b4eeb9c91c063ce3514e5ca96468">play_math_xo</a>();</div>
+<div class="line"><span class="lineno">  234</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  235</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno">  236</span>                <a class="code hl_function" href="#adc24daa8cb21513fe3cd9480f0c75104">play_reverse_xo</a>();</div>
+<div class="line"><span class="lineno">  237</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">  239</span>                <a class="code hl_function" href="#a749ef7d0edfd19a1799e3980cb8919a0">play_obstacle_xo</a>();</div>
+<div class="line"><span class="lineno">  240</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  242</span>                <a class="code hl_function" href="#af4e66e02b8fb46e82028487922b2646e">play_five_x_five</a>();</div>
+<div class="line"><span class="lineno">  243</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">case</span> 6:</div>
+<div class="line"><span class="lineno">  245</span>                <a class="code hl_function" href="#ac519027ee4017279b03301e1308e433a">play_four_x_four</a>();</div>
+<div class="line"><span class="lineno">  246</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">case</span> 7:</div>
+<div class="line"><span class="lineno">  248</span>                <a class="code hl_function" href="#a10b869eceb72938be9ef06fe295c224f">play_connect_four</a>();</div>
+<div class="line"><span class="lineno">  249</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  250</span>            <span class="keywordflow">case</span> 8:</div>
+<div class="line"><span class="lineno">  251</span>                <a class="code hl_function" href="#ad1c4254d7665cf030b1a69abcecce274">play_diamond_xo</a>();</div>
+<div class="line"><span class="lineno">  252</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">case</span> 9:</div>
+<div class="line"><span class="lineno">  254</span>                <a class="code hl_function" href="#a461773ebcef3f2a0074f5ad49d6a33c7">play_word_xo</a>();</div>
+<div class="line"><span class="lineno">  255</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  256</span>            <span class="keywordflow">case</span> 10:</div>
+<div class="line"><span class="lineno">  257</span>                <a class="code hl_function" href="#a706885ad82974c5f5a0fd7fdc2e38eb5">play_pyramid_xo</a>();</div>
+<div class="line"><span class="lineno">  258</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">case</span> 11:</div>
+<div class="line"><span class="lineno">  260</span>                <a class="code hl_function" href="#a881b94fd0747b7162a66c15a75e9beb5">play_infinity_xo</a>();</div>
+<div class="line"><span class="lineno">  261</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordflow">case</span> 12:</div>
+<div class="line"><span class="lineno">  263</span>                cout &lt;&lt; <span class="stringliteral">&quot;Thank you for playing!\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  264</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  266</span>                cout &lt;&lt; <span class="stringliteral">&quot;Invalid choice! Please try again.\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  267</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  268</span>        }</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>    } <span class="keywordflow">while</span> (choice != 12);</div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  273</span>}</div>
+<div class="ttc" id="a_x_o_8cpp_html_a10b869eceb72938be9ef06fe295c224f"><div class="ttname"><a href="#a10b869eceb72938be9ef06fe295c224f">play_connect_four</a></div><div class="ttdeci">void play_connect_four()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00125">XO.cpp:125</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_a461773ebcef3f2a0074f5ad49d6a33c7"><div class="ttname"><a href="#a461773ebcef3f2a0074f5ad49d6a33c7">play_word_xo</a></div><div class="ttdeci">void play_word_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00154">XO.cpp:154</a></div></div>
 <div class="ttc" id="a_x_o_8cpp_html_a47d7b4eeb9c91c063ce3514e5ca96468"><div class="ttname"><a href="#a47d7b4eeb9c91c063ce3514e5ca96468">play_math_xo</a></div><div class="ttdeci">void play_math_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00017">XO.cpp:17</a></div></div>
-<div class="ttc" id="a_x_o_8cpp_html_a706885ad82974c5f5a0fd7fdc2e38eb5"><div class="ttname"><a href="#a706885ad82974c5f5a0fd7fdc2e38eb5">play_pyramid_xo</a></div><div class="ttdeci">void play_pyramid_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00143">XO.cpp:143</a></div></div>
-<div class="ttc" id="a_x_o_8cpp_html_a749ef7d0edfd19a1799e3980cb8919a0"><div class="ttname"><a href="#a749ef7d0edfd19a1799e3980cb8919a0">play_obstacle_xo</a></div><div class="ttdeci">void play_obstacle_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00047">XO.cpp:47</a></div></div>
-<div class="ttc" id="a_x_o_8cpp_html_a881b94fd0747b7162a66c15a75e9beb5"><div class="ttname"><a href="#a881b94fd0747b7162a66c15a75e9beb5">play_infinity_xo</a></div><div class="ttdeci">void play_infinity_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00157">XO.cpp:157</a></div></div>
-<div class="ttc" id="a_x_o_8cpp_html_ac519027ee4017279b03301e1308e433a"><div class="ttname"><a href="#ac519027ee4017279b03301e1308e433a">play_four_x_four</a></div><div class="ttdeci">void play_four_x_four()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00085">XO.cpp:85</a></div></div>
-<div class="ttc" id="a_x_o_8cpp_html_ad1c4254d7665cf030b1a69abcecce274"><div class="ttname"><a href="#ad1c4254d7665cf030b1a69abcecce274">play_diamond_xo</a></div><div class="ttdeci">void play_diamond_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00115">XO.cpp:115</a></div></div>
-<div class="ttc" id="a_x_o_8cpp_html_adc24daa8cb21513fe3cd9480f0c75104"><div class="ttname"><a href="#adc24daa8cb21513fe3cd9480f0c75104">play_reverse_xo</a></div><div class="ttdeci">void play_reverse_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00032">XO.cpp:32</a></div></div>
-<div class="ttc" id="a_x_o_8cpp_html_af4e66e02b8fb46e82028487922b2646e"><div class="ttname"><a href="#af4e66e02b8fb46e82028487922b2646e">play_five_x_five</a></div><div class="ttdeci">void play_five_x_five()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00062">XO.cpp:62</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_a706885ad82974c5f5a0fd7fdc2e38eb5"><div class="ttname"><a href="#a706885ad82974c5f5a0fd7fdc2e38eb5">play_pyramid_xo</a></div><div class="ttdeci">void play_pyramid_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00168">XO.cpp:168</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_a749ef7d0edfd19a1799e3980cb8919a0"><div class="ttname"><a href="#a749ef7d0edfd19a1799e3980cb8919a0">play_obstacle_xo</a></div><div class="ttdeci">void play_obstacle_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00072">XO.cpp:72</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_a881b94fd0747b7162a66c15a75e9beb5"><div class="ttname"><a href="#a881b94fd0747b7162a66c15a75e9beb5">play_infinity_xo</a></div><div class="ttdeci">void play_infinity_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00182">XO.cpp:182</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_ac519027ee4017279b03301e1308e433a"><div class="ttname"><a href="#ac519027ee4017279b03301e1308e433a">play_four_x_four</a></div><div class="ttdeci">void play_four_x_four()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00110">XO.cpp:110</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_ad1c4254d7665cf030b1a69abcecce274"><div class="ttname"><a href="#ad1c4254d7665cf030b1a69abcecce274">play_diamond_xo</a></div><div class="ttdeci">void play_diamond_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00140">XO.cpp:140</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_ad7090c4c3c68db4f5f1ae3e8663186b1"><div class="ttname"><a href="#ad7090c4c3c68db4f5f1ae3e8663186b1">play_sus_xo</a></div><div class="ttdeci">void play_sus_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00032">XO.cpp:32</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_adc24daa8cb21513fe3cd9480f0c75104"><div class="ttname"><a href="#adc24daa8cb21513fe3cd9480f0c75104">play_reverse_xo</a></div><div class="ttdeci">void play_reverse_xo()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00057">XO.cpp:57</a></div></div>
+<div class="ttc" id="a_x_o_8cpp_html_af4e66e02b8fb46e82028487922b2646e"><div class="ttname"><a href="#af4e66e02b8fb46e82028487922b2646e">play_five_x_five</a></div><div class="ttdeci">void play_five_x_five()</div><div class="ttdef"><b>Definition</b> <a href="_x_o_8cpp_source.html#l00087">XO.cpp:87</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="_x_o_8cpp_source.html#l00100">play_connect_four()</a>, <a class="el" href="_x_o_8cpp_source.html#l00115">play_diamond_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00062">play_five_x_five()</a>, <a class="el" href="_x_o_8cpp_source.html#l00085">play_four_x_four()</a>, <a class="el" href="_x_o_8cpp_source.html#l00157">play_infinity_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00017">play_math_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00047">play_obstacle_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00143">play_pyramid_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00032">play_reverse_xo()</a>, and <a class="el" href="_x_o_8cpp_source.html#l00129">play_word_xo()</a>.</p>
+<p class="reference">References <a class="el" href="_x_o_8cpp_source.html#l00125">play_connect_four()</a>, <a class="el" href="_x_o_8cpp_source.html#l00140">play_diamond_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00087">play_five_x_five()</a>, <a class="el" href="_x_o_8cpp_source.html#l00110">play_four_x_four()</a>, <a class="el" href="_x_o_8cpp_source.html#l00182">play_infinity_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00017">play_math_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00072">play_obstacle_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00168">play_pyramid_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00057">play_reverse_xo()</a>, <a class="el" href="_x_o_8cpp_source.html#l00032">play_sus_xo()</a>, and <a class="el" href="_x_o_8cpp_source.html#l00154">play_word_xo()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_x_o_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#a_x_o_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" loading="lazy" alt=""/></div>
 <map name="a_x_o_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="a_x_o_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,241,55,268"/>
-<area shape="rect" href="_x_o_8cpp.html#a10b869eceb72938be9ef06fe295c224f" title=" " alt="" coords="103,64,229,91"/>
-<area shape="poly" title=" " alt="" coords="32,240,53,175,73,135,101,101,105,97,109,101,105,105,78,138,58,177,37,242"/>
-<area shape="rect" href="_x_o_8cpp.html#ad1c4254d7665cf030b1a69abcecce274" title=" " alt="" coords="105,115,227,141"/>
-<area shape="poly" title=" " alt="" coords="35,240,60,197,79,173,101,151,107,147,110,151,104,155,83,176,65,200,40,242"/>
+<area shape="rect" title=" " alt="" coords="5,267,55,293"/>
+<area shape="rect" href="_x_o_8cpp.html#a10b869eceb72938be9ef06fe295c224f" title=" " alt="" coords="103,216,229,243"/>
+<area shape="poly" title=" " alt="" coords="54,268,113,246,115,251,56,273"/>
+<area shape="rect" href="_x_o_8cpp.html#ad1c4254d7665cf030b1a69abcecce274" title=" " alt="" coords="105,267,227,293"/>
+<area shape="poly" title=" " alt="" coords="55,277,89,277,89,283,55,283"/>
 <area shape="rect" href="_x_o_8cpp.html#af4e66e02b8fb46e82028487922b2646e" title=" " alt="" coords="111,13,221,40"/>
-<area shape="poly" title=" " alt="" coords="30,241,35,204,46,153,67,99,82,73,101,50,104,47,107,51,105,54,87,76,72,101,51,155,40,205,35,241"/>
-<area shape="rect" href="_x_o_8cpp.html#ac519027ee4017279b03301e1308e433a" title=" " alt="" coords="108,165,224,192"/>
-<area shape="poly" title=" " alt="" coords="47,239,101,202,112,196,114,201,104,206,50,243"/>
-<area shape="rect" href="_x_o_8cpp.html#a881b94fd0747b7162a66c15a75e9beb5" title=" " alt="" coords="111,216,221,243"/>
-<area shape="poly" title=" " alt="" coords="55,248,95,240,96,245,56,253"/>
-<area shape="rect" href="_x_o_8cpp.html#a47d7b4eeb9c91c063ce3514e5ca96468" title=" " alt="" coords="115,267,217,293"/>
-<area shape="poly" title=" " alt="" coords="56,257,100,265,99,270,55,262"/>
-<area shape="rect" href="_x_o_8cpp.html#a749ef7d0edfd19a1799e3980cb8919a0" title=" " alt="" coords="105,317,227,344"/>
-<area shape="poly" title=" " alt="" coords="50,266,104,303,114,308,112,313,101,308,47,271"/>
-<area shape="rect" href="_x_o_8cpp.html#a706885ad82974c5f5a0fd7fdc2e38eb5" title=" " alt="" coords="106,368,226,395"/>
-<area shape="poly" title=" " alt="" coords="40,267,65,309,83,333,104,354,110,358,107,362,101,358,79,337,60,312,35,270"/>
-<area shape="rect" href="_x_o_8cpp.html#adc24daa8cb21513fe3cd9480f0c75104" title=" " alt="" coords="109,419,223,445"/>
-<area shape="poly" title=" " alt="" coords="37,268,58,333,78,371,105,405,109,408,105,412,101,409,73,374,53,335,32,269"/>
-<area shape="rect" href="_x_o_8cpp.html#a461773ebcef3f2a0074f5ad49d6a33c7" title=" " alt="" coords="116,469,216,496"/>
-<area shape="poly" title=" " alt="" coords="35,268,40,305,51,355,72,408,87,433,105,456,107,458,104,462,101,459,82,436,67,411,46,356,35,306,30,269"/>
-<area shape="rect" href="class_game_manager.html#a71f46d5189dac5c773f608cea1b5a203" title="Run the main game loop until someone wins or the game ends." alt="" coords="282,216,414,243"/>
-<area shape="poly" title=" " alt="" coords="210,89,230,100,260,124,288,151,330,202,326,205,284,155,257,128,228,105,207,94"/>
-<area shape="rect" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a" title="Set up players for the game." alt="" coords="287,267,409,293"/>
-<area shape="poly" title=" " alt="" coords="216,89,231,101,245,121,252,141,255,179,258,216,265,234,279,253,282,256,278,260,275,256,261,237,253,217,250,179,247,142,240,123,227,105,212,93"/>
-<area shape="rect" href="class_player.html#aed2af19790ba73190e3ebeea589518e1" title="Get the player&#39;s name." alt="" coords="492,115,616,141"/>
-<area shape="poly" title=" " alt="" coords="376,213,511,146,513,151,378,218"/>
-<area shape="rect" href="class_u_i.html#a94561e0bb4bbcbe5ff71ca6d751922df" title="Create a player object based on input name, symbol, and type." alt="" coords="494,325,614,352"/>
-<area shape="poly" title=" " alt="" coords="398,291,491,318,489,323,397,296"/>
-<area shape="rect" href="class_u_i.html#a7b1603de1f73fbb4006e4f00a27c44da" title="Ask the user for the player&#39;s name." alt="" coords="484,208,624,235"/>
-<area shape="poly" title=" " alt="" coords="397,264,489,237,491,242,398,269"/>
-<area shape="rect" href="class_u_i.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title="Ask the user to choose the player type from a list." alt="" coords="487,259,621,301"/>
-<area shape="poly" title=" " alt="" coords="409,277,472,277,472,283,409,283"/>
-<area shape="poly" title=" " alt="" coords="205,139,230,151,316,205,314,209,228,156,203,144"/>
-<area shape="poly" title=" " alt="" coords="214,140,231,151,249,178,255,204,261,228,279,253,283,256,280,260,275,256,257,231,250,205,244,180,227,155,211,144"/>
-<area shape="poly" title=" " alt="" coords="212,38,231,50,248,68,259,84,279,124,331,202,327,205,275,127,254,87,244,71,227,54,209,43"/>
-<area shape="poly" title=" " alt="" coords="212,38,278,57,478,108,477,113,276,63,211,43"/>
-<area shape="poly" title=" " alt="" coords="217,38,231,50,248,77,256,103,257,129,255,154,253,179,255,203,262,228,279,253,281,255,277,259,275,256,257,230,249,204,248,179,250,154,252,129,251,104,243,79,227,54,213,43"/>
-<area shape="rect" href="class_five_x_five___board.html#a5a57e5e0d34a2b220b015a8c93e34fe8" title=" " alt="" coords="277,5,418,48"/>
-<area shape="poly" title=" " alt="" coords="221,24,262,24,262,29,221,29"/>
-<area shape="rect" href="class_five_x_five___board.html#a240768c02341e80056d1f7a21a0f0a12" title=" " alt="" coords="466,5,642,48"/>
-<area shape="poly" title=" " alt="" coords="419,24,451,24,451,29,419,29"/>
-<area shape="rect" href="class_five_x_five___board.html#a33be820bbd8fa54a2f7183519b97889a" title=" " alt="" coords="690,5,845,48"/>
-<area shape="poly" title=" " alt="" coords="642,24,674,24,674,29,642,29"/>
-<area shape="poly" title=" " alt="" coords="217,190,283,209,282,214,216,195"/>
-<area shape="poly" title=" " alt="" coords="210,190,231,202,246,215,255,228,264,240,279,252,287,257,284,262,275,257,260,244,251,231,242,219,227,206,207,195"/>
-<area shape="poly" title=" " alt="" coords="221,227,266,227,266,232,221,232"/>
-<area shape="poly" title=" " alt="" coords="217,241,283,259,282,265,216,246"/>
-<area shape="poly" title=" " alt="" coords="216,263,282,245,283,250,217,269"/>
-<area shape="poly" title=" " alt="" coords="218,277,271,277,271,283,218,283"/>
-<area shape="poly" title=" " alt="" coords="207,314,227,303,242,291,251,278,260,265,275,252,284,247,287,252,279,257,264,269,255,281,246,294,231,308,210,319"/>
-<area shape="poly" title=" " alt="" coords="216,314,282,295,283,301,217,319"/>
-<area shape="poly" title=" " alt="" coords="211,365,227,354,244,329,250,304,257,279,275,253,280,249,283,253,279,256,261,281,255,306,249,332,231,358,214,370"/>
-<area shape="poly" title=" " alt="" coords="203,365,228,354,314,300,316,305,230,358,205,370"/>
-<area shape="poly" title=" " alt="" coords="212,416,227,405,240,386,247,368,250,330,253,292,261,272,275,253,278,250,282,254,279,256,265,275,258,293,255,331,252,369,245,389,231,409,216,420"/>
-<area shape="poly" title=" " alt="" coords="207,416,228,404,257,381,284,354,326,304,330,308,288,358,260,385,230,409,210,420"/>
-<area shape="poly" title=" " alt="" coords="213,467,227,456,243,430,251,405,252,381,250,356,248,331,249,305,257,279,275,253,277,250,281,254,279,256,262,282,255,306,253,331,255,355,257,380,256,406,248,432,231,459,217,471"/>
-<area shape="poly" title=" " alt="" coords="209,467,227,455,262,420,292,380,332,306,337,309,296,383,267,423,231,459,212,471"/>
+<area shape="poly" title=" " alt="" coords="29,266,33,225,43,168,65,106,81,76,101,50,104,47,107,51,105,54,85,79,70,108,48,169,38,226,34,266"/>
+<area shape="rect" href="_x_o_8cpp.html#ac519027ee4017279b03301e1308e433a" title=" " alt="" coords="108,317,224,344"/>
+<area shape="poly" title=" " alt="" coords="56,287,115,309,113,314,54,292"/>
+<area shape="rect" href="_x_o_8cpp.html#a881b94fd0747b7162a66c15a75e9beb5" title=" " alt="" coords="111,368,221,395"/>
+<area shape="poly" title=" " alt="" coords="43,292,69,322,104,354,111,358,109,363,101,358,65,326,39,295"/>
+<area shape="rect" href="_x_o_8cpp.html#a47d7b4eeb9c91c063ce3514e5ca96468" title=" " alt="" coords="115,419,217,445"/>
+<area shape="poly" title=" " alt="" coords="38,293,61,347,80,378,104,405,109,409,106,413,101,409,76,381,56,349,33,295"/>
+<area shape="rect" href="_x_o_8cpp.html#a749ef7d0edfd19a1799e3980cb8919a0" title=" " alt="" coords="105,469,227,496"/>
+<area shape="poly" title=" " alt="" coords="36,293,42,326,55,369,75,415,105,456,108,459,104,463,101,459,70,418,50,371,37,327,31,295"/>
+<area shape="rect" href="_x_o_8cpp.html#a706885ad82974c5f5a0fd7fdc2e38eb5" title=" " alt="" coords="106,64,226,91"/>
+<area shape="poly" title=" " alt="" coords="31,265,37,233,50,189,70,142,101,101,104,97,108,101,105,104,75,145,55,191,42,234,36,267"/>
+<area shape="rect" href="_x_o_8cpp.html#adc24daa8cb21513fe3cd9480f0c75104" title=" " alt="" coords="109,115,223,141"/>
+<area shape="poly" title=" " alt="" coords="33,265,56,211,76,179,101,151,106,147,109,151,104,155,80,182,61,213,38,267"/>
+<area shape="rect" href="_x_o_8cpp.html#ad7090c4c3c68db4f5f1ae3e8663186b1" title=" " alt="" coords="119,520,213,547"/>
+<area shape="poly" title=" " alt="" coords="34,294,38,334,48,391,70,452,85,481,105,506,108,510,104,513,101,510,81,484,65,454,43,392,33,335,29,294"/>
+<area shape="rect" href="_x_o_8cpp.html#a461773ebcef3f2a0074f5ad49d6a33c7" title=" " alt="" coords="116,165,216,192"/>
+<area shape="poly" title=" " alt="" coords="39,265,65,234,101,202,109,197,111,202,104,206,69,238,43,268"/>
+<area shape="rect" href="class_game_manager.html#a71f46d5189dac5c773f608cea1b5a203" title="Run the main game loop until someone wins or the game ends." alt="" coords="299,317,431,344"/>
+<area shape="poly" title=" " alt="" coords="205,241,230,252,278,284,322,308,320,313,276,289,228,257,203,246"/>
+<area shape="rect" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a" title="Set up players for the game." alt="" coords="304,248,426,275"/>
+<area shape="poly" title=" " alt="" coords="230,237,289,246,288,252,229,242"/>
+<area shape="rect" href="class_player.html#aed2af19790ba73190e3ebeea589518e1" title="Get the player&#39;s name." alt="" coords="527,336,651,363"/>
+<area shape="poly" title=" " alt="" coords="432,334,512,340,512,346,431,339"/>
+<area shape="rect" href="class_u_i.html#a94561e0bb4bbcbe5ff71ca6d751922df" title="Create a player object based on input name, symbol, and type." alt="" coords="529,168,649,195"/>
+<area shape="poly" title=" " alt="" coords="397,245,500,204,522,197,523,202,502,209,399,250"/>
+<area shape="rect" href="class_u_i.html#a7b1603de1f73fbb4006e4f00a27c44da" title="Ask the user for the player&#39;s name." alt="" coords="519,219,659,245"/>
+<area shape="poly" title=" " alt="" coords="427,251,503,241,504,246,427,256"/>
+<area shape="rect" href="class_u_i.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title="Ask the user to choose the player type from a list." alt="" coords="522,269,656,312"/>
+<area shape="poly" title=" " alt="" coords="427,267,507,277,506,283,427,272"/>
+<area shape="poly" title=" " alt="" coords="222,291,296,310,294,316,221,297"/>
+<area shape="poly" title=" " alt="" coords="227,272,288,266,289,271,227,277"/>
+<area shape="poly" title=" " alt="" coords="217,38,231,50,250,81,259,111,260,140,257,169,254,197,254,225,262,255,279,285,306,308,303,312,275,288,257,257,249,226,249,197,252,168,254,140,253,112,245,83,227,54,213,42"/>
+<area shape="poly" title=" " alt="" coords="207,38,230,50,301,92,354,129,401,173,455,234,470,259,477,281,485,302,503,322,515,330,512,334,500,326,481,305,472,283,466,261,451,238,397,177,350,134,298,97,228,54,205,43"/>
+<area shape="poly" title=" " alt="" coords="214,38,231,50,251,76,259,101,266,127,279,156,311,199,342,235,338,239,306,202,275,159,261,128,254,102,246,79,227,54,211,43"/>
+<area shape="rect" href="class_five_x_five___board.html#a5a57e5e0d34a2b220b015a8c93e34fe8" title=" " alt="" coords="295,5,436,48"/>
+<area shape="poly" title=" " alt="" coords="221,24,279,24,279,29,221,29"/>
+<area shape="rect" href="class_five_x_five___board.html#a240768c02341e80056d1f7a21a0f0a12" title=" " alt="" coords="501,5,677,48"/>
+<area shape="poly" title=" " alt="" coords="436,24,486,24,486,29,436,29"/>
+<area shape="rect" href="class_five_x_five___board.html#a33be820bbd8fa54a2f7183519b97889a" title=" " alt="" coords="725,5,880,48"/>
+<area shape="poly" title=" " alt="" coords="677,24,709,24,709,29,677,29"/>
+<area shape="poly" title=" " alt="" coords="224,328,283,328,283,333,224,333"/>
+<area shape="poly" title=" " alt="" coords="206,314,309,278,311,283,207,319"/>
+<area shape="poly" title=" " alt="" coords="221,365,294,346,296,351,222,370"/>
+<area shape="poly" title=" " alt="" coords="207,365,227,354,242,341,251,329,261,317,275,303,315,279,318,284,279,307,265,320,255,333,246,345,231,358,210,370"/>
+<area shape="poly" title=" " alt="" coords="202,416,228,404,327,350,330,355,230,409,205,420"/>
+<area shape="poly" title=" " alt="" coords="211,416,227,405,244,380,251,356,257,330,275,303,308,280,311,284,279,307,262,332,256,357,249,383,231,409,214,420"/>
+<area shape="poly" title=" " alt="" coords="208,466,227,455,243,441,252,428,275,397,330,351,333,355,279,401,256,431,247,445,231,459,211,471"/>
+<area shape="poly" title=" " alt="" coords="212,467,227,455,241,437,248,419,251,382,254,344,261,324,275,304,305,280,308,284,279,307,266,326,260,345,256,382,253,420,245,439,231,459,216,471"/>
+<area shape="poly" title=" " alt="" coords="216,89,231,101,247,125,255,149,257,194,258,239,264,261,279,285,308,308,304,312,275,288,260,264,252,240,251,194,250,149,242,127,227,104,213,93"/>
+<area shape="poly" title=" " alt="" coords="210,89,231,101,345,235,341,238,227,105,207,93"/>
+<area shape="poly" title=" " alt="" coords="215,140,231,151,244,169,252,186,256,219,261,252,267,268,279,285,309,308,306,312,275,289,262,271,255,253,251,220,246,187,240,172,227,155,212,144"/>
+<area shape="poly" title=" " alt="" coords="207,139,230,151,291,193,340,235,337,239,288,198,228,156,205,144"/>
+<area shape="poly" title=" " alt="" coords="211,517,227,506,246,480,252,455,259,427,275,397,299,372,326,351,329,355,303,375,279,400,264,429,258,456,250,482,231,510,214,522"/>
+<area shape="poly" title=" " alt="" coords="211,518,227,506,244,481,251,456,253,432,251,408,251,357,259,331,275,304,304,280,307,284,279,307,263,333,256,358,257,407,258,432,256,457,248,483,231,510,215,523"/>
+<area shape="rect" href="class_s_u_s___board.html#acd2c39612239065da3aea67ac7c27aa4" title="Check if the game is over." alt="" coords="277,520,453,547"/>
+<area shape="poly" title=" " alt="" coords="213,531,262,531,262,536,213,536"/>
+<area shape="rect" href="class_s_u_s___board.html#a54fee337d2b56c54c6969276b46b2e3f" title=" " alt="" coords="293,411,438,453"/>
+<area shape="poly" title=" " alt="" coords="202,517,228,506,314,459,316,464,230,510,205,522"/>
+<area shape="poly" title=" " alt="" coords="424,408,535,366,537,371,426,413"/>
+<area shape="rect" href="class_s_u_s___board.html#a0bed683e58cfdbba1293fb5628133f70" title=" " alt="" coords="510,411,668,453"/>
+<area shape="poly" title=" " alt="" coords="438,429,495,429,495,435,438,435"/>
+<area shape="poly" title=" " alt="" coords="213,190,231,202,248,223,256,244,263,264,279,285,313,308,310,312,275,289,259,267,251,246,243,226,227,206,210,195"/>
+<area shape="poly" title=" " alt="" coords="202,190,230,202,319,239,317,244,228,206,200,195"/>
 </map>
 </div>
 
@@ -335,24 +352,24 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00100">100</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                         {</div>
-<div class="line"><span class="lineno">  101</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Connect Four ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  102</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_connect_four___u_i.html">ConnectFour_UI</a>();</div>
-<div class="line"><span class="lineno">  103</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* connect4_board = <span class="keyword">new</span> <a class="code hl_class" href="class_connect_four___board.html">ConnectFour_Board</a>();</div>
-<div class="line"><span class="lineno">  104</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(connect4_board, players, game_ui);</div>
-<div class="line"><span class="lineno">  107</span>    game.run();</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>    <span class="keyword">delete</span> connect4_board;</div>
-<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">  113</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00125">125</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>                         {</div>
+<div class="line"><span class="lineno">  126</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Connect Four ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  127</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_connect_four___u_i.html">ConnectFour_UI</a>();</div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* connect4_board = <span class="keyword">new</span> <a class="code hl_class" href="class_connect_four___board.html">ConnectFour_Board</a>();</div>
+<div class="line"><span class="lineno">  129</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(connect4_board, players, game_ui);</div>
+<div class="line"><span class="lineno">  132</span>    game.run();</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>    <span class="keyword">delete</span> connect4_board;</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">  137</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">  138</span>}</div>
 <div class="ttc" id="aclass_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdoc">Base template for any board used in board games.</div><div class="ttdef"><b>Definition</b> <a href="_board_game___classes_8h_source.html#l00045">BoardGame_Classes.h:45</a></div></div>
 <div class="ttc" id="aclass_connect_four___board_html"><div class="ttname"><a href="class_connect_four___board.html">ConnectFour_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00109">XO_Classes.h:109</a></div></div>
-<div class="ttc" id="aclass_connect_four___u_i_html"><div class="ttname"><a href="class_connect_four___u_i.html">ConnectFour_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00197">XO_Classes.h:197</a></div></div>
+<div class="ttc" id="aclass_connect_four___u_i_html"><div class="ttname"><a href="class_connect_four___u_i.html">ConnectFour_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00277">XO_Classes.h:277</a></div></div>
 <div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdoc">Controls the flow of a board game between two players.</div><div class="ttdef"><b>Definition</b> <a href="_board_game___classes_8h_source.html#l00271">BoardGame_Classes.h:271</a></div></div>
 <div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Base template for all players (human or AI).</div><div class="ttdef"><b>Definition</b> <a href="_board_game___classes_8h_source.html#l00139">BoardGame_Classes.h:139</a></div></div>
 <div class="ttc" id="aclass_u_i_html"><div class="ttname"><a href="class_u_i.html">UI</a></div><div class="ttdoc">Base class for handling user interface and input/output.</div><div class="ttdef"><b>Definition</b> <a href="_board_game___classes_8h_source.html#l00179">BoardGame_Classes.h:179</a></div></div>
@@ -360,7 +377,7 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -409,27 +426,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00115">115</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                       {</div>
-<div class="line"><span class="lineno">  116</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Diamond X-O Game ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  117</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_diamond_x_o___u_i.html">DiamondXO_UI</a>();</div>
-<div class="line"><span class="lineno">  118</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* diamond_board = <span class="keyword">new</span> <a class="code hl_class" href="class_diamond_x_o___board.html">DiamondXO_Board</a>();</div>
-<div class="line"><span class="lineno">  119</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(diamond_board, players, game_ui);</div>
-<div class="line"><span class="lineno">  122</span>    game.run();</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>    <span class="keyword">delete</span> diamond_board;</div>
-<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">  126</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">  128</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00140">140</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>                       {</div>
+<div class="line"><span class="lineno">  141</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Diamond X-O Game ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  142</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_diamond_x_o___u_i.html">DiamondXO_UI</a>();</div>
+<div class="line"><span class="lineno">  143</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* diamond_board = <span class="keyword">new</span> <a class="code hl_class" href="class_diamond_x_o___board.html">DiamondXO_Board</a>();</div>
+<div class="line"><span class="lineno">  144</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(diamond_board, players, game_ui);</div>
+<div class="line"><span class="lineno">  147</span>    game.run();</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>    <span class="keyword">delete</span> diamond_board;</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">  153</span>}</div>
 <div class="ttc" id="aclass_diamond_x_o___board_html"><div class="ttname"><a href="class_diamond_x_o___board.html">DiamondXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00126">XO_Classes.h:126</a></div></div>
-<div class="ttc" id="aclass_diamond_x_o___u_i_html"><div class="ttname"><a href="class_diamond_x_o___u_i.html">DiamondXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00205">XO_Classes.h:205</a></div></div>
+<div class="ttc" id="aclass_diamond_x_o___u_i_html"><div class="ttname"><a href="class_diamond_x_o___u_i.html">DiamondXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00285">XO_Classes.h:285</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -478,37 +495,37 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00062">62</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                        {</div>
-<div class="line"><span class="lineno">   63</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting 5x5 Tic Tac Toe ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   64</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_five_x_five___u_i.html">FiveXFive_UI</a>();</div>
-<div class="line"><span class="lineno">   65</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* five_board = <span class="keyword">new</span> <a class="code hl_class" href="class_five_x_five___board.html">FiveXFive_Board</a>();</div>
-<div class="line"><span class="lineno">   66</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(five_board, players, game_ui);</div>
-<div class="line"><span class="lineno">   69</span>    game.run();</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>    <a class="code hl_class" href="class_five_x_five___board.html">FiveXFive_Board</a>* final_board = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_five_x_five___board.html">FiveXFive_Board</a>*<span class="keyword">&gt;</span>(five_board);</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordtype">int</span> scoreX = final_board-&gt;<a class="code hl_function" href="class_five_x_five___board.html#a5a57e5e0d34a2b220b015a8c93e34fe8">get_player_score</a>(<span class="charliteral">&#39;X&#39;</span>);</div>
-<div class="line"><span class="lineno">   73</span>    <span class="keywordtype">int</span> scoreO = final_board-&gt;<a class="code hl_function" href="class_five_x_five___board.html#a5a57e5e0d34a2b220b015a8c93e34fe8">get_player_score</a>(<span class="charliteral">&#39;O&#39;</span>);</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== FINAL SCORES ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   76</span>    cout &lt;&lt; players[0]-&gt;<a class="code hl_function" href="class_player.html#aed2af19790ba73190e3ebeea589518e1">get_name</a>() &lt;&lt; <span class="stringliteral">&quot; (X): &quot;</span> &lt;&lt; scoreX &lt;&lt; <span class="stringliteral">&quot; three-in-a-row sequences\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   77</span>    cout &lt;&lt; players[1]-&gt;<a class="code hl_function" href="class_player.html#aed2af19790ba73190e3ebeea589518e1">get_name</a>() &lt;&lt; <span class="stringliteral">&quot; (O): &quot;</span> &lt;&lt; scoreO &lt;&lt; <span class="stringliteral">&quot; three-in-a-row sequences\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>    <span class="keyword">delete</span> five_board;</div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">   81</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">   82</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">   83</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00087">87</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                        {</div>
+<div class="line"><span class="lineno">   88</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting 5x5 Tic Tac Toe ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   89</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_five_x_five___u_i.html">FiveXFive_UI</a>();</div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* five_board = <span class="keyword">new</span> <a class="code hl_class" href="class_five_x_five___board.html">FiveXFive_Board</a>();</div>
+<div class="line"><span class="lineno">   91</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(five_board, players, game_ui);</div>
+<div class="line"><span class="lineno">   94</span>    game.run();</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_class" href="class_five_x_five___board.html">FiveXFive_Board</a>* final_board = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_five_x_five___board.html">FiveXFive_Board</a>*<span class="keyword">&gt;</span>(five_board);</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordtype">int</span> scoreX = final_board-&gt;<a class="code hl_function" href="class_five_x_five___board.html#a5a57e5e0d34a2b220b015a8c93e34fe8">get_player_score</a>(<span class="charliteral">&#39;X&#39;</span>);</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordtype">int</span> scoreO = final_board-&gt;<a class="code hl_function" href="class_five_x_five___board.html#a5a57e5e0d34a2b220b015a8c93e34fe8">get_player_score</a>(<span class="charliteral">&#39;O&#39;</span>);</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== FINAL SCORES ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  101</span>    cout &lt;&lt; players[0]-&gt;<a class="code hl_function" href="class_player.html#aed2af19790ba73190e3ebeea589518e1">get_name</a>() &lt;&lt; <span class="stringliteral">&quot; (X): &quot;</span> &lt;&lt; scoreX &lt;&lt; <span class="stringliteral">&quot; three-in-a-row sequences\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  102</span>    cout &lt;&lt; players[1]-&gt;<a class="code hl_function" href="class_player.html#aed2af19790ba73190e3ebeea589518e1">get_name</a>() &lt;&lt; <span class="stringliteral">&quot; (O): &quot;</span> &lt;&lt; scoreO &lt;&lt; <span class="stringliteral">&quot; three-in-a-row sequences\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="keyword">delete</span> five_board;</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">  108</span>}</div>
 <div class="ttc" id="aclass_five_x_five___board_html"><div class="ttname"><a href="class_five_x_five___board.html">FiveXFive_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00066">XO_Classes.h:66</a></div></div>
 <div class="ttc" id="aclass_five_x_five___board_html_a5a57e5e0d34a2b220b015a8c93e34fe8"><div class="ttname"><a href="class_five_x_five___board.html#a5a57e5e0d34a2b220b015a8c93e34fe8">FiveXFive_Board::get_player_score</a></div><div class="ttdeci">int get_player_score(char symbol)</div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8cpp_source.html#l00455">XO_Classes.cpp:455</a></div></div>
-<div class="ttc" id="aclass_five_x_five___u_i_html"><div class="ttname"><a href="class_five_x_five___u_i.html">FiveXFive_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00180">XO_Classes.h:180</a></div></div>
+<div class="ttc" id="aclass_five_x_five___u_i_html"><div class="ttname"><a href="class_five_x_five___u_i.html">FiveXFive_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00260">XO_Classes.h:260</a></div></div>
 <div class="ttc" id="aclass_player_html_aed2af19790ba73190e3ebeea589518e1"><div class="ttname"><a href="class_player.html#aed2af19790ba73190e3ebeea589518e1">Player::get_name</a></div><div class="ttdeci">string get_name() const</div><div class="ttdoc">Get the player&#39;s name.</div><div class="ttdef"><b>Definition</b> <a href="_board_game___classes_8h_source.html#l00157">BoardGame_Classes.h:157</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00157">Player&lt; T &gt;::get_name()</a>, <a class="el" href="_x_o___classes_8cpp_source.html#l00455">FiveXFive_Board::get_player_score()</a>, <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -564,27 +581,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00085">85</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                        {</div>
-<div class="line"><span class="lineno">   86</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting 4x4 Tic Tac Toe ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   87</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_four_x_four___u_i.html">FourXFour_UI</a>();</div>
-<div class="line"><span class="lineno">   88</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* four_board = <span class="keyword">new</span> <a class="code hl_class" href="class_four_x_four___board.html">FourXFour_Board</a>();</div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(four_board, players, game_ui);</div>
-<div class="line"><span class="lineno">   92</span>    game.run();</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">delete</span> four_board;</div>
-<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">   97</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">   98</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00110">110</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                        {</div>
+<div class="line"><span class="lineno">  111</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting 4x4 Tic Tac Toe ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  112</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_four_x_four___u_i.html">FourXFour_UI</a>();</div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* four_board = <span class="keyword">new</span> <a class="code hl_class" href="class_four_x_four___board.html">FourXFour_Board</a>();</div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(four_board, players, game_ui);</div>
+<div class="line"><span class="lineno">  117</span>    game.run();</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    <span class="keyword">delete</span> four_board;</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">  123</span>}</div>
 <div class="ttc" id="aclass_four_x_four___board_html"><div class="ttname"><a href="class_four_x_four___board.html">FourXFour_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00087">XO_Classes.h:87</a></div></div>
-<div class="ttc" id="aclass_four_x_four___u_i_html"><div class="ttname"><a href="class_four_x_four___u_i.html">FourXFour_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00188">XO_Classes.h:188</a></div></div>
+<div class="ttc" id="aclass_four_x_four___u_i_html"><div class="ttname"><a href="class_four_x_four___u_i.html">FourXFour_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00268">XO_Classes.h:268</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -633,32 +650,32 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00157">157</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                        {</div>
-<div class="line"><span class="lineno">  158</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Infinity Tic-Tac-Toe ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  159</span>    cout &lt;&lt; <span class="stringliteral">&quot;Rules:\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  160</span>    cout &lt;&lt; <span class="stringliteral">&quot;1. Standard 3x3 grid\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  161</span>    cout &lt;&lt; <span class="stringliteral">&quot;2. After every 3 moves (total), the oldest mark disappears\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  162</span>    cout &lt;&lt; <span class="stringliteral">&quot;3. Win by getting 3 in a row before your marks disappear!\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_infinity_x_o___u_i.html">InfinityXO_UI</a>();</div>
-<div class="line"><span class="lineno">  165</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* infinity_board = <span class="keyword">new</span> <a class="code hl_class" href="class_infinity_x_o___board.html">InfinityXO_Board</a>();</div>
-<div class="line"><span class="lineno">  166</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">  167</span> </div>
-<div class="line"><span class="lineno">  168</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(infinity_board, players, game_ui);</div>
-<div class="line"><span class="lineno">  169</span>    game.run();</div>
-<div class="line"><span class="lineno">  170</span> </div>
-<div class="line"><span class="lineno">  171</span>    <span class="keyword">delete</span> infinity_board;</div>
-<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">  173</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">  174</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">  175</span>}</div>
-<div class="ttc" id="aclass_infinity_x_o___board_html"><div class="ttname"><a href="class_infinity_x_o___board.html">InfinityXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00267">XO_Classes.h:267</a></div></div>
-<div class="ttc" id="aclass_infinity_x_o___u_i_html"><div class="ttname"><a href="class_infinity_x_o___u_i.html">InfinityXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00288">XO_Classes.h:288</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00182">182</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>                        {</div>
+<div class="line"><span class="lineno">  183</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Infinity Tic-Tac-Toe ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  184</span>    cout &lt;&lt; <span class="stringliteral">&quot;Rules:\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  185</span>    cout &lt;&lt; <span class="stringliteral">&quot;1. Standard 3x3 grid\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  186</span>    cout &lt;&lt; <span class="stringliteral">&quot;2. After every 3 moves (total), the oldest mark disappears\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  187</span>    cout &lt;&lt; <span class="stringliteral">&quot;3. Win by getting 3 in a row before your marks disappear!\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_infinity_x_o___u_i.html">InfinityXO_UI</a>();</div>
+<div class="line"><span class="lineno">  190</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* infinity_board = <span class="keyword">new</span> <a class="code hl_class" href="class_infinity_x_o___board.html">InfinityXO_Board</a>();</div>
+<div class="line"><span class="lineno">  191</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(infinity_board, players, game_ui);</div>
+<div class="line"><span class="lineno">  194</span>    game.run();</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>    <span class="keyword">delete</span> infinity_board;</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">  198</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">  199</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">  200</span>}</div>
+<div class="ttc" id="aclass_infinity_x_o___board_html"><div class="ttname"><a href="class_infinity_x_o___board.html">InfinityXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00193">XO_Classes.h:193</a></div></div>
+<div class="ttc" id="aclass_infinity_x_o___u_i_html"><div class="ttname"><a href="class_infinity_x_o___u_i.html">InfinityXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00311">XO_Classes.h:311</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -723,11 +740,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   29</span>    <span class="keyword">delete</span> game_ui;</div>
 <div class="line"><span class="lineno">   30</span>}</div>
 <div class="ttc" id="aclass_math_x_o___board_html"><div class="ttname"><a href="class_math_x_o___board.html">MathXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00016">XO_Classes.h:16</a></div></div>
-<div class="ttc" id="aclass_math_x_o___u_i_html"><div class="ttname"><a href="class_math_x_o___u_i.html">MathXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00155">XO_Classes.h:155</a></div></div>
+<div class="ttc" id="aclass_math_x_o___u_i_html"><div class="ttname"><a href="class_math_x_o___u_i.html">MathXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00235">XO_Classes.h:235</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -776,27 +793,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00047">47</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                        {</div>
-<div class="line"><span class="lineno">   48</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Obstacle X-O Game ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   49</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_obstacle_x_o___u_i.html">ObstacleXO_UI</a>();</div>
-<div class="line"><span class="lineno">   50</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* obstacle_board = <span class="keyword">new</span> <a class="code hl_class" href="class_obstacle_x_o___board.html">ObstacleXO_Board</a>();</div>
-<div class="line"><span class="lineno">   51</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(obstacle_board, players, game_ui);</div>
-<div class="line"><span class="lineno">   54</span>    game.run();</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>    <span class="keyword">delete</span> obstacle_board;</div>
-<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">   58</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">   59</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">   60</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00072">72</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                        {</div>
+<div class="line"><span class="lineno">   73</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Obstacle X-O Game ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_obstacle_x_o___u_i.html">ObstacleXO_UI</a>();</div>
+<div class="line"><span class="lineno">   75</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* obstacle_board = <span class="keyword">new</span> <a class="code hl_class" href="class_obstacle_x_o___board.html">ObstacleXO_Board</a>();</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(obstacle_board, players, game_ui);</div>
+<div class="line"><span class="lineno">   79</span>    game.run();</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    <span class="keyword">delete</span> obstacle_board;</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">   85</span>}</div>
 <div class="ttc" id="aclass_obstacle_x_o___board_html"><div class="ttname"><a href="class_obstacle_x_o___board.html">ObstacleXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00046">XO_Classes.h:46</a></div></div>
-<div class="ttc" id="aclass_obstacle_x_o___u_i_html"><div class="ttname"><a href="class_obstacle_x_o___u_i.html">ObstacleXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00172">XO_Classes.h:172</a></div></div>
+<div class="ttc" id="aclass_obstacle_x_o___u_i_html"><div class="ttname"><a href="class_obstacle_x_o___u_i.html">ObstacleXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00252">XO_Classes.h:252</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -845,27 +862,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00143">143</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  143</span>                       {</div>
-<div class="line"><span class="lineno">  144</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Pyramid Tic-Tac-Toe ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  145</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_pyramid_x_o___u_i.html">PyramidXO_UI</a>();</div>
-<div class="line"><span class="lineno">  146</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* pyramid_board = <span class="keyword">new</span> <a class="code hl_class" href="class_pyramid_x_o___board.html">PyramidXO_Board</a>();</div>
-<div class="line"><span class="lineno">  147</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(pyramid_board, players, game_ui);</div>
-<div class="line"><span class="lineno">  150</span>    game.run();</div>
-<div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>    <span class="keyword">delete</span> pyramid_board;</div>
-<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">  154</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">  155</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">  156</span>}</div>
-<div class="ttc" id="aclass_pyramid_x_o___board_html"><div class="ttname"><a href="class_pyramid_x_o___board.html">PyramidXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00238">XO_Classes.h:238</a></div></div>
-<div class="ttc" id="aclass_pyramid_x_o___u_i_html"><div class="ttname"><a href="class_pyramid_x_o___u_i.html">PyramidXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00258">XO_Classes.h:258</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00168">168</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>                       {</div>
+<div class="line"><span class="lineno">  169</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Pyramid Tic-Tac-Toe ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  170</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_pyramid_x_o___u_i.html">PyramidXO_UI</a>();</div>
+<div class="line"><span class="lineno">  171</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* pyramid_board = <span class="keyword">new</span> <a class="code hl_class" href="class_pyramid_x_o___board.html">PyramidXO_Board</a>();</div>
+<div class="line"><span class="lineno">  172</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(pyramid_board, players, game_ui);</div>
+<div class="line"><span class="lineno">  175</span>    game.run();</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>    <span class="keyword">delete</span> pyramid_board;</div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">  179</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">  181</span>}</div>
+<div class="ttc" id="aclass_pyramid_x_o___board_html"><div class="ttname"><a href="class_pyramid_x_o___board.html">PyramidXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00173">XO_Classes.h:173</a></div></div>
+<div class="ttc" id="aclass_pyramid_x_o___u_i_html"><div class="ttname"><a href="class_pyramid_x_o___u_i.html">PyramidXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00302">XO_Classes.h:302</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -914,27 +931,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00032">32</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                       {</div>
-<div class="line"><span class="lineno">   33</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Reverse X-O Game ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   34</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_reverse_x_o___u_i.html">ReverseXO_UI</a>();</div>
-<div class="line"><span class="lineno">   35</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* reverse_board = <span class="keyword">new</span> <a class="code hl_class" href="class_reverse_x_o___board.html">ReverseXO_Board</a>();</div>
-<div class="line"><span class="lineno">   36</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(reverse_board, players, game_ui);</div>
-<div class="line"><span class="lineno">   39</span>    game.run();</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>    <span class="keyword">delete</span> reverse_board;</div>
-<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">   43</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">   44</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">   45</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00057">57</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                       {</div>
+<div class="line"><span class="lineno">   58</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Reverse X-O Game ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   59</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_reverse_x_o___u_i.html">ReverseXO_UI</a>();</div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* reverse_board = <span class="keyword">new</span> <a class="code hl_class" href="class_reverse_x_o___board.html">ReverseXO_Board</a>();</div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(reverse_board, players, game_ui);</div>
+<div class="line"><span class="lineno">   64</span>    game.run();</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    <span class="keyword">delete</span> reverse_board;</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 <div class="ttc" id="aclass_reverse_x_o___board_html"><div class="ttname"><a href="class_reverse_x_o___board.html">ReverseXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00034">XO_Classes.h:34</a></div></div>
-<div class="ttc" id="aclass_reverse_x_o___u_i_html"><div class="ttname"><a href="class_reverse_x_o___u_i.html">ReverseXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00164">XO_Classes.h:164</a></div></div>
+<div class="ttc" id="aclass_reverse_x_o___u_i_html"><div class="ttname"><a href="class_reverse_x_o___u_i.html">ReverseXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00244">XO_Classes.h:244</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -968,6 +985,94 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ad7090c4c3c68db4f5f1ae3e8663186b1" name="ad7090c4c3c68db4f5f1ae3e8663186b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7090c4c3c68db4f5f1ae3e8663186b1">&#9670;&#160;</a></span>play_sus_xo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_sus_xo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00032">32</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                   {</div>
+<div class="line"><span class="lineno">   33</span>    cout &lt;&lt; <span class="stringliteral">&quot;SUS Game Started (Win by highest S-U-S sequences)&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_s_u_s___u_i.html">SUS_UI</a>();</div>
+<div class="line"><span class="lineno">   36</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* game_board = <span class="keyword">new</span> <a class="code hl_class" href="class_s_u_s___board.html">SUS_Board</a>();</div>
+<div class="line"><span class="lineno">   37</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(game_board, players, game_ui);</div>
+<div class="line"><span class="lineno">   40</span>    game.run();</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_class" href="class_s_u_s___board.html">SUS_Board</a>* sus_board = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_s_u_s___board.html">SUS_Board</a>*<span class="keyword">&gt;</span>(game_board);</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">if</span> (sus_board) {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (sus_board-&gt;<a class="code hl_function" href="class_s_u_s___board.html#acd2c39612239065da3aea67ac7c27aa4">game_is_over</a>(<span class="keyword">nullptr</span>)) {</div>
+<div class="line"><span class="lineno">   46</span>            cout &lt;&lt; <span class="stringliteral">&quot;\n--- Final Results ---\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   47</span>            cout &lt;&lt; sus_board-&gt;<a class="code hl_function" href="class_s_u_s___board.html#a54fee337d2b56c54c6969276b46b2e3f">get_final_result_message</a>(players);</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <span class="keyword">delete</span> sus_board;</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">   55</span>}</div>
+<div class="ttc" id="aclass_s_u_s___board_html"><div class="ttname"><a href="class_s_u_s___board.html">SUS_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00214">XO_Classes.h:214</a></div></div>
+<div class="ttc" id="aclass_s_u_s___board_html_a54fee337d2b56c54c6969276b46b2e3f"><div class="ttname"><a href="class_s_u_s___board.html#a54fee337d2b56c54c6969276b46b2e3f">SUS_Board::get_final_result_message</a></div><div class="ttdeci">string get_final_result_message(Player&lt; char &gt; **players)</div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8cpp_source.html#l01737">XO_Classes.cpp:1737</a></div></div>
+<div class="ttc" id="aclass_s_u_s___board_html_acd2c39612239065da3aea67ac7c27aa4"><div class="ttname"><a href="class_s_u_s___board.html#acd2c39612239065da3aea67ac7c27aa4">SUS_Board::game_is_over</a></div><div class="ttdeci">bool game_is_over(Player&lt; char &gt; *player) override</div><div class="ttdoc">Check if the game is over.</div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8cpp_source.html#l01733">XO_Classes.cpp:1733</a></div></div>
+<div class="ttc" id="aclass_s_u_s___u_i_html"><div class="ttname"><a href="class_s_u_s___u_i.html">SUS_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00319">XO_Classes.h:319</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_x_o___classes_8cpp_source.html#l01733">SUS_Board::game_is_over()</a>, <a class="el" href="_x_o___classes_8cpp_source.html#l01737">SUS_Board::get_final_result_message()</a>, <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_x_o_8cpp_ad7090c4c3c68db4f5f1ae3e8663186b1_cgraph.png" border="0" usemap="#a_x_o_8cpp_ad7090c4c3c68db4f5f1ae3e8663186b1_cgraph" loading="lazy" alt=""/></div>
+<map name="a_x_o_8cpp_ad7090c4c3c68db4f5f1ae3e8663186b1_cgraph" id="a_x_o_8cpp_ad7090c4c3c68db4f5f1ae3e8663186b1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,85,100,112"/>
+<area shape="rect" href="class_s_u_s___board.html#acd2c39612239065da3aea67ac7c27aa4" title="Check if the game is over." alt="" coords="148,5,324,32"/>
+<area shape="poly" title=" " alt="" coords="73,82,107,62,147,42,164,35,166,40,149,46,109,66,76,87"/>
+<area shape="rect" href="class_s_u_s___board.html#a54fee337d2b56c54c6969276b46b2e3f" title=" " alt="" coords="163,107,309,149"/>
+<area shape="poly" title=" " alt="" coords="100,104,148,111,147,117,99,109"/>
+<area shape="rect" href="class_game_manager.html#a71f46d5189dac5c773f608cea1b5a203" title="Run the main game loop until someone wins or the game ends." alt="" coords="170,56,302,83"/>
+<area shape="poly" title=" " alt="" coords="99,89,154,80,155,85,100,94"/>
+<area shape="rect" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a" title="Set up players for the game." alt="" coords="175,199,297,225"/>
+<area shape="poly" title=" " alt="" coords="75,110,149,159,198,188,195,193,146,164,72,115"/>
+<area shape="rect" href="class_player.html#aed2af19790ba73190e3ebeea589518e1" title="Get the player&#39;s name." alt="" coords="389,56,512,83"/>
+<area shape="poly" title=" " alt="" coords="308,106,384,85,385,90,310,111"/>
+<area shape="rect" href="class_s_u_s___board.html#a0bed683e58cfdbba1293fb5628133f70" title=" " alt="" coords="372,107,529,149"/>
+<area shape="poly" title=" " alt="" coords="309,125,356,125,356,131,309,131"/>
+<area shape="poly" title=" " alt="" coords="303,67,374,67,374,72,303,72"/>
+<area shape="rect" href="class_u_i.html#a94561e0bb4bbcbe5ff71ca6d751922df" title="Create a player object based on input name, symbol, and type." alt="" coords="391,173,510,200"/>
+<area shape="poly" title=" " alt="" coords="297,202,375,193,376,198,298,207"/>
+<area shape="rect" href="class_u_i.html#a7b1603de1f73fbb4006e4f00a27c44da" title="Ask the user for the player&#39;s name." alt="" coords="381,224,521,251"/>
+<area shape="poly" title=" " alt="" coords="298,217,366,225,365,230,297,222"/>
+<area shape="rect" href="class_u_i.html#ac3d45fea2bbcaa0372d8e5101e116ca1" title="Ask the user to choose the player type from a list." alt="" coords="384,275,517,317"/>
+<area shape="poly" title=" " alt="" coords="273,223,381,266,379,271,271,228"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="_x_o_8cpp_ad7090c4c3c68db4f5f1ae3e8663186b1_icgraph.png" border="0" usemap="#a_x_o_8cpp_ad7090c4c3c68db4f5f1ae3e8663186b1_icgraph" loading="lazy" alt=""/></div>
+<map name="a_x_o_8cpp_ad7090c4c3c68db4f5f1ae3e8663186b1_icgraph" id="a_x_o_8cpp_ad7090c4c3c68db4f5f1ae3e8663186b1_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,197,32"/>
+<area shape="rect" href="_x_o_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a461773ebcef3f2a0074f5ad49d6a33c7" name="a461773ebcef3f2a0074f5ad49d6a33c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a461773ebcef3f2a0074f5ad49d6a33c7">&#9670;&#160;</a></span>play_word_xo()</h2>
 
@@ -983,27 +1088,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00129">129</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>                    {</div>
-<div class="line"><span class="lineno">  130</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Word Tic-Tac-Toe ===\n&quot;</span>;</div>
-<div class="line"><span class="lineno">  131</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_word_x_o___u_i.html">WordXO_UI</a>();</div>
-<div class="line"><span class="lineno">  132</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* word_board = <span class="keyword">new</span> <a class="code hl_class" href="class_word_x_o___board.html">WordXO_Board</a>();</div>
-<div class="line"><span class="lineno">  133</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(word_board, players, game_ui);</div>
-<div class="line"><span class="lineno">  136</span>    game.run();</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>    <span class="keyword">delete</span> word_board;</div>
-<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
-<div class="line"><span class="lineno">  140</span>    <span class="keyword">delete</span>[] players;</div>
-<div class="line"><span class="lineno">  141</span>    <span class="keyword">delete</span> game_ui;</div>
-<div class="line"><span class="lineno">  142</span>}</div>
-<div class="ttc" id="aclass_word_x_o___board_html"><div class="ttname"><a href="class_word_x_o___board.html">WordXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00213">XO_Classes.h:213</a></div></div>
-<div class="ttc" id="aclass_word_x_o___u_i_html"><div class="ttname"><a href="class_word_x_o___u_i.html">WordXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00231">XO_Classes.h:231</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_x_o_8cpp_source.html#l00154">154</a> of file <a class="el" href="_x_o_8cpp_source.html">XO.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>                    {</div>
+<div class="line"><span class="lineno">  155</span>    cout &lt;&lt; <span class="stringliteral">&quot;\n=== Starting Word Tic-Tac-Toe ===\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  156</span>    <a class="code hl_class" href="class_u_i.html">UI&lt;char&gt;</a>* game_ui = <span class="keyword">new</span> <a class="code hl_class" href="class_word_x_o___u_i.html">WordXO_UI</a>();</div>
+<div class="line"><span class="lineno">  157</span>    <a class="code hl_class" href="class_board.html">Board&lt;char&gt;</a>* word_board = <span class="keyword">new</span> <a class="code hl_class" href="class_word_x_o___board.html">WordXO_Board</a>();</div>
+<div class="line"><span class="lineno">  158</span>    <a class="code hl_class" href="class_player.html">Player&lt;char&gt;</a>** players = game_ui-&gt;<a class="code hl_function" href="class_u_i.html#a6966a040c995b2292e5edddaa94f889a">setup_players</a>();</div>
+<div class="line"><span class="lineno">  159</span> </div>
+<div class="line"><span class="lineno">  160</span>    <a class="code hl_class" href="class_game_manager.html">GameManager&lt;char&gt;</a> game(word_board, players, game_ui);</div>
+<div class="line"><span class="lineno">  161</span>    game.run();</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>    <span class="keyword">delete</span> word_board;</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; ++i) <span class="keyword">delete</span> players[i];</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keyword">delete</span>[] players;</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keyword">delete</span> game_ui;</div>
+<div class="line"><span class="lineno">  167</span>}</div>
+<div class="ttc" id="aclass_word_x_o___board_html"><div class="ttname"><a href="class_word_x_o___board.html">WordXO_Board</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00155">XO_Classes.h:155</a></div></div>
+<div class="ttc" id="aclass_word_x_o___u_i_html"><div class="ttname"><a href="class_word_x_o___u_i.html">WordXO_UI</a></div><div class="ttdef"><b>Definition</b> <a href="_x_o___classes_8h_source.html#l00294">XO_Classes.h:294</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_board_game___classes_8h_source.html#l00291">GameManager&lt; T &gt;::run()</a>, and <a class="el" href="_board_game___classes_8h_source.html#l00327">UI&lt; T &gt;::setup_players()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00177">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_x_o_8cpp_source.html#l00202">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
