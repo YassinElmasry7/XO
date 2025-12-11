@@ -193,7 +193,7 @@ public:
 class InfinityXO_Board : public Board<char> {
 private:
     char blank_symbol = '.';
-    vector<pair<pair<int, int>, char>> move_history; // Track moves in chronological order
+    vector<pair<pair<int, int>, char>> move_history;
     int moves_since_last_removal = 0;
 
     void remove_oldest_move();
